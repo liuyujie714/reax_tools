@@ -12,6 +12,52 @@ extern int STABLE_TIME_FRAMES;
 extern float TIMESTEP_FS;
 extern int SAMPLING_FREQ;
 
+static bool cancel_common_species(std::vector<std::string>& reactants,
+                                    std::vector<std::string>& products) {
+    std::map<std::string, int> left_counts, right_counts;
+    for (const auto& s : reactants) left_counts[s]++;
+    for (const auto& s : products) right_counts[s]++;
+
+    for (auto& [species, left_n] : left_counts) {
+        auto it = right_counts.find(species);
+        if (it != right_counts.end()) {
+            int cancel_n = std::min(left_n, it->second);
+            left_n -= cancel_n;
+            it->second -= cancel_n;
+        }
+    }
+
+    reactants.clear();
+    products.clear();
+    for (const auto& [s, n] : left_counts) {
+        for (int i = 0; i < n; i++) reactants.push_back(s);
+    }
+    for (const auto& [s, n] : right_counts) {
+        for (int i = 0; i < n; i++) products.push_back(s);
+    }
+
+    return !reactants.empty() || !products.empty();
+}
+
+static bool check_formula_atom_balance(const std::vector<std::string>& reactants,
+                                        const std::vector<std::string>& products) {
+    std::map<std::string, int> total;
+    for (const auto& formula : reactants) {
+        for (const auto& [elem, count] : parse_formula(formula)) {
+            total[elem] += count;
+        }
+    }
+    for (const auto& formula : products) {
+        for (const auto& [elem, count] : parse_formula(formula)) {
+            total[elem] -= count;
+        }
+    }
+    for (const auto& [elem, count] : total) {
+        if (count != 0) return false;
+    }
+    return true;
+}
+
 // Static member initialization
 int TrackedMolecule::next_id = 0;
 
@@ -342,12 +388,32 @@ void ReactionTracker::save_events(const std::string& filepath) {
     std::map<std::string, ReactionRecord> reaction_map;
     
     for (const auto& event : events) {
-        std::string key = event.get_reactants_string() + " -> " + event.get_products_string();
+        std::vector<std::string> r_species = split(event.get_reactants_string(), "+");
+        std::vector<std::string> p_species = split(event.get_products_string(), "+");
+
+        if (!cancel_common_species(r_species, p_species)) continue;
+
+        if (!check_formula_atom_balance(r_species, p_species)) continue;
+
+        std::sort(r_species.begin(), r_species.end());
+        std::sort(p_species.begin(), p_species.end());
+
+        std::string canon_reactants, canon_products;
+        for (size_t i = 0; i < r_species.size(); ++i) {
+            if (i > 0) canon_reactants += "+";
+            canon_reactants += r_species[i];
+        }
+        for (size_t i = 0; i < p_species.size(); ++i) {
+            if (i > 0) canon_products += "+";
+            canon_products += p_species[i];
+        }
+
+        std::string key = canon_reactants + " -> " + canon_products;
         auto it = reaction_map.find(key);
         if (it == reaction_map.end()) {
             reaction_map[key] = {
-                event.get_reactants_string(),
-                event.get_products_string(),
+                canon_reactants,
+                canon_products,
                 1,
                 event.frame_id,
                 event.frame_id
@@ -432,7 +498,26 @@ void ReactionTracker::brief_report() const {
         // Count reaction types
         std::map<std::string, int> reaction_counts;
         for (const auto& event : events) {
-            std::string key = event.get_reactants_string() + " -> " + event.get_products_string();
+            std::vector<std::string> r_species = split(event.get_reactants_string(), "+");
+            std::vector<std::string> p_species = split(event.get_products_string(), "+");
+
+            if (!cancel_common_species(r_species, p_species)) continue;
+            if (!check_formula_atom_balance(r_species, p_species)) continue;
+
+            std::sort(r_species.begin(), r_species.end());
+            std::sort(p_species.begin(), p_species.end());
+
+            std::string canon_reactants, canon_products;
+            for (size_t i = 0; i < r_species.size(); ++i) {
+                if (i > 0) canon_reactants += "+";
+                canon_reactants += r_species[i];
+            }
+            for (size_t i = 0; i < p_species.size(); ++i) {
+                if (i > 0) canon_products += "+";
+                canon_products += p_species[i];
+            }
+
+            std::string key = canon_reactants + " -> " + canon_products;
             reaction_counts[key]++;
         }
         
