@@ -90,8 +90,8 @@ struct edge_equal {
     bool operator()(const Edge* lhs, const Edge* rhs) const noexcept { return lhs->hash == rhs->hash; }
 };
 
-inline bool operator==(const Node& lhs, const Node& rhs) { return { lhs.hash == rhs.hash }; }
-inline bool operator==(const Edge& lhs, const Edge& rhs) { return { lhs.hash == rhs.hash }; }
+inline bool operator==(const Node& lhs, const Node& rhs) { return lhs.hash == rhs.hash; }
+inline bool operator==(const Edge& lhs, const Edge& rhs) { return lhs.hash == rhs.hash; }
 
 class ReaxFlow {
 private:

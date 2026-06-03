@@ -104,9 +104,9 @@ void rdkit_draw_molecule(const Molecule& mol) {
         drawer.finishDrawing();
 
         // Create output directory if it doesn't exist
-        std::string pictures_dir = std::filesystem::path(OUTPUT_DIR) / "molecule_pictures";
+        auto pictures_dir = std::filesystem::path(OUTPUT_DIR) / "molecule_pictures";
         std::filesystem::create_directories(pictures_dir);
-        std::string output_path = std::filesystem::path(pictures_dir) / fmt::format("{}.svg", mol.hash);
+        auto output_path = std::filesystem::path(pictures_dir) / fmt::format("{}.svg", mol.hash);
 
         std::ofstream out(output_path);
         out << drawer.getDrawingText();

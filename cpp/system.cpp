@@ -382,7 +382,7 @@ void System::set_types() {
  */
 void System::finish() {
     std::string header = fmt::format("{:<8} {:<8} {:<8} {:<8}", "Frame", "Atoms", "Bonds", "Mols");
-    std::string formatting = "{:<8} {:<8} {:<8} {:<8} {}";
+    constexpr const char * formatting = "{:<8} {:<8} {:<8} {:<8} {}";
 
     std::string ring_str = "";
 
@@ -400,7 +400,7 @@ void System::finish() {
     }
 
     if (frame_id <= 1) {
-        fmt::print(header);
+        fmt::print("{}", header);
         fmt::print("\n");
     }
 

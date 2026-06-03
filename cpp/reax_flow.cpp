@@ -115,22 +115,33 @@ ReaxFlow::ReaxFlow() {}
  * @note Safely deallocates all nodes and edges to prevent memory leaks
  */
 ReaxFlow::~ReaxFlow() {
-    for (auto& edge : edges) {
-        if (edge != nullptr) {
-            delete edge;
-        }
-    }
+    // Collect raw pointers BEFORE clearing the containers.
+    // MSVC's unordered_set::clear() walks buckets and calls the hasher
+    // (edge_hash / node_hash) on every stored pointer during rehash/cleanup.
+    // If we delete the objects first the hasher dereferences freed memory and
+    // crashes.  The correct order is:
+    //   1. snapshot the pointers
+    //   2. clear (and destroy) the containers  -> hasher runs on valid objects
+    //   3. delete the objects
+
+    std::vector<Edge*> edges_to_delete(edges.begin(), edges.end());
+    std::vector<Node*> nodes_to_delete(nodes.begin(), nodes.end());
+
     edges.clear();
+    edge_hash_to_edge.clear();
+    nodes.clear();
+    molecule_hash_to_node.clear();
 
-    for (auto& node : nodes) {
-        if (node != nullptr) {
-            delete node;
+    for (auto &e : edges_to_delete) {
+        if (e != nullptr){
+            delete e;
         }
     }
-    nodes.clear();
-
-    // Clear the hash map
-    molecule_hash_to_node.clear();
+    for (auto &n : nodes_to_delete) {
+        if (n != nullptr){
+            delete n;
+        }
+    }
 }
 
 /**
@@ -504,7 +515,7 @@ void ReaxFlow::write_dot_file(std::string basename, const std::vector<Edge*>& ed
         else {
             edge_line += "];\n";
         }
-        fmt::print(fp, edge_line);
+        fmt::print(fp, "{}", edge_line);
         curr_highlights++;
     }
 

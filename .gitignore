@@ -10,3 +10,9 @@ nginx.conf
 start-dev.sh
 build/
 reax_reporter/
+
+x64/
+.vs/
+reax_tools/x64/
+reax_tools/reax_tools_output/
+

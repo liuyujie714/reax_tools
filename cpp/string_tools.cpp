@@ -37,8 +37,8 @@ bool ends_with(const std::string& str, const std::string& suffix) {
 }
 
 FILE* create_file(std::string basename) {
-    std::string full_path = std::filesystem::path(OUTPUT_DIR) / basename;
-    FILE* file = fopen(full_path.c_str(), "w");
+    auto full_path = std::filesystem::path(OUTPUT_DIR) / basename;
+    FILE* file = fopen(full_path.string().c_str(), "w");
     if (!file) {
         std::cerr << "Failed to open file: " << std::endl;
     }
