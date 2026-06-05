@@ -904,6 +904,7 @@ void System::process_reax_flow() {
         prev_mol = prev_sys->get_molecule_by_id(pair.first);
         curr_mol = this->get_molecule_by_id(pair.second);
 
+<<<<<<< HEAD:src/cpp/system.cpp
         const auto& smaller = prev_mol->atom_ids.size() < curr_mol->atom_ids.size()
             ? prev_mol->atom_ids
             : curr_mol->atom_ids;
@@ -912,6 +913,11 @@ void System::process_reax_flow() {
             : prev_mol->atom_ids;
         for (int id : smaller) {
             if (larger.count(id)) {
+=======
+        // Find atoms that are in both molecules.
+        for (int id : prev_mol->atom_ids) {
+            if (curr_mol->atom_ids.count(id)) {
+>>>>>>> 5e7365d (fix set_intersection issue):cpp/system.cpp
                 intersection.push_back(id);
             }
         }
