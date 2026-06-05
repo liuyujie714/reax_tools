@@ -77,5 +77,11 @@
     <ClInclude Include="..\cpp\vec_algorithms.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="graphviz_io.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cpp\graphviz_io.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
