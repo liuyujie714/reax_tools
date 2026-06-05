@@ -396,13 +396,19 @@ void ReaxFlow::update_graph() {
         sorted_nodes.emplace_back(std::pair(node, node->degree));
     }
     std::sort(sorted_nodes.begin(), sorted_nodes.end(),
-        [](const auto& a, const auto& b) { return a.second > b.second; });
+        [](const auto& a, const auto& b) {
+            if (a.second != b.second) return a.second > b.second;
+            return a.first->hash < b.first->hash;
+        });
 
     for (const auto& edge : edges) {
         sorted_edges.emplace_back(std::pair(edge, edge->count));
     }
     std::sort(sorted_edges.begin(), sorted_edges.end(),
-        [](const auto& a, const auto& b) { return a.second > b.second; });
+        [](const auto& a, const auto& b) {
+            if (a.second != b.second) return a.second > b.second;
+            return a.first->hash < b.first->hash;
+        });
 }
 
 /**
@@ -420,11 +426,11 @@ void ReaxFlow::brief_report() {
 
     fmt::print("\n=== Reaction Flow Report ===\n");
     fmt::print("Top {} key molecules:\n", max_node_display);
-    fmt::print("{:<12s}{:<12s}{:<12s}\n", "molecule", "precursors", "derivatives");
+    fmt::print("{:<24s} {:<12s} {:<12s}\n", "molecule", "precursors", "derivatives");
     Node* tmp_node = nullptr;
     for (size_t i = 0; i < max_node_display; i++) {
         tmp_node = sorted_nodes[i].first;
-        fmt::print("{:<12s}{:<12d}{:<12d}\n", tmp_node->molecule->formula, tmp_node->precursor_count, tmp_node->derivative_count);
+        fmt::print("{:<24s} {:<12d} {:<12d}\n", tmp_node->molecule->formula, tmp_node->precursor_count, tmp_node->derivative_count);
     }
 
     fmt::print("\n");
@@ -1121,6 +1127,8 @@ void ReaxFlow::calculate_edge_betweenness() {
 
     // Convert to vector for sampling
     std::vector<Node*> node_list(nodes.begin(), nodes.end());
+    std::sort(node_list.begin(), node_list.end(),
+        [](Node* a, Node* b) { return a->hash < b->hash; });
 
     // Sample at most 100 source nodes for efficiency
     int sample_size = std::min((int)node_list.size(), 100);
@@ -1200,15 +1208,24 @@ void ReaxFlow::filter_by_betweenness(int target_edge_count) {
     // Sort by different criteria
     std::vector<Edge*> by_bc(edges.begin(), edges.end());
     std::sort(by_bc.begin(), by_bc.end(),
-        [](Edge* a, Edge* b) { return a->betweenness > b->betweenness; });
+        [](Edge* a, Edge* b) {
+            if (a->betweenness != b->betweenness) return a->betweenness > b->betweenness;
+            return a->hash < b->hash;
+        });
 
     std::vector<Edge*> by_count(edges.begin(), edges.end());
     std::sort(by_count.begin(), by_count.end(),
-        [](Edge* a, Edge* b) { return a->count > b->count; });
+        [](Edge* a, Edge* b) {
+            if (a->count != b->count) return a->count > b->count;
+            return a->hash < b->hash;
+        });
 
     std::vector<Edge*> by_transfer(edges.begin(), edges.end());
     std::sort(by_transfer.begin(), by_transfer.end(),
-        [](Edge* a, Edge* b) { return a->atom_transfer > b->atom_transfer; });
+        [](Edge* a, Edge* b) {
+            if (a->atom_transfer != b->atom_transfer) return a->atom_transfer > b->atom_transfer;
+            return a->hash < b->hash;
+        });
 
     // Keep top from each category
     int n_bc = target_edge_count / 2;

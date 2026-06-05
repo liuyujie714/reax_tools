@@ -132,11 +132,15 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>E:\code_test\RDKit_Win64_Static\boost_1_81_0\lib\*.lib;E:\code_test\RDKit_Win64_Static\lib\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /Y "$(TargetPath)" "$(SolutionDir)\bin"
-xcopy /Y "$(TargetDir)*.dll"  "$(SolutionDir)\bin"</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(TargetPath)" "$(SolutionDir)\bin"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\cpp\argparser.cpp" />

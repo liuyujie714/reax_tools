@@ -1,5 +1,10 @@
 #ifndef WASM_MODE
+#ifdef _WIN32
+#include <thread>
+#else
 #include <pthread.h>
+#endif
+
 #endif
 
 #include <filesystem>
@@ -120,6 +125,20 @@ void Universe::flush() {
 #ifndef WASM_MODE
 template <typename T, typename Func>
 void parallel_for_each(std::vector<T*>& objects, Func func) {
+#ifdef _WIN32
+    std::vector<std::thread> threads;
+    for (auto* obj : objects)
+    {
+        if (obj)
+        {
+            threads.emplace_back([obj, func]() { (obj->*func)(); });
+        }
+    }
+    for (auto& t : threads)
+    {
+        if (t.joinable()) t.join();
+    }
+#else
     size_t n = objects.size();
     std::vector<pthread_t> threads(n);
 
@@ -145,6 +164,7 @@ void parallel_for_each(std::vector<T*>& objects, Func func) {
     for (size_t i = 0; i < n; ++i) {
         if (objects[i]) pthread_join(threads[i], nullptr);
     }
+#endif
 }
 #endif
 

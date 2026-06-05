@@ -896,8 +896,12 @@ void System::process_reax_flow() {
         prev_mol = prev_sys->get_molecule_by_id(pair.first);
         curr_mol = this->get_molecule_by_id(pair.second);
 
-        std::set_intersection(prev_mol->atom_ids.begin(), prev_mol->atom_ids.end(), curr_mol->atom_ids.begin(),
-            curr_mol->atom_ids.end(), back_inserter(intersection));
+        // Find atoms that are in both molecules.
+        for (int id : prev_mol->atom_ids) {
+            if (curr_mol->atom_ids.count(id)) {
+                intersection.push_back(id);
+            }
+        }
 
         if (intersection.size() > 0) {
             reax_flow->add_reaction(this->frame_id, intersection.size(), prev_mol, curr_mol);

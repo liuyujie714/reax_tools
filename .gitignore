@@ -15,4 +15,9 @@ x64/
 .vs/
 reax_tools/x64/
 reax_tools/reax_tools_output/
+cpp/reax_tools_output/
+cpp/*.o
+cpp/*.exe
+cpp/Makefile
+
 
