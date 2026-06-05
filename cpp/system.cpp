@@ -725,15 +725,12 @@ void System::process_this() {
     std::map<int, float> atomic_radius;
     float bond_radius = 0.0f;
 
-    for (auto& pair : type_stoi) {
-        std::string typ_s = pair.first;
-        int typ_i = pair.second;
-
-        // pair.first: string type, pair.second: int type
-        if (ELEMENT_ATOMIC_RADII.find(typ_s) != ELEMENT_ATOMIC_RADII.end())
-            atomic_radius[typ_i] = ELEMENT_ATOMIC_RADII.at(typ_s);
+    for (const auto& [type_i, type_s] : type_itos)
+    {
+        if (ELEMENT_ATOMIC_RADII.find(type_s) != ELEMENT_ATOMIC_RADII.end())
+            atomic_radius[type_i] = ELEMENT_ATOMIC_RADII.at(type_s);
         else
-            atomic_radius[typ_i] = ELEMENT_ATOMIC_RADII.at("X");
+            atomic_radius[type_i] = ELEMENT_ATOMIC_RADII.at("X");
     }
 
     for (int type_i = 1; type_i <= total_types; type_i++) {
