@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -74,7 +74,7 @@
     <VcpkgEnabled>true</VcpkgEnabled>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <VcpkgUseStatic>false</VcpkgUseStatic>
+    <VcpkgUseStatic>true</VcpkgUseStatic>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -122,16 +122,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\code_test\RDKit_Win64_Static\boost_1_81_0\include\boost-1_81;E:\code_test\RDKit_Win64_Static\boost_1_81_0;E:\code_test\RDKit_Win64_Static\Code;C:\Users\liuyujie714\Desktop\reax_tools\cpp</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\code_test\RDKit_Win64_Static\boost_1_81_0\include\boost-1_81;E:\code_test\RDKit_Win64_Static\boost_1_81_0;E:\code_test\RDKit_Win64_Static\Code;C:\Users\liuyujie714\Desktop\reax_tools\cpp;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS   /DWIN32 /DFMT_HEADER_ONLY %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS   /DWIN32 /DFMT_HEADER_ONLY  /DGRAPHVIZ %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>E:\code_test\RDKit_Win64_Static\boost_1_81_0\lib\*.lib;E:\code_test\RDKit_Win64_Static\lib\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>E:\code_test\RDKit_Win64_Static\boost_1_81_0\lib\*.lib;E:\code_test\RDKit_Win64_Static\lib\*.lib;D:\vcpkg-2024.08.23\packages\expat_x64-windows-static-release\lib\libexpatMT.lib;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\lib\*.lib;D:\vcpkg-2024.08.23\buildtrees\graphviz\x64-windows-static-release-rel\lib\dotgen\dotgen.lib;gdiplus.lib
+;%(AdditionalDependencies)</AdditionalDependencies>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
     </Link>
     <PreBuildEvent>
@@ -157,6 +158,7 @@
   <ItemGroup>
     <ClInclude Include="..\cpp\argparser.h" />
     <ClInclude Include="..\cpp\cell_list.h" />
+    <ClInclude Include="..\cpp\graphviz_io.h" />
     <ClInclude Include="..\cpp\rdkit_utils.h" />
     <ClInclude Include="..\cpp\reax_counter.h" />
     <ClInclude Include="..\cpp\reax_flow.h" />
@@ -165,6 +167,7 @@
     <ClInclude Include="..\cpp\system.h" />
     <ClInclude Include="..\cpp\universe.h" />
     <ClInclude Include="..\cpp\vec_algorithms.h" />
+    <ClInclude Include="graphviz_io.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

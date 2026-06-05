@@ -20,6 +20,10 @@
 #include "rdkit_utils.h"
 #endif
 
+#ifdef GRAPHVIZ
+#include "graphviz_io.h"
+#endif
+
 /**
  * @brief Constructs a Node object representing a molecule in the reaction graph
  * @param mol Pointer to the molecule to be represented by this node
@@ -527,6 +531,11 @@ void ReaxFlow::write_dot_file(std::string basename, const std::vector<Edge*>& ed
 
     fmt::print(fp, "}}\n");
     fclose(fp);
+
+#ifdef GRAPHVIZ
+    auto pngfile = std::filesystem::path(basename).stem().string() + ".png";
+    dot_to_png(basename, pngfile);
+#endif
 }
 
 /**
