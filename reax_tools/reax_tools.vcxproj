@@ -126,7 +126,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS   /DWIN32 /DFMT_HEADER_ONLY  /DGRAPHVIZ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/D_CRT_SECURE_NO_WARNINGS   /DWIN32 /DFMT_HEADER_ONLY /DRDKIT /DGRAPHVIZ  %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

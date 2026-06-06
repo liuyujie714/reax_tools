@@ -4,7 +4,6 @@
 #else
 #include <pthread.h>
 #endif
-
 #endif
 
 #include <filesystem>

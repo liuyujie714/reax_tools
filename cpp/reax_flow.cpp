@@ -17,7 +17,9 @@
 #include "universe.h"
 
 #ifndef WASM_MODE
+#ifdef RDKIT
 #include "rdkit_utils.h"
+#endif
 #endif
 
 #ifdef GRAPHVIZ
@@ -976,6 +978,7 @@ void ReaxFlow::merge_formulas(const std::unordered_set<std::string>& formulas_se
  * @note Requires RDKit library (only available when not in WASM mode)
  */
 void ReaxFlow::dump_smiles() {
+#ifdef RDKIT
     // Ensure degrees are calculated
     update_graph();
 
@@ -1005,6 +1008,7 @@ void ReaxFlow::dump_smiles() {
     }
 
     fclose(fp);
+#endif // RDKIT
 }
 #endif
 
@@ -1017,6 +1021,7 @@ void ReaxFlow::dump_smiles() {
  * @note Creates individual image files for each molecule
  */
 void ReaxFlow::draw_molecules() {
+#ifdef RDKIT
     for (const auto& node : nodes) {
         try {
             if (starts_with(node->molecule->formula, "grp_")) continue;
@@ -1026,6 +1031,7 @@ void ReaxFlow::draw_molecules() {
             fmt::print("Note: Molecule {} can not be drawn.\n", node->molecule->formula);
         }
     }
+#endif
 }
 #endif
 

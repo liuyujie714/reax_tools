@@ -1,4 +1,5 @@
 #ifndef WASM_MODE
+#ifdef RDKIT
 #include "rdkit_utils.h"
 
 #include <GraphMol/DistGeomHelpers/Embedder.h>
@@ -116,4 +117,5 @@ void rdkit_draw_molecule(const Molecule& mol) {
 
     return;
 }
+#endif
 #endif
