@@ -15,72 +15,63 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cpp\argparser.cpp">
+    <ClCompile Include="..\src\cpp\argparser.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\cell_list.cpp">
+    <ClCompile Include="..\src\cpp\cell_list.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\main.cpp">
+    <ClCompile Include="..\src\cpp\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\rdkit_utils.cpp">
+    <ClCompile Include="..\src\cpp\reax_counter.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\reax_counter.cpp">
+    <ClCompile Include="..\src\cpp\reax_flow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\reax_flow.cpp">
+    <ClCompile Include="..\src\cpp\reax_track.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\reax_track.cpp">
+    <ClCompile Include="..\src\cpp\string_tools.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\string_tools.cpp">
+    <ClCompile Include="..\src\cpp\system.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\cpp\system.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\cpp\universe.cpp">
+    <ClCompile Include="..\src\cpp\universe.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\cpp\argparser.h">
+    <ClInclude Include="..\src\cpp\argparser.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\cell_list.h">
+    <ClInclude Include="..\src\cpp\cell_list.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\rdkit_utils.h">
+    <ClInclude Include="..\src\cpp\graphviz_io.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\reax_counter.h">
+    <ClInclude Include="..\src\cpp\reax_counter.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\reax_flow.h">
+    <ClInclude Include="..\src\cpp\reax_flow.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\reax_track.h">
+    <ClInclude Include="..\src\cpp\reax_track.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\string_tools.h">
+    <ClInclude Include="..\src\cpp\string_tools.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\system.h">
+    <ClInclude Include="..\src\cpp\system.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\universe.h">
+    <ClInclude Include="..\src\cpp\universe.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\cpp\vec_algorithms.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="graphviz_io.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\cpp\graphviz_io.h">
+    <ClInclude Include="..\src\cpp\vec_algorithms.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

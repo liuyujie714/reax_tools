@@ -18,6 +18,29 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\cpp\argparser.cpp" />
+    <ClCompile Include="..\src\cpp\cell_list.cpp" />
+    <ClCompile Include="..\src\cpp\main.cpp" />
+    <ClCompile Include="..\src\cpp\reax_counter.cpp" />
+    <ClCompile Include="..\src\cpp\reax_flow.cpp" />
+    <ClCompile Include="..\src\cpp\reax_track.cpp" />
+    <ClCompile Include="..\src\cpp\string_tools.cpp" />
+    <ClCompile Include="..\src\cpp\system.cpp" />
+    <ClCompile Include="..\src\cpp\universe.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\cpp\argparser.h" />
+    <ClInclude Include="..\src\cpp\cell_list.h" />
+    <ClInclude Include="..\src\cpp\graphviz_io.h" />
+    <ClInclude Include="..\src\cpp\reax_counter.h" />
+    <ClInclude Include="..\src\cpp\reax_flow.h" />
+    <ClInclude Include="..\src\cpp\reax_track.h" />
+    <ClInclude Include="..\src\cpp\string_tools.h" />
+    <ClInclude Include="..\src\cpp\system.h" />
+    <ClInclude Include="..\src\cpp\universe.h" />
+    <ClInclude Include="..\src\cpp\vec_algorithms.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -70,6 +93,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName)_core</TargetName>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>true</VcpkgEnabled>
   </PropertyGroup>
@@ -122,7 +148,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\code_test\RDKit_Win64_Static\boost_1_81_0\include\boost-1_81;E:\code_test\RDKit_Win64_Static\boost_1_81_0;E:\code_test\RDKit_Win64_Static\Code;C:\Users\liuyujie714\Desktop\reax_tools\cpp;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\code_test\RDKit_Win64_Static\boost_1_81_0\include\boost-1_81;E:\code_test\RDKit_Win64_Static\boost_1_81_0;E:\code_test\RDKit_Win64_Static\Code;C:\Users\liuyujie714\Desktop\reax_tools\src\cpp;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -131,8 +157,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>E:\code_test\RDKit_Win64_Static\boost_1_81_0\lib\*.lib;E:\code_test\RDKit_Win64_Static\lib\*.lib;D:\vcpkg-2024.08.23\packages\expat_x64-windows-static-release\lib\libexpatMT.lib;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\lib\*.lib;D:\vcpkg-2024.08.23\buildtrees\graphviz\x64-windows-static-release-rel\lib\dotgen\dotgen.lib;gdiplus.lib
-;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>E:\code_test\RDKit_Win64_Static\boost_1_81_0\lib\*.lib;E:\code_test\RDKit_Win64_Static\lib\*.lib;D:\vcpkg-2024.08.23\packages\expat_x64-windows-static-release\lib\libexpatMT.lib;D:\vcpkg-2024.08.23\packages\graphviz_x64-windows-static-release\lib\*.lib;gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
     </Link>
     <PreBuildEvent>
@@ -143,32 +168,6 @@
       <Command>xcopy /Y "$(TargetPath)" "$(SolutionDir)\bin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\cpp\argparser.cpp" />
-    <ClCompile Include="..\cpp\cell_list.cpp" />
-    <ClCompile Include="..\cpp\main.cpp" />
-    <ClCompile Include="..\cpp\rdkit_utils.cpp" />
-    <ClCompile Include="..\cpp\reax_counter.cpp" />
-    <ClCompile Include="..\cpp\reax_flow.cpp" />
-    <ClCompile Include="..\cpp\reax_track.cpp" />
-    <ClCompile Include="..\cpp\string_tools.cpp" />
-    <ClCompile Include="..\cpp\system.cpp" />
-    <ClCompile Include="..\cpp\universe.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\cpp\argparser.h" />
-    <ClInclude Include="..\cpp\cell_list.h" />
-    <ClInclude Include="..\cpp\graphviz_io.h" />
-    <ClInclude Include="..\cpp\rdkit_utils.h" />
-    <ClInclude Include="..\cpp\reax_counter.h" />
-    <ClInclude Include="..\cpp\reax_flow.h" />
-    <ClInclude Include="..\cpp\reax_track.h" />
-    <ClInclude Include="..\cpp\string_tools.h" />
-    <ClInclude Include="..\cpp\system.h" />
-    <ClInclude Include="..\cpp\universe.h" />
-    <ClInclude Include="..\cpp\vec_algorithms.h" />
-    <ClInclude Include="graphviz_io.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
