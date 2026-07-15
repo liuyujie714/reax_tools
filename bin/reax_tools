@@ -12,6 +12,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PYTHON_DIR = ROOT / "src" / "python"
 CORE = ROOT / "bin" / "reax_tools_core"
+if sys.platform == "win32":
+    CORE = CORE.with_suffix(".exe")
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/reax_tools_matplotlib")
 
 if str(PYTHON_DIR) not in sys.path:
