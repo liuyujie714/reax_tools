@@ -3,3 +3,8 @@ test/
 node_modules/
 web/
 archived/
+reax_tools/
+x64/
+src/python/reax_tools_viz/
+.vs/
+
