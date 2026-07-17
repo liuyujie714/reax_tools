@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Add chart control button event listeners
     //
-    document.getElementById('clearBtn').addEventListener('click', function () {
+    document.getElementById('clearAllBtn').addEventListener('click', function () {
         // Clear charts first
         if (window.reaxToolsPlotter) {
             window.reaxToolsPlotter.clearCharts();
