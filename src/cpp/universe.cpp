@@ -225,7 +225,7 @@ void Universe::process_traj() {
             std::sort(systems_to_process.begin(), systems_to_process.end(),
                 [](System* a, System* b) { return a->frame_id < b->frame_id; });
             for (auto& curr_system : systems_to_process) {
-                reaction_tracker->process_frame(curr_system->frame_id, curr_system->molecules);
+                reaction_tracker->process_frame(curr_system->frame_id, curr_system->molecules, curr_system->has_boundaries, curr_system->axis_lengths);
             }
         }
 
@@ -278,6 +278,7 @@ void Universe::process_traj() {
         reaction_tracker->save_raw_events("reaction_events.csv");
         reaction_tracker->save_raw_event_pairs("reaction_event_pairs.csv");
         reaction_tracker->save_transfer_flow("transfer_flow.csv");
+        reaction_tracker->save_reaction_snapshots("reaction_snapshots");
     }
 }
 #else

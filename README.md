@@ -2,7 +2,7 @@
 
 ReaxTools is a local post-processing toolkit for reactive molecular dynamics trajectories from LAMMPS, GPUMD, CP2K, and related workflows.
 
-Version 2.1 is a major cleanup release. The C++ core now writes stable raw audit files, while Python owns filtering, plotting, and presentation. The transfer network is auditable from raw reaction events; the Sankey-style `flow` view is experimental and intended as a narrative visualization.
+Version 2.1 is a major cleanup release. The C++ core now writes stable raw audit files, while Python owns filtering, plotting, and presentation. The atom-transfer table is auditable from raw reaction events; `plot` and `network` provide compact molecule-transfer and reaction-transfer diagrams.
 
 ## Install
 
@@ -77,18 +77,19 @@ The C++ core writes raw, audit-oriented files:
 | `bond_count.csv` | Bond-type counts by frame |
 | `atom_bonded_num_count.csv` | Atom coordination counts by frame |
 | `ring_count.csv` | Ring counts by frame |
-| `reaction_events.csv` | Unfiltered atom-conserved reaction events |
-| `reaction_event_pairs.csv` | Per-event atom-overlap pairs used to audit the network |
-| `transfer_flow.csv` | Aggregated atom-transfer edges |
+| `reaction_events.csv` | Lightweight reaction-event index: frame, arity, hashes, and formulas |
+| `reaction_event_pairs.csv` | Per-event atom-overlap pairs used to audit atom transfer |
+| `transfer_flow.csv` | Aggregated atom transfer between molecular species |
+| `reaction_snapshots/` | C++ reaction snapshot packages for montage rendering |
 | `molecules.json` | Molecule identity records and example graph definitions |
 | `reax_tools.log` | Run metadata and audit notes |
 | `reax_tools_manifest.json` | Structured file manifest for Python and web clients |
 
 `molecules.json` is the identity anchor. Current ids use `formula-hash-v1`; future structural hashes can replace this without changing the audit model.
 
-## Audited Network
+## Audited Transfer
 
-The reaction network is based on atom ownership transfer. For every raw reaction event, ReaxTools computes reactant-product atom-overlap pairs. `transfer_flow.csv` is exactly the aggregation of `reaction_event_pairs.csv`.
+The reaction-transfer analysis is based on atom ownership transfer. `reaction_events.csv` is a compact event index, while `reaction_event_pairs.csv` records per-event reactant-product atom overlaps. `transfer_flow.csv` is exactly the aggregation of `reaction_event_pairs.csv`. For single- and bimolecular snapshot rendering, the C++ core writes self-contained `.rxtsnap.json` packages under `reaction_snapshots/`.
 
 Run the built-in audit:
 
@@ -111,7 +112,7 @@ transfer edges: 18391
 atom transfer total: 1733312
 ```
 
-This is the core v2.1 guarantee: the raw event layer and the full transfer network are consistent and auditable. Filtered plots are presentation products.
+This is the core v2.1 guarantee: the raw event layer and the full atom-transfer table are consistent and auditable. Filtered plots are presentation products.
 
 ## Plotting Commands
 
@@ -128,24 +129,27 @@ reax_tools counts -f test/energetic_v3
 reax_tools counts -f test/energetic_v3 -t H2O,N2,H3N
 reax_tools events -f test/energetic_v3 --max 15
 reax_tools network -f test/energetic_v3 --max-reactions 60
-reax_tools network -f test/energetic_v3 --dot
+reax_tools snapshots -f test/energetic_v3
 reax_tools flow -f test/energetic_v3
 reax_tools focus -f test/energetic_v3 --centers H3N N3O4 H2O
 ```
 
-`network` is the main graph view of `transfer_flow.csv`. Its filters are explicit:
+`plot` and the default `network` command write two transfer diagrams:
 
-- `--max-reactions N`: keep the strongest net transfer edges.
-- `--max-molecules N`: keep the induced subgraph of the strongest molecule nodes.
-- `--max-subgraphs N`: keep the largest weakly connected components.
+- `molecule_transfer_top24.png`: the 24 most active molecular species and their direct transfers.
+- `reaction_transfer_top48.png`: the 48 strongest reaction transfers and the molecular species involved.
 
-These filters combine with AND semantics.
+`network` also accepts explicit chemical filters:
 
-`flow` is experimental. It converts the network into a one-way, role-layer Sankey-style narrative by ranking molecules with `(W_in - W_out) / (W_in + W_out)` and keeping forward inter-layer atom transfer. This can make reaction stories easier to see, but it deliberately discards cyclic and same-layer information. Use `network` and the raw CSV files for audit.
+- `--max-reactions N`: keep the strongest N reaction transfers.
+- `--max-molecules N`: keep the strongest N molecular species and the direct transfers among them.
+- `--max-subgraphs N`: keep the largest connected molecule groups.
+
+These filters combine with AND semantics. `flow` remains an explicit experimental command for one-way role-layer summaries.
 
 ## Energetic Example
 
-The bundled energetic fixture is ammonium dinitramide decomposition. The audited raw network shows the main pathway from `H4N` and `N3O4` through nitrogen-oxygen intermediates toward products such as `H2O` and `N2`.
+The bundled energetic fixture is ammonium dinitramide decomposition. The audited raw transfer table shows the main pathway from `H4N` and `N3O4` through nitrogen-oxygen intermediates toward products such as `H2O` and `N2`.
 
 Species counts:
 
@@ -155,13 +159,13 @@ Reaction-event summary:
 
 ![Reaction events](test/energetic_v3/reaction_events.png)
 
-Audited transfer network:
+Molecule-transfer view:
 
-![Transfer network](test/energetic_v3/transfer_network.png)
+![Molecule transfer](test/energetic_v3/molecule_transfer_top24.png)
 
-Experimental Sankey-style flow:
+Reaction-transfer view:
 
-![Transfer flow](test/energetic_v3/transfer_flow.png)
+![Reaction transfer](test/energetic_v3/reaction_transfer_top48.png)
 
 ## Plot Style Templates
 

@@ -25,19 +25,19 @@ def filter_transfer_flow(
         result = result[result["self_loop"].astype(int) == 0]
     for column in ["count", "atom_transfer"]:
         result[column] = result[column].astype(int)
+    if sort_by not in result.columns:
+        sort_by = "count"
     if cancel_reverse:
-        result = cancel_reverse_transfer_edges(result)
+        result = cancel_reverse_transfer_edges(result, direction_by=sort_by)
     if min_count is not None:
         result = result[result["count"].astype(int) >= min_count]
     if min_atom_transfer is not None:
         result = result[result["atom_transfer"].astype(int) >= min_atom_transfer]
-    if sort_by not in result.columns:
-        sort_by = "count"
     result = result.sort_values(sort_by, ascending=False)
     if top_n is not None:
         result = result.head(top_n)
     if max_molecules is not None:
-        result = filter_flow_by_top_molecules(result, max_molecules)
+        result = filter_flow_by_top_molecules(result, max_molecules, weight=sort_by)
     if max_subgraphs is not None:
         result = filter_flow_by_largest_subgraphs(result, max_subgraphs)
     return result.reset_index(drop=True)
@@ -48,6 +48,7 @@ def prepare_transfer_flow(
     *,
     include_self_loops: bool = False,
     cancel_reverse: bool = True,
+    direction_by: str = "count",
 ) -> pd.DataFrame:
     result = flow.copy()
     if not include_self_loops and "self_loop" in result.columns:
@@ -55,11 +56,14 @@ def prepare_transfer_flow(
     for column in ["count", "atom_transfer"]:
         result[column] = result[column].astype(int)
     if cancel_reverse:
-        result = cancel_reverse_transfer_edges(result)
+        result = cancel_reverse_transfer_edges(result, direction_by=direction_by)
     return result.reset_index(drop=True)
 
 
-def cancel_reverse_transfer_edges(flow: pd.DataFrame) -> pd.DataFrame:
+def cancel_reverse_transfer_edges(flow: pd.DataFrame, *, direction_by: str = "count") -> pd.DataFrame:
+    if direction_by not in {"count", "atom_transfer"}:
+        direction_by = "count"
+    fallback_by = "atom_transfer" if direction_by == "count" else "count"
     records = {}
     for _, row in flow.iterrows():
         source = str(row["source_id"])
@@ -82,19 +86,21 @@ def cancel_reverse_transfer_edges(flow: pd.DataFrame) -> pd.DataFrame:
         records[key]["atom_transfer"] += sign * int(row["atom_transfer"])
     rows = []
     for rec in records.values():
-        if rec["count"] == 0:
+        direction_value = rec[direction_by] or rec[fallback_by]
+        if direction_value == 0:
             continue
-        if rec["count"] < 0:
+        if direction_value < 0:
             rec = {
                 "source_id": rec["target_id"],
                 "target_id": rec["source_id"],
                 "source_label": rec["target_label"],
                 "target_label": rec["source_label"],
-                "count": -rec["count"],
+                "count": abs(rec["count"]),
                 "atom_transfer": abs(rec["atom_transfer"]),
                 "self_loop": 0,
             }
         else:
+            rec["count"] = abs(rec["count"])
             rec["atom_transfer"] = abs(rec["atom_transfer"])
         rows.append(rec)
     columns = [column for column in flow.columns if column in {
@@ -126,14 +132,16 @@ def _resolve_node(graph: nx.Graph, value: str) -> str | None:
     return matches[0] if matches else None
 
 
-def filter_flow_by_top_molecules(flow: pd.DataFrame, max_molecules: int) -> pd.DataFrame:
+def filter_flow_by_top_molecules(flow: pd.DataFrame, max_molecules: int, *, weight: str = "count") -> pd.DataFrame:
     if flow.empty:
         return flow
+    if weight not in flow.columns:
+        weight = "count"
     scores = Counter()
     for _, row in flow.iterrows():
-        weight = int(row["count"])
-        scores[str(row["source_id"])] += weight
-        scores[str(row["target_id"])] += weight
+        value = int(row[weight])
+        scores[str(row["source_id"])] += value
+        scores[str(row["target_id"])] += value
     keep = {node for node, _ in scores.most_common(max_molecules)}
     # Induced subgraph semantics: max_molecules is an AND filter on endpoints.
     mask = flow["source_id"].astype(str).isin(keep) & flow["target_id"].astype(str).isin(keep)
@@ -203,8 +211,10 @@ def aggregate_reaction_events(
 ) -> pd.DataFrame:
     records: dict[tuple[tuple[str, ...], tuple[str, ...]], dict] = {}
     for _, row in events.iterrows():
-        reactants = _split_ids(row["reactant_ids"])
-        products = _split_ids(row["product_ids"])
+        reactant_column = "reactant_hashes" if "reactant_hashes" in events.columns else "reactant_ids"
+        product_column = "product_hashes" if "product_hashes" in events.columns else "product_ids"
+        reactants = _split_ids(row[reactant_column])
+        products = _split_ids(row[product_column])
         if cancel_common:
             reactants, products = cancel_common_ids(reactants, products)
         if not reactants and not products:
@@ -212,8 +222,15 @@ def aggregate_reaction_events(
         key = (tuple(sorted(reactants)), tuple(sorted(products)))
         frame = int(row["frame"])
         if key not in records:
-            reactant_labels = "+".join(getattr(molecules[id_], "formula", id_) for id_ in key[0]) if molecules else "+".join(key[0])
-            product_labels = "+".join(getattr(molecules[id_], "formula", id_) for id_ in key[1]) if molecules else "+".join(key[1])
+            if molecules:
+                reactant_labels = "+".join(getattr(molecules[id_], "formula", id_) for id_ in key[0])
+                product_labels = "+".join(getattr(molecules[id_], "formula", id_) for id_ in key[1])
+            elif "reactant_formulas" in events.columns and "product_formulas" in events.columns:
+                reactant_labels = str(row["reactant_formulas"])
+                product_labels = str(row["product_formulas"])
+            else:
+                reactant_labels = "+".join(key[0])
+                product_labels = "+".join(key[1])
             records[key] = {
                 "frequency": 0,
                 "first_frame": frame,

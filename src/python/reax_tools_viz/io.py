@@ -62,8 +62,17 @@ def validate_bundle(bundle: RunBundle) -> None:
         raise ValueError(f"transfer_flow.csv references unknown molecule ids: {sorted(unknown)[:10]}")
 
     events = pd.read_csv(bundle.root / "reaction_events.csv", dtype=str)
+    for column in [
+        "reactant_hashes",
+        "product_hashes",
+        "reactant_formulas",
+        "product_formulas",
+    ]:
+        if column not in events.columns:
+            raise ValueError(f"reaction_events.csv missing {column}")
+
     unknown_event_ids: set[str] = set()
-    for column in ["reactant_ids", "product_ids"]:
+    for column in ["reactant_hashes", "product_hashes"]:
         for value in events[column].dropna():
             unknown_event_ids.update(part for part in value.split("+") if part and part not in molecule_ids)
     if unknown_event_ids:

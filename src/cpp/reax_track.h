@@ -16,6 +16,21 @@
 struct Molecule;
 class System;
 
+struct AtomSnapshot {
+    int id;
+    std::string element;
+    float x;
+    float y;
+    float z;
+};
+
+struct BondSnapshot {
+    int atom_i;
+    int atom_j;
+    int order;
+    float length;
+};
+
 /**
  * @brief TrackedMolecule - A molecule with lifecycle tracking
  * 
@@ -29,6 +44,8 @@ struct TrackedMolecule {
     int start_frame;                 // First frame where this molecule appears
     int end_frame;                   // Last frame (INT_MAX if still active)
     std::unordered_set<int> atom_ids;  // Set of atom IDs in this molecule
+    std::vector<AtomSnapshot> atoms;   // Atom coordinates at molecule creation
+    std::vector<BondSnapshot> bonds;   // Bonds at molecule creation
     std::string formula;             // Chemical formula
     unsigned int hash;               // Hash of formula
     
@@ -40,7 +57,7 @@ struct TrackedMolecule {
     bool is_stable;                  // Whether molecule has reached stable lifetime
     bool is_processed;               // Whether reaction involving this mol has been recorded
     
-    TrackedMolecule(int frame, const Molecule* mol);
+    TrackedMolecule(int frame, const Molecule* mol, bool has_boundaries = false, const std::vector<float>& axis_lengths = {});
     ~TrackedMolecule() = default;
     
     // Check if molecule is still active (not ended)
@@ -59,7 +76,7 @@ struct TrackedMolecule {
 /**
  * @brief ReactionEvent - A single reaction event detected between frames
  * 
- * Records the reactants, products, frame/time, and atom transfer information.
+ * Records the reactants, products, and frame/time information.
  */
 struct ReactionEvent {
     int event_id;                    // Unique event ID
@@ -68,8 +85,6 @@ struct ReactionEvent {
     
     std::vector<TrackedMolecule*> reactants;
     std::vector<TrackedMolecule*> products;
-    
-    int atom_transfer;               // Number of atoms transferred
     
     // For detailed analysis
     std::set<std::pair<int, int>> formed_bonds;
@@ -115,7 +130,7 @@ private:
     int last_processed_frame;
     
     // Helper: Find or create tracked molecule from System's Molecule
-    TrackedMolecule* find_or_create_tracked(const Molecule* mol, int frame_id);
+    TrackedMolecule* find_or_create_tracked(const Molecule* mol, int frame_id, bool has_boundaries = false, const std::vector<float>& axis_lengths = {});
     
     // Helper: Check if a molecule should be marked as stable
     bool should_mark_stable(TrackedMolecule* mol, int current_frame);
@@ -128,7 +143,9 @@ private:
     // Helper: Detect reactions using symmetric difference algorithm
     void detect_reactions_from_changes(int frame_id, 
                                        const std::unordered_map<int, Molecule*>& current_atom_to_mol,
-                                       const std::unordered_set<int>& changed_atoms);
+                                       const std::unordered_set<int>& changed_atoms,
+                                       bool has_boundaries,
+                                       const std::vector<float>& axis_lengths);
     
     // Helper: Mark stable molecules and create events
     void process_stable_molecules(int current_frame);
@@ -138,13 +155,14 @@ public:
     ~ReactionTracker();
     
     // Process a single frame - main entry point
-    void process_frame(int frame_id, const std::vector<Molecule*>& molecules);
+    void process_frame(int frame_id, const std::vector<Molecule*>& molecules, bool has_boundaries = false, const std::vector<float>& axis_lengths = {});
     
     // Finalize and save results
     void finalize(int last_frame);
     void save_raw_events(const std::string& filepath);
     void save_raw_event_pairs(const std::string& filepath);
     void save_transfer_flow(const std::string& filepath);
+    void save_reaction_snapshots(const std::string& directory);
     void save_events(const std::string& filepath);
     void save_molecule_lifetimes(const std::string& filepath);
     

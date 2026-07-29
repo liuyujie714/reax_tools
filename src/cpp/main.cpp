@@ -39,6 +39,7 @@ static void write_run_log(double elapsed_sec) {
     fmt::print(fp, "reaction_events.csv\n");
     fmt::print(fp, "reaction_event_pairs.csv\n");
     fmt::print(fp, "transfer_flow.csv\n");
+    fmt::print(fp, "reaction_snapshots/\n");
     fmt::print(fp, "molecules.json\n");
     fmt::print(fp, "reax_tools_manifest.json\n");
     fmt::print(fp, "reax_tools.log\n\n");
@@ -76,6 +77,7 @@ static void write_manifest(double elapsed_sec) {
     fmt::print(fp, "    \"reaction_events.csv\",\n");
     fmt::print(fp, "    \"reaction_event_pairs.csv\",\n");
     fmt::print(fp, "    \"transfer_flow.csv\",\n");
+    fmt::print(fp, "    \"reaction_snapshots/snapshots_manifest.csv\",\n");
     fmt::print(fp, "    \"molecules.json\",\n");
     fmt::print(fp, "    \"reax_tools.log\",\n");
     fmt::print(fp, "    \"reax_tools_manifest.json\"\n");

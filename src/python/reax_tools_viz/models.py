@@ -32,14 +32,10 @@ class TransferEdge:
 class ReactionEvent:
     event_id: int
     frame: int
-    reactant_ids: tuple[str, ...]
-    product_ids: tuple[str, ...]
-    tracked_reactant_ids: tuple[str, ...]
-    tracked_product_ids: tuple[str, ...]
-    reactants: tuple[str, ...]
-    products: tuple[str, ...]
-    atom_transfer: int
-    atom_conserved: bool
+    reactant_hashes: tuple[str, ...]
+    product_hashes: tuple[str, ...]
+    reactant_formulas: tuple[str, ...]
+    product_formulas: tuple[str, ...]
 
 
 @dataclass(frozen=True)
@@ -47,4 +43,3 @@ class RunBundle:
     root: Path
     manifest: dict
     molecules: dict[str, MoleculeRecord]
-
