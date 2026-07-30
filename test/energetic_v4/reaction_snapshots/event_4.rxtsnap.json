@@ -1,0 +1,89 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 4,
+  "frame_id": 2,
+  "reactant_frame": 1,
+  "product_frame": 2,
+  "time_fs": 5.000000,
+  "reaction_signature": "1332768717+3786389028->2363352848+248649749",
+  "reaction_arity": "2->2",
+  "reactant_formulas": "H4N+N3O4",
+  "product_formulas": "H3N+HN3O4",
+  "reactants": [
+    {"tracked_molecule_id":401,"molecule_hash":"1332768717","formula":"H4N","atom_ids":[2132,2190,2202,2212,2228]},
+    {"tracked_molecule_id":375,"molecule_hash":"3786389028","formula":"N3O4","atom_ids":[1968,1987,2036,2140,2168,2219,2233]}
+  ],
+  "products": [
+    {"tracked_molecule_id":466,"molecule_hash":"2363352848","formula":"H3N","atom_ids":[2132,2202,2212,2228]},
+    {"tracked_molecule_id":467,"molecule_hash":"248649749","formula":"HN3O4","atom_ids":[1968,1987,2036,2140,2168,2190,2219,2233]}
+  ],
+  "reactant_coords": [
+    {"id":2132,"element":"H","x":36.707401,"y":8.797270,"z":1.147040},
+    {"id":2190,"element":"H","x":35.097801,"y":9.426030,"z":2.002910},
+    {"id":2202,"element":"N","x":35.686199,"y":9.109490,"z":1.029130},
+    {"id":2212,"element":"H","x":35.857300,"y":10.049600,"z":0.518051},
+    {"id":2228,"element":"H","x":34.959400,"y":8.375760,"z":0.559941},
+    {"id":1968,"element":"N","x":33.460701,"y":11.718800,"z":2.258400},
+    {"id":1987,"element":"O","x":31.527500,"y":13.851200,"z":4.264390},
+    {"id":2036,"element":"O","x":34.311401,"y":10.897200,"z":2.840630},
+    {"id":2140,"element":"O","x":33.057598,"y":11.454400,"z":1.050240},
+    {"id":2168,"element":"N","x":31.942301,"y":13.666100,"z":3.043500},
+    {"id":2219,"element":"O","x":31.207001,"y":14.000100,"z":2.034800},
+    {"id":2233,"element":"N","x":33.313599,"y":13.127300,"z":2.746380}
+  ],
+  "product_coords": [
+    {"id":2132,"element":"H","x":33.505199,"y":8.077810,"z":6.613850},
+    {"id":2202,"element":"N","x":33.826801,"y":9.049400,"z":6.372230},
+    {"id":2212,"element":"H","x":33.145699,"y":9.856960,"z":6.145260},
+    {"id":2228,"element":"H","x":34.830299,"y":9.178050,"z":6.199200},
+    {"id":1968,"element":"N","x":33.654598,"y":11.933200,"z":4.581760},
+    {"id":1987,"element":"O","x":31.899401,"y":14.414300,"z":3.181090},
+    {"id":2036,"element":"O","x":34.061100,"y":11.234000,"z":6.219130},
+    {"id":2140,"element":"O","x":33.423302,"y":11.125200,"z":3.602140},
+    {"id":2168,"element":"N","x":33.110600,"y":14.005200,"z":3.370130},
+    {"id":2190,"element":"H","x":33.485100,"y":11.747700,"z":6.828600},
+    {"id":2219,"element":"O","x":34.106499,"y":14.412000,"z":2.672370},
+    {"id":2233,"element":"N","x":33.520500,"y":13.218000,"z":4.637110}
+  ],
+  "reactant_bonds": [
+    {"a":2132,"b":2202,"order":1,"length":1.074355},
+    {"a":2190,"b":2202,"order":1,"length":1.180956},
+    {"a":2202,"b":2212,"order":1,"length":1.083643},
+    {"a":2202,"b":2228,"order":1,"length":1.134344},
+    {"a":1968,"b":2036,"order":2,"length":1.318222},
+    {"a":1968,"b":2140,"order":1,"length":1.300788},
+    {"a":1968,"b":2233,"order":1,"length":1.497878},
+    {"a":1987,"b":2168,"order":2,"length":1.302649},
+    {"a":2168,"b":2219,"order":1,"length":1.292168},
+    {"a":2168,"b":2233,"order":1,"length":1.503011}
+  ],
+  "product_bonds": [
+    {"a":2132,"b":2202,"order":1,"length":1.051568},
+    {"a":2202,"b":2212,"order":1,"length":1.080541},
+    {"a":2202,"b":2228,"order":1,"length":1.026401},
+    {"a":1968,"b":2036,"order":1,"length":1.826227},
+    {"a":1968,"b":2140,"order":2,"length":1.290743},
+    {"a":1968,"b":2233,"order":1,"length":1.292965},
+    {"a":1987,"b":2168,"order":2,"length":1.292324},
+    {"a":2036,"b":2190,"order":1,"length":0.983421},
+    {"a":2168,"b":2219,"order":1,"length":1.282252},
+    {"a":2168,"b":2233,"order":1,"length":1.546913}
+  ],
+  "broken_bond_ids": [
+    "2190-2202"
+  ],
+  "created_bond_ids": [
+    "2036-2190"
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 12,
+    "product_atom_count": 12,
+    "reactant_bond_count": 10,
+    "product_bond_count": 10,
+    "broken_bond_count": 1,
+    "created_bond_count": 1,
+    "allowed_arity": true,
+    "signature_instance_index": 1
+  }
+}

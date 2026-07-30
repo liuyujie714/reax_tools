@@ -1,0 +1,4423 @@
+{
+  "schema_version": "1.0",
+  "identity_model": "formula-hash-v1",
+  "molecules": [
+    {
+      "id": "27791148",
+      "formula": "H6N5O7",
+      "atom_counts": {"H": 6, "N": 5, "O": 7},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 643, "element": "O"},
+          {"id": 644, "element": "O"},
+          {"id": 646, "element": "N"},
+          {"id": 1297, "element": "N"},
+          {"id": 1298, "element": "H"},
+          {"id": 1514, "element": "O"},
+          {"id": 1516, "element": "H"},
+          {"id": 1526, "element": "N"},
+          {"id": 1527, "element": "H"},
+          {"id": 1529, "element": "H"},
+          {"id": 1580, "element": "H"},
+          {"id": 1581, "element": "H"},
+          {"id": 1863, "element": "O"},
+          {"id": 1979, "element": "N"},
+          {"id": 2170, "element": "O"},
+          {"id": 2236, "element": "O"},
+          {"id": 2307, "element": "N"},
+          {"id": 2457, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 643, "b": 646, "order": 1},
+          {"a": 643, "b": 1979, "order": 1},
+          {"a": 644, "b": 646, "order": 2},
+          {"a": 646, "b": 1863, "order": 1},
+          {"a": 1297, "b": 1514, "order": 1},
+          {"a": 1297, "b": 1580, "order": 1},
+          {"a": 1297, "b": 1581, "order": 1},
+          {"a": 1297, "b": 2170, "order": 1},
+          {"a": 1298, "b": 2170, "order": 1},
+          {"a": 1514, "b": 1979, "order": 1},
+          {"a": 1516, "b": 1526, "order": 1},
+          {"a": 1526, "b": 1527, "order": 1},
+          {"a": 1526, "b": 1529, "order": 1},
+          {"a": 1526, "b": 1863, "order": 1},
+          {"a": 1979, "b": 2236, "order": 1},
+          {"a": 2236, "b": 2307, "order": 1},
+          {"a": 2307, "b": 2457, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "71208732",
+      "formula": "HN3O",
+      "atom_counts": {"H": 1, "N": 3, "O": 1},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 4,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 494, "element": "N"},
+          {"id": 498, "element": "N"},
+          {"id": 500, "element": "H"},
+          {"id": 530, "element": "O"},
+          {"id": 532, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 494, "b": 530, "order": 1},
+          {"a": 494, "b": 532, "order": 3},
+          {"a": 498, "b": 500, "order": 1},
+          {"a": 498, "b": 530, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "92031212",
+      "formula": "H2NO3",
+      "atom_counts": {"H": 2, "N": 1, "O": 3},
+      "stats": {
+        "total_connections": 10,
+        "precursors": 6,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1033, "element": "O"},
+          {"id": 1034, "element": "O"},
+          {"id": 1035, "element": "N"},
+          {"id": 1271, "element": "O"},
+          {"id": 1839, "element": "H"},
+          {"id": 1870, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1033, "b": 1035, "order": 2},
+          {"a": 1034, "b": 1035, "order": 1},
+          {"a": 1034, "b": 1839, "order": 1},
+          {"a": 1035, "b": 1271, "order": 1},
+          {"a": 1271, "b": 1870, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "117644816",
+      "formula": "H2N4O5",
+      "atom_counts": {"H": 2, "N": 4, "O": 5},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 7,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 72, "element": "O"},
+          {"id": 92, "element": "N"},
+          {"id": 709, "element": "N"},
+          {"id": 713, "element": "O"},
+          {"id": 738, "element": "O"},
+          {"id": 739, "element": "N"},
+          {"id": 833, "element": "O"},
+          {"id": 986, "element": "O"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1081, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 72, "b": 92, "order": 1},
+          {"a": 92, "b": 709, "order": 1},
+          {"a": 92, "b": 833, "order": 2},
+          {"a": 709, "b": 739, "order": 1},
+          {"a": 709, "b": 986, "order": 1},
+          {"a": 713, "b": 739, "order": 2},
+          {"a": 738, "b": 739, "order": 1},
+          {"a": 986, "b": 1078, "order": 1},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1078, "b": 1081, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "119914029",
+      "formula": "HN",
+      "atom_counts": {"H": 1, "N": 1},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 2,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1328, "element": "N"},
+          {"id": 1330, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1328, "b": 1330, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "192909109",
+      "formula": "H2N6O5",
+      "atom_counts": {"H": 2, "N": 6, "O": 5},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 3,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 328, "element": "O"},
+          {"id": 347, "element": "N"},
+          {"id": 356, "element": "O"},
+          {"id": 359, "element": "O"},
+          {"id": 380, "element": "O"},
+          {"id": 381, "element": "N"},
+          {"id": 430, "element": "N"},
+          {"id": 503, "element": "N"},
+          {"id": 591, "element": "O"},
+          {"id": 629, "element": "N"},
+          {"id": 662, "element": "H"},
+          {"id": 841, "element": "H"},
+          {"id": 922, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 328, "b": 503, "order": 1},
+          {"a": 347, "b": 381, "order": 1},
+          {"a": 347, "b": 503, "order": 2},
+          {"a": 356, "b": 381, "order": 1},
+          {"a": 356, "b": 629, "order": 1},
+          {"a": 359, "b": 503, "order": 1},
+          {"a": 380, "b": 381, "order": 2},
+          {"a": 430, "b": 591, "order": 1},
+          {"a": 430, "b": 629, "order": 3},
+          {"a": 591, "b": 922, "order": 1},
+          {"a": 662, "b": 922, "order": 1},
+          {"a": 841, "b": 922, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "196829963",
+      "formula": "H2N3O2",
+      "atom_counts": {"H": 2, "N": 3, "O": 2},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 2,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1900, "element": "O"},
+          {"id": 1901, "element": "O"},
+          {"id": 1902, "element": "N"},
+          {"id": 1903, "element": "N"},
+          {"id": 2073, "element": "N"},
+          {"id": 2186, "element": "H"},
+          {"id": 2249, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1900, "b": 1903, "order": 1},
+          {"a": 1901, "b": 1903, "order": 2},
+          {"a": 1902, "b": 1903, "order": 1},
+          {"a": 1902, "b": 2073, "order": 2},
+          {"a": 2073, "b": 2186, "order": 1},
+          {"a": 2073, "b": 2249, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "248649749",
+      "formula": "HN3O4",
+      "atom_counts": {"H": 1, "N": 3, "O": 4},
+      "stats": {
+        "total_connections": 45,
+        "precursors": 16,
+        "derivatives": 29
+      },
+      "example": {
+        "atoms": [
+          {"id": 3, "element": "O"},
+          {"id": 4, "element": "O"},
+          {"id": 5, "element": "N"},
+          {"id": 6, "element": "N"},
+          {"id": 163, "element": "H"},
+          {"id": 287, "element": "O"},
+          {"id": 288, "element": "N"},
+          {"id": 289, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 3, "b": 6, "order": 1},
+          {"a": 4, "b": 6, "order": 2},
+          {"a": 5, "b": 6, "order": 1},
+          {"a": 5, "b": 288, "order": 1},
+          {"a": 163, "b": 287, "order": 1},
+          {"a": 287, "b": 288, "order": 1},
+          {"a": 288, "b": 289, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "264604118",
+      "formula": "H2N5O9",
+      "atom_counts": {"H": 2, "N": 5, "O": 9},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 267, "element": "H"},
+          {"id": 1027, "element": "O"},
+          {"id": 1037, "element": "H"},
+          {"id": 1053, "element": "N"},
+          {"id": 1055, "element": "O"},
+          {"id": 1057, "element": "O"},
+          {"id": 1060, "element": "O"},
+          {"id": 1083, "element": "O"},
+          {"id": 1085, "element": "N"},
+          {"id": 1086, "element": "O"},
+          {"id": 1087, "element": "N"},
+          {"id": 1088, "element": "N"},
+          {"id": 1089, "element": "O"},
+          {"id": 1108, "element": "O"},
+          {"id": 1121, "element": "O"},
+          {"id": 1123, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 267, "b": 1108, "order": 1},
+          {"a": 1027, "b": 1053, "order": 1},
+          {"a": 1027, "b": 1085, "order": 1},
+          {"a": 1037, "b": 1057, "order": 1},
+          {"a": 1053, "b": 1055, "order": 2},
+          {"a": 1053, "b": 1057, "order": 1},
+          {"a": 1060, "b": 1085, "order": 2},
+          {"a": 1083, "b": 1085, "order": 1},
+          {"a": 1083, "b": 1087, "order": 1},
+          {"a": 1086, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1123, "order": 2},
+          {"a": 1088, "b": 1089, "order": 2},
+          {"a": 1108, "b": 1123, "order": 1},
+          {"a": 1121, "b": 1123, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "295395741",
+      "formula": "H2N2O4",
+      "atom_counts": {"H": 2, "N": 2, "O": 4},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 1,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 1433, "element": "O"},
+          {"id": 1435, "element": "N"},
+          {"id": 1922, "element": "O"},
+          {"id": 2392, "element": "H"},
+          {"id": 2433, "element": "H"},
+          {"id": 2498, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 2498, "order": 1},
+          {"a": 897, "b": 1435, "order": 1},
+          {"a": 1433, "b": 1435, "order": 2},
+          {"a": 1435, "b": 1922, "order": 1},
+          {"a": 2392, "b": 2498, "order": 1},
+          {"a": 2433, "b": 2498, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "344282662",
+      "formula": "N6O9",
+      "atom_counts": {"N": 6, "O": 9},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 80, "element": "O"},
+          {"id": 81, "element": "N"},
+          {"id": 82, "element": "O"},
+          {"id": 83, "element": "O"},
+          {"id": 109, "element": "N"},
+          {"id": 110, "element": "N"},
+          {"id": 115, "element": "O"},
+          {"id": 1949, "element": "O"},
+          {"id": 1986, "element": "N"},
+          {"id": 2038, "element": "N"},
+          {"id": 2056, "element": "O"},
+          {"id": 2086, "element": "O"},
+          {"id": 2093, "element": "O"},
+          {"id": 2110, "element": "O"},
+          {"id": 2229, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 80, "b": 81, "order": 1},
+          {"a": 81, "b": 83, "order": 2},
+          {"a": 81, "b": 109, "order": 1},
+          {"a": 82, "b": 110, "order": 1},
+          {"a": 109, "b": 110, "order": 2},
+          {"a": 109, "b": 2093, "order": 1},
+          {"a": 110, "b": 115, "order": 1},
+          {"a": 1949, "b": 2229, "order": 2},
+          {"a": 1986, "b": 2038, "order": 1},
+          {"a": 1986, "b": 2093, "order": 1},
+          {"a": 1986, "b": 2229, "order": 1},
+          {"a": 2038, "b": 2086, "order": 2},
+          {"a": 2038, "b": 2110, "order": 1},
+          {"a": 2056, "b": 2229, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "363556361",
+      "formula": "HO2",
+      "atom_counts": {"H": 1, "O": 2},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 905, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 905, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "365647193",
+      "formula": "H3N4O2",
+      "atom_counts": {"H": 3, "N": 4, "O": 2},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 5,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 2058, "element": "H"},
+          {"id": 2059, "element": "N"},
+          {"id": 2060, "element": "H"},
+          {"id": 2062, "element": "H"},
+          {"id": 2091, "element": "N"},
+          {"id": 2092, "element": "O"},
+          {"id": 2094, "element": "N"},
+          {"id": 2095, "element": "N"},
+          {"id": 2134, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2058, "b": 2059, "order": 1},
+          {"a": 2059, "b": 2060, "order": 1},
+          {"a": 2059, "b": 2062, "order": 1},
+          {"a": 2059, "b": 2092, "order": 1},
+          {"a": 2091, "b": 2094, "order": 2},
+          {"a": 2091, "b": 2095, "order": 2},
+          {"a": 2092, "b": 2094, "order": 1},
+          {"a": 2095, "b": 2134, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "465789679",
+      "formula": "N12O15",
+      "atom_counts": {"N": 12, "O": 15},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 3,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 2},
+          {"a": 70, "b": 90, "order": 1},
+          {"a": 70, "b": 97, "order": 2},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 1},
+          {"a": 90, "b": 91, "order": 1},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 405, "b": 427, "order": 2},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 1},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 2},
+          {"a": 1944, "b": 2126, "order": 2},
+          {"a": 2106, "b": 2167, "order": 2},
+          {"a": 2126, "b": 2130, "order": 1},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "485753480",
+      "formula": "H3N2O",
+      "atom_counts": {"H": 3, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 4,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 399, "element": "N"},
+          {"id": 552, "element": "H"},
+          {"id": 569, "element": "N"},
+          {"id": 571, "element": "H"},
+          {"id": 581, "element": "H"},
+          {"id": 2219, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 399, "b": 569, "order": 1},
+          {"a": 399, "b": 2219, "order": 2},
+          {"a": 552, "b": 569, "order": 1},
+          {"a": 569, "b": 571, "order": 1},
+          {"a": 569, "b": 581, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "508424263",
+      "formula": "H2NO2",
+      "atom_counts": {"H": 2, "N": 1, "O": 2},
+      "stats": {
+        "total_connections": 17,
+        "precursors": 9,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 852, "element": "O"},
+          {"id": 900, "element": "N"},
+          {"id": 902, "element": "O"},
+          {"id": 1329, "element": "H"},
+          {"id": 1569, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 852, "b": 900, "order": 1},
+          {"a": 852, "b": 1329, "order": 1},
+          {"a": 900, "b": 902, "order": 1},
+          {"a": 902, "b": 1569, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "513914432",
+      "formula": "N6O8",
+      "atom_counts": {"N": 6, "O": 8},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 2,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 390, "element": "O"},
+          {"id": 391, "element": "O"},
+          {"id": 392, "element": "N"},
+          {"id": 410, "element": "N"},
+          {"id": 411, "element": "O"},
+          {"id": 412, "element": "O"},
+          {"id": 413, "element": "N"},
+          {"id": 434, "element": "O"},
+          {"id": 435, "element": "O"},
+          {"id": 436, "element": "N"},
+          {"id": 437, "element": "N"},
+          {"id": 469, "element": "O"},
+          {"id": 470, "element": "O"},
+          {"id": 471, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 390, "b": 410, "order": 1},
+          {"a": 391, "b": 413, "order": 2},
+          {"a": 392, "b": 410, "order": 2},
+          {"a": 392, "b": 413, "order": 1},
+          {"a": 392, "b": 437, "order": 1},
+          {"a": 410, "b": 412, "order": 1},
+          {"a": 411, "b": 413, "order": 1},
+          {"a": 434, "b": 436, "order": 1},
+          {"a": 435, "b": 436, "order": 2},
+          {"a": 436, "b": 437, "order": 1},
+          {"a": 437, "b": 471, "order": 2},
+          {"a": 469, "b": 471, "order": 1},
+          {"a": 470, "b": 471, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "593008688",
+      "formula": "HN5O8",
+      "atom_counts": {"H": 1, "N": 5, "O": 8},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 4,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 1027, "element": "O"},
+          {"id": 1053, "element": "N"},
+          {"id": 1055, "element": "O"},
+          {"id": 1060, "element": "O"},
+          {"id": 1083, "element": "O"},
+          {"id": 1085, "element": "N"},
+          {"id": 1086, "element": "O"},
+          {"id": 1087, "element": "N"},
+          {"id": 1088, "element": "N"},
+          {"id": 1089, "element": "O"},
+          {"id": 1108, "element": "O"},
+          {"id": 1121, "element": "O"},
+          {"id": 1123, "element": "N"},
+          {"id": 1127, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1027, "b": 1053, "order": 1},
+          {"a": 1027, "b": 1085, "order": 1},
+          {"a": 1053, "b": 1055, "order": 2},
+          {"a": 1060, "b": 1085, "order": 1},
+          {"a": 1060, "b": 1127, "order": 1},
+          {"a": 1083, "b": 1085, "order": 1},
+          {"a": 1083, "b": 1087, "order": 1},
+          {"a": 1086, "b": 1088, "order": 2},
+          {"a": 1087, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1123, "order": 1},
+          {"a": 1088, "b": 1089, "order": 1},
+          {"a": 1108, "b": 1123, "order": 1},
+          {"a": 1121, "b": 1123, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "608596597",
+      "formula": "H2N4O6",
+      "atom_counts": {"H": 2, "N": 4, "O": 6},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 4,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 2010, "element": "O"},
+          {"id": 2119, "element": "O"},
+          {"id": 2123, "element": "N"},
+          {"id": 2124, "element": "O"},
+          {"id": 2145, "element": "N"},
+          {"id": 2146, "element": "H"},
+          {"id": 2149, "element": "O"},
+          {"id": 2159, "element": "H"},
+          {"id": 2161, "element": "O"},
+          {"id": 2162, "element": "N"},
+          {"id": 2163, "element": "N"},
+          {"id": 2193, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2010, "b": 2145, "order": 1},
+          {"a": 2010, "b": 2193, "order": 1},
+          {"a": 2119, "b": 2123, "order": 1},
+          {"a": 2123, "b": 2124, "order": 2},
+          {"a": 2123, "b": 2163, "order": 1},
+          {"a": 2145, "b": 2146, "order": 1},
+          {"a": 2145, "b": 2159, "order": 1},
+          {"a": 2149, "b": 2162, "order": 2},
+          {"a": 2161, "b": 2162, "order": 1},
+          {"a": 2162, "b": 2163, "order": 1},
+          {"a": 2163, "b": 2193, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "725943052",
+      "formula": "HN3O2",
+      "atom_counts": {"H": 1, "N": 3, "O": 2},
+      "stats": {
+        "total_connections": 14,
+        "precursors": 7,
+        "derivatives": 7
+      },
+      "example": {
+        "atoms": [
+          {"id": 2091, "element": "N"},
+          {"id": 2092, "element": "O"},
+          {"id": 2094, "element": "N"},
+          {"id": 2095, "element": "N"},
+          {"id": 2115, "element": "H"},
+          {"id": 2134, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2091, "b": 2094, "order": 2},
+          {"a": 2091, "b": 2095, "order": 2},
+          {"a": 2092, "b": 2094, "order": 1},
+          {"a": 2092, "b": 2115, "order": 1},
+          {"a": 2095, "b": 2134, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "744595106",
+      "formula": "H3N2O2",
+      "atom_counts": {"H": 3, "N": 2, "O": 2},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 4,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 31, "element": "H"},
+          {"id": 32, "element": "N"},
+          {"id": 33, "element": "H"},
+          {"id": 34, "element": "H"},
+          {"id": 47, "element": "O"},
+          {"id": 93, "element": "N"},
+          {"id": 184, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 31, "b": 32, "order": 1},
+          {"a": 32, "b": 33, "order": 1},
+          {"a": 32, "b": 34, "order": 1},
+          {"a": 32, "b": 184, "order": 1},
+          {"a": 47, "b": 93, "order": 2},
+          {"a": 93, "b": 184, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "774006495",
+      "formula": "O",
+      "atom_counts": {"O": 1},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 3,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 2180, "element": "O"}
+        ],
+        "bonds": [
+        ]
+      }
+    },
+    {
+      "id": "798200288",
+      "formula": "NO2",
+      "atom_counts": {"N": 1, "O": 2},
+      "stats": {
+        "total_connections": 36,
+        "precursors": 20,
+        "derivatives": 16
+      },
+      "example": {
+        "atoms": [
+          {"id": 48, "element": "O"},
+          {"id": 560, "element": "N"},
+          {"id": 561, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 48, "b": 560, "order": 2},
+          {"a": 560, "b": 561, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "810543774",
+      "formula": "N2O4",
+      "atom_counts": {"N": 2, "O": 4},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 1351, "element": "O"},
+          {"id": 1371, "element": "N"},
+          {"id": 1373, "element": "O"},
+          {"id": 1657, "element": "O"},
+          {"id": 1663, "element": "O"},
+          {"id": 1665, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1351, "b": 1371, "order": 1},
+          {"a": 1351, "b": 1665, "order": 1},
+          {"a": 1371, "b": 1373, "order": 2},
+          {"a": 1657, "b": 1665, "order": 2},
+          {"a": 1663, "b": 1665, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "835943829",
+      "formula": "H5N13O15",
+      "atom_counts": {"H": 5, "N": 13, "O": 15},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 4,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 849, "element": "N"},
+          {"id": 861, "element": "H"},
+          {"id": 863, "element": "H"},
+          {"id": 895, "element": "H"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2166, "element": "H"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"},
+          {"id": 2475, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 2},
+          {"a": 70, "b": 90, "order": 1},
+          {"a": 70, "b": 97, "order": 1},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 2},
+          {"a": 90, "b": 91, "order": 1},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 1},
+          {"a": 152, "b": 2475, "order": 1},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 180, "b": 849, "order": 1},
+          {"a": 405, "b": 427, "order": 1},
+          {"a": 405, "b": 2166, "order": 1},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 1},
+          {"a": 426, "b": 429, "order": 2},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 1},
+          {"a": 849, "b": 861, "order": 1},
+          {"a": 849, "b": 863, "order": 1},
+          {"a": 849, "b": 895, "order": 1},
+          {"a": 1944, "b": 2126, "order": 2},
+          {"a": 2106, "b": 2167, "order": 2},
+          {"a": 2126, "b": 2130, "order": 1},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "861415502",
+      "formula": "H4N13O15",
+      "atom_counts": {"H": 4, "N": 13, "O": 15},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 4,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 849, "element": "N"},
+          {"id": 861, "element": "H"},
+          {"id": 863, "element": "H"},
+          {"id": 895, "element": "H"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2166, "element": "H"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 1},
+          {"a": 70, "b": 90, "order": 2},
+          {"a": 70, "b": 97, "order": 1},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 2},
+          {"a": 90, "b": 91, "order": 1},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 180, "b": 849, "order": 1},
+          {"a": 405, "b": 427, "order": 1},
+          {"a": 405, "b": 2166, "order": 1},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 1},
+          {"a": 426, "b": 429, "order": 2},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 1},
+          {"a": 849, "b": 861, "order": 1},
+          {"a": 849, "b": 863, "order": 1},
+          {"a": 849, "b": 895, "order": 1},
+          {"a": 1944, "b": 2126, "order": 1},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 1},
+          {"a": 2126, "b": 2203, "order": 2},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "861652419",
+      "formula": "H3N4O6",
+      "atom_counts": {"H": 3, "N": 4, "O": 6},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 6,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 2010, "element": "O"},
+          {"id": 2119, "element": "O"},
+          {"id": 2123, "element": "N"},
+          {"id": 2124, "element": "O"},
+          {"id": 2145, "element": "N"},
+          {"id": 2146, "element": "H"},
+          {"id": 2149, "element": "O"},
+          {"id": 2159, "element": "H"},
+          {"id": 2161, "element": "O"},
+          {"id": 2162, "element": "N"},
+          {"id": 2163, "element": "N"},
+          {"id": 2191, "element": "H"},
+          {"id": 2193, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2010, "b": 2145, "order": 1},
+          {"a": 2010, "b": 2193, "order": 1},
+          {"a": 2119, "b": 2123, "order": 2},
+          {"a": 2123, "b": 2124, "order": 1},
+          {"a": 2123, "b": 2163, "order": 1},
+          {"a": 2145, "b": 2146, "order": 1},
+          {"a": 2145, "b": 2159, "order": 1},
+          {"a": 2145, "b": 2191, "order": 1},
+          {"a": 2149, "b": 2162, "order": 2},
+          {"a": 2161, "b": 2162, "order": 1},
+          {"a": 2162, "b": 2163, "order": 1},
+          {"a": 2163, "b": 2193, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "887460911",
+      "formula": "H2N5O8",
+      "atom_counts": {"H": 2, "N": 5, "O": 8},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 2,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 267, "element": "H"},
+          {"id": 1027, "element": "O"},
+          {"id": 1053, "element": "N"},
+          {"id": 1055, "element": "O"},
+          {"id": 1060, "element": "O"},
+          {"id": 1083, "element": "O"},
+          {"id": 1085, "element": "N"},
+          {"id": 1086, "element": "O"},
+          {"id": 1087, "element": "N"},
+          {"id": 1088, "element": "N"},
+          {"id": 1089, "element": "O"},
+          {"id": 1108, "element": "O"},
+          {"id": 1121, "element": "O"},
+          {"id": 1123, "element": "N"},
+          {"id": 1127, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 267, "b": 1108, "order": 1},
+          {"a": 1027, "b": 1053, "order": 1},
+          {"a": 1027, "b": 1085, "order": 1},
+          {"a": 1053, "b": 1055, "order": 2},
+          {"a": 1060, "b": 1085, "order": 1},
+          {"a": 1060, "b": 1127, "order": 1},
+          {"a": 1083, "b": 1085, "order": 1},
+          {"a": 1083, "b": 1087, "order": 1},
+          {"a": 1086, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1088, "order": 2},
+          {"a": 1087, "b": 1123, "order": 1},
+          {"a": 1088, "b": 1089, "order": 1},
+          {"a": 1108, "b": 1123, "order": 1},
+          {"a": 1121, "b": 1123, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "902582191",
+      "formula": "HN2O3",
+      "atom_counts": {"H": 1, "N": 2, "O": 3},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 6,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1497, "element": "O"},
+          {"id": 1498, "element": "O"},
+          {"id": 1509, "element": "O"},
+          {"id": 1510, "element": "N"},
+          {"id": 1550, "element": "N"},
+          {"id": 2342, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1497, "b": 1550, "order": 2},
+          {"a": 1498, "b": 1510, "order": 1},
+          {"a": 1498, "b": 2342, "order": 1},
+          {"a": 1509, "b": 1510, "order": 2},
+          {"a": 1510, "b": 1550, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "909406738",
+      "formula": "HNO",
+      "atom_counts": {"H": 1, "N": 1, "O": 1},
+      "stats": {
+        "total_connections": 22,
+        "precursors": 14,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 71, "element": "H"},
+          {"id": 142, "element": "N"},
+          {"id": 1996, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 71, "b": 142, "order": 1},
+          {"a": 142, "b": 1996, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1002262295",
+      "formula": "H2N5O5",
+      "atom_counts": {"H": 2, "N": 5, "O": 5},
+      "stats": {
+        "total_connections": 13,
+        "precursors": 7,
+        "derivatives": 6
+      },
+      "example": {
+        "atoms": [
+          {"id": 1365, "element": "O"},
+          {"id": 1366, "element": "N"},
+          {"id": 1369, "element": "O"},
+          {"id": 1386, "element": "N"},
+          {"id": 1387, "element": "O"},
+          {"id": 1389, "element": "N"},
+          {"id": 1392, "element": "O"},
+          {"id": 1393, "element": "N"},
+          {"id": 1480, "element": "O"},
+          {"id": 1483, "element": "N"},
+          {"id": 1567, "element": "H"},
+          {"id": 1592, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1365, "b": 1386, "order": 1},
+          {"a": 1365, "b": 1592, "order": 1},
+          {"a": 1366, "b": 1386, "order": 2},
+          {"a": 1366, "b": 1393, "order": 1},
+          {"a": 1366, "b": 1480, "order": 1},
+          {"a": 1369, "b": 1393, "order": 2},
+          {"a": 1386, "b": 1387, "order": 1},
+          {"a": 1387, "b": 1567, "order": 1},
+          {"a": 1389, "b": 1480, "order": 1},
+          {"a": 1389, "b": 1483, "order": 3},
+          {"a": 1392, "b": 1393, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1038396513",
+      "formula": "H2N3O4",
+      "atom_counts": {"H": 2, "N": 3, "O": 4},
+      "stats": {
+        "total_connections": 35,
+        "precursors": 12,
+        "derivatives": 23
+      },
+      "example": {
+        "atoms": [
+          {"id": 20, "element": "H"},
+          {"id": 371, "element": "O"},
+          {"id": 372, "element": "N"},
+          {"id": 397, "element": "O"},
+          {"id": 398, "element": "N"},
+          {"id": 399, "element": "N"},
+          {"id": 542, "element": "O"},
+          {"id": 577, "element": "O"},
+          {"id": 2338, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 20, "b": 371, "order": 1},
+          {"a": 371, "b": 399, "order": 1},
+          {"a": 372, "b": 398, "order": 1},
+          {"a": 372, "b": 542, "order": 1},
+          {"a": 372, "b": 577, "order": 2},
+          {"a": 397, "b": 399, "order": 1},
+          {"a": 397, "b": 2338, "order": 1},
+          {"a": 398, "b": 399, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1073851572",
+      "formula": "H3N4O3",
+      "atom_counts": {"H": 3, "N": 4, "O": 3},
+      "stats": {
+        "total_connections": 18,
+        "precursors": 11,
+        "derivatives": 7
+      },
+      "example": {
+        "atoms": [
+          {"id": 118, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 170, "element": "H"},
+          {"id": 180, "element": "O"},
+          {"id": 283, "element": "H"},
+          {"id": 290, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 118, "b": 152, "order": 1},
+          {"a": 118, "b": 170, "order": 1},
+          {"a": 118, "b": 283, "order": 1},
+          {"a": 118, "b": 290, "order": 1},
+          {"a": 151, "b": 154, "order": 3},
+          {"a": 151, "b": 155, "order": 1},
+          {"a": 152, "b": 154, "order": 1},
+          {"a": 153, "b": 155, "order": 2},
+          {"a": 155, "b": 180, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1151240098",
+      "formula": "H3N6O4",
+      "atom_counts": {"H": 3, "N": 6, "O": 4},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 2,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1623, "element": "H"},
+          {"id": 1727, "element": "H"},
+          {"id": 1730, "element": "O"},
+          {"id": 1731, "element": "O"},
+          {"id": 1732, "element": "N"},
+          {"id": 1733, "element": "N"},
+          {"id": 1765, "element": "O"},
+          {"id": 1766, "element": "O"},
+          {"id": 1767, "element": "N"},
+          {"id": 1876, "element": "N"},
+          {"id": 1904, "element": "H"},
+          {"id": 2294, "element": "N"},
+          {"id": 2327, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1623, "b": 1876, "order": 1},
+          {"a": 1727, "b": 1876, "order": 1},
+          {"a": 1730, "b": 1732, "order": 2},
+          {"a": 1731, "b": 1732, "order": 1},
+          {"a": 1732, "b": 1733, "order": 1},
+          {"a": 1733, "b": 1767, "order": 1},
+          {"a": 1733, "b": 2294, "order": 2},
+          {"a": 1765, "b": 1767, "order": 2},
+          {"a": 1766, "b": 1767, "order": 1},
+          {"a": 1876, "b": 1904, "order": 1},
+          {"a": 1876, "b": 2327, "order": 1},
+          {"a": 2294, "b": 2327, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1169087527",
+      "formula": "H2N",
+      "atom_counts": {"H": 2, "N": 1},
+      "stats": {
+        "total_connections": 42,
+        "precursors": 22,
+        "derivatives": 20
+      },
+      "example": {
+        "atoms": [
+          {"id": 130, "element": "H"},
+          {"id": 131, "element": "N"},
+          {"id": 132, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 130, "b": 131, "order": 1},
+          {"a": 131, "b": 132, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1179232853",
+      "formula": "H4N4O4",
+      "atom_counts": {"H": 4, "N": 4, "O": 4},
+      "stats": {
+        "total_connections": 21,
+        "precursors": 11,
+        "derivatives": 10
+      },
+      "example": {
+        "atoms": [
+          {"id": 46, "element": "N"},
+          {"id": 183, "element": "O"},
+          {"id": 185, "element": "N"},
+          {"id": 186, "element": "H"},
+          {"id": 188, "element": "H"},
+          {"id": 189, "element": "O"},
+          {"id": 190, "element": "O"},
+          {"id": 207, "element": "H"},
+          {"id": 208, "element": "N"},
+          {"id": 212, "element": "H"},
+          {"id": 735, "element": "N"},
+          {"id": 761, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 46, "b": 189, "order": 2},
+          {"a": 46, "b": 190, "order": 1},
+          {"a": 46, "b": 735, "order": 1},
+          {"a": 183, "b": 185, "order": 1},
+          {"a": 183, "b": 208, "order": 1},
+          {"a": 185, "b": 188, "order": 1},
+          {"a": 185, "b": 207, "order": 1},
+          {"a": 185, "b": 212, "order": 1},
+          {"a": 186, "b": 761, "order": 1},
+          {"a": 208, "b": 735, "order": 2},
+          {"a": 208, "b": 761, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1179937242",
+      "formula": "H3N4O4",
+      "atom_counts": {"H": 3, "N": 4, "O": 4},
+      "stats": {
+        "total_connections": 21,
+        "precursors": 10,
+        "derivatives": 11
+      },
+      "example": {
+        "atoms": [
+          {"id": 26, "element": "O"},
+          {"id": 27, "element": "O"},
+          {"id": 28, "element": "N"},
+          {"id": 29, "element": "N"},
+          {"id": 53, "element": "H"},
+          {"id": 59, "element": "O"},
+          {"id": 61, "element": "N"},
+          {"id": 270, "element": "N"},
+          {"id": 273, "element": "H"},
+          {"id": 274, "element": "H"},
+          {"id": 293, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 26, "b": 29, "order": 1},
+          {"a": 27, "b": 29, "order": 2},
+          {"a": 28, "b": 29, "order": 1},
+          {"a": 28, "b": 61, "order": 3},
+          {"a": 53, "b": 293, "order": 1},
+          {"a": 59, "b": 61, "order": 1},
+          {"a": 59, "b": 270, "order": 1},
+          {"a": 270, "b": 273, "order": 1},
+          {"a": 270, "b": 274, "order": 1},
+          {"a": 270, "b": 293, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1193238455",
+      "formula": "H3N7O8",
+      "atom_counts": {"H": 3, "N": 7, "O": 8},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 1313, "element": "O"},
+          {"id": 1523, "element": "O"},
+          {"id": 1596, "element": "N"},
+          {"id": 1957, "element": "N"},
+          {"id": 1993, "element": "O"},
+          {"id": 1995, "element": "N"},
+          {"id": 2078, "element": "H"},
+          {"id": 2079, "element": "N"},
+          {"id": 2080, "element": "H"},
+          {"id": 2147, "element": "O"},
+          {"id": 2177, "element": "H"},
+          {"id": 2270, "element": "N"},
+          {"id": 2416, "element": "O"},
+          {"id": 2440, "element": "O"},
+          {"id": 2443, "element": "O"},
+          {"id": 2454, "element": "N"},
+          {"id": 2491, "element": "O"},
+          {"id": 2527, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1313, "b": 1596, "order": 1},
+          {"a": 1313, "b": 2079, "order": 1},
+          {"a": 1523, "b": 1596, "order": 1},
+          {"a": 1523, "b": 2454, "order": 1},
+          {"a": 1596, "b": 1957, "order": 2},
+          {"a": 1957, "b": 1995, "order": 1},
+          {"a": 1957, "b": 2147, "order": 1},
+          {"a": 1993, "b": 1995, "order": 2},
+          {"a": 2078, "b": 2079, "order": 1},
+          {"a": 2079, "b": 2080, "order": 1},
+          {"a": 2147, "b": 2177, "order": 1},
+          {"a": 2270, "b": 2416, "order": 2},
+          {"a": 2270, "b": 2443, "order": 1},
+          {"a": 2270, "b": 2454, "order": 1},
+          {"a": 2440, "b": 2527, "order": 2},
+          {"a": 2454, "b": 2527, "order": 1},
+          {"a": 2491, "b": 2527, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1205430882",
+      "formula": "H3N2O4",
+      "atom_counts": {"H": 3, "N": 2, "O": 4},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 5,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 1433, "element": "O"},
+          {"id": 1435, "element": "N"},
+          {"id": 1922, "element": "O"},
+          {"id": 2392, "element": "H"},
+          {"id": 2425, "element": "H"},
+          {"id": 2433, "element": "H"},
+          {"id": 2498, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 2498, "order": 1},
+          {"a": 897, "b": 1435, "order": 1},
+          {"a": 1433, "b": 1435, "order": 2},
+          {"a": 1435, "b": 1922, "order": 1},
+          {"a": 2392, "b": 2498, "order": 1},
+          {"a": 2425, "b": 2498, "order": 1},
+          {"a": 2433, "b": 2498, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1234378387",
+      "formula": "N3",
+      "atom_counts": {"N": 3},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 187, "element": "N"},
+          {"id": 209, "element": "N"},
+          {"id": 2247, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 187, "b": 209, "order": 2},
+          {"a": 209, "b": 2247, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1264667115",
+      "formula": "O2",
+      "atom_counts": {"O": 2},
+      "stats": {
+        "total_connections": 2,
+        "precursors": 1,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1321461249",
+      "formula": "H4N7O8",
+      "atom_counts": {"H": 4, "N": 7, "O": 8},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 1313, "element": "O"},
+          {"id": 1523, "element": "O"},
+          {"id": 1596, "element": "N"},
+          {"id": 1957, "element": "N"},
+          {"id": 1993, "element": "O"},
+          {"id": 1995, "element": "N"},
+          {"id": 2078, "element": "H"},
+          {"id": 2079, "element": "N"},
+          {"id": 2080, "element": "H"},
+          {"id": 2082, "element": "H"},
+          {"id": 2147, "element": "O"},
+          {"id": 2177, "element": "H"},
+          {"id": 2270, "element": "N"},
+          {"id": 2416, "element": "O"},
+          {"id": 2440, "element": "O"},
+          {"id": 2443, "element": "O"},
+          {"id": 2454, "element": "N"},
+          {"id": 2491, "element": "O"},
+          {"id": 2527, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1313, "b": 1596, "order": 1},
+          {"a": 1313, "b": 2079, "order": 1},
+          {"a": 1523, "b": 1596, "order": 1},
+          {"a": 1523, "b": 2454, "order": 1},
+          {"a": 1596, "b": 1957, "order": 1},
+          {"a": 1957, "b": 1995, "order": 2},
+          {"a": 1957, "b": 2147, "order": 1},
+          {"a": 1993, "b": 1995, "order": 1},
+          {"a": 1993, "b": 2078, "order": 1},
+          {"a": 2079, "b": 2080, "order": 1},
+          {"a": 2079, "b": 2082, "order": 1},
+          {"a": 2147, "b": 2177, "order": 1},
+          {"a": 2270, "b": 2416, "order": 2},
+          {"a": 2270, "b": 2443, "order": 1},
+          {"a": 2270, "b": 2454, "order": 1},
+          {"a": 2440, "b": 2527, "order": 1},
+          {"a": 2454, "b": 2527, "order": 1},
+          {"a": 2491, "b": 2527, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1324368594",
+      "formula": "N5O2",
+      "atom_counts": {"N": 5, "O": 2},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 3,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 754, "element": "O"},
+          {"id": 772, "element": "N"},
+          {"id": 774, "element": "O"},
+          {"id": 775, "element": "N"},
+          {"id": 776, "element": "N"},
+          {"id": 1353, "element": "N"},
+          {"id": 1374, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 754, "b": 775, "order": 1},
+          {"a": 754, "b": 1374, "order": 1},
+          {"a": 772, "b": 775, "order": 2},
+          {"a": 772, "b": 776, "order": 2},
+          {"a": 774, "b": 776, "order": 2},
+          {"a": 1353, "b": 1374, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "1327297875",
+      "formula": "H7N14O15",
+      "atom_counts": {"H": 7, "N": 14, "O": 15},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 4,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 336, "element": "H"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 552, "element": "H"},
+          {"id": 562, "element": "O"},
+          {"id": 849, "element": "N"},
+          {"id": 861, "element": "H"},
+          {"id": 863, "element": "H"},
+          {"id": 895, "element": "H"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2167, "element": "N"},
+          {"id": 2201, "element": "H"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"},
+          {"id": 2475, "element": "H"},
+          {"id": 2476, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 1},
+          {"a": 70, "b": 90, "order": 2},
+          {"a": 70, "b": 97, "order": 1},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 2},
+          {"a": 90, "b": 91, "order": 1},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 1},
+          {"a": 152, "b": 2476, "order": 1},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 180, "b": 849, "order": 1},
+          {"a": 336, "b": 2476, "order": 1},
+          {"a": 405, "b": 427, "order": 1},
+          {"a": 405, "b": 2201, "order": 1},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 2},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 2},
+          {"a": 552, "b": 1944, "order": 1},
+          {"a": 849, "b": 861, "order": 1},
+          {"a": 849, "b": 863, "order": 1},
+          {"a": 849, "b": 895, "order": 1},
+          {"a": 1944, "b": 2126, "order": 1},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 2},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 2},
+          {"a": 2475, "b": 2476, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1332768717",
+      "formula": "H4N",
+      "atom_counts": {"H": 4, "N": 1},
+      "stats": {
+        "total_connections": 34,
+        "precursors": 8,
+        "derivatives": 26
+      },
+      "example": {
+        "atoms": [
+          {"id": 10, "element": "H"},
+          {"id": 25, "element": "H"},
+          {"id": 146, "element": "N"},
+          {"id": 182, "element": "H"},
+          {"id": 195, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 10, "b": 146, "order": 1},
+          {"a": 25, "b": 146, "order": 1},
+          {"a": 146, "b": 182, "order": 1},
+          {"a": 146, "b": 195, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1363259389",
+      "formula": "N5O5",
+      "atom_counts": {"N": 5, "O": 5},
+      "stats": {
+        "total_connections": 18,
+        "precursors": 11,
+        "derivatives": 7
+      },
+      "example": {
+        "atoms": [
+          {"id": 43, "element": "O"},
+          {"id": 135, "element": "N"},
+          {"id": 136, "element": "O"},
+          {"id": 138, "element": "N"},
+          {"id": 144, "element": "O"},
+          {"id": 281, "element": "N"},
+          {"id": 2064, "element": "O"},
+          {"id": 2075, "element": "N"},
+          {"id": 2144, "element": "N"},
+          {"id": 2223, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 43, "b": 281, "order": 1},
+          {"a": 135, "b": 138, "order": 3},
+          {"a": 136, "b": 138, "order": 1},
+          {"a": 136, "b": 2075, "order": 1},
+          {"a": 144, "b": 281, "order": 2},
+          {"a": 281, "b": 2075, "order": 1},
+          {"a": 2064, "b": 2144, "order": 2},
+          {"a": 2075, "b": 2144, "order": 1},
+          {"a": 2144, "b": 2223, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1454331877",
+      "formula": "HN12O15",
+      "atom_counts": {"H": 1, "N": 12, "O": 15},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 2,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 552, "element": "H"},
+          {"id": 562, "element": "O"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 1},
+          {"a": 70, "b": 90, "order": 1},
+          {"a": 70, "b": 97, "order": 2},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 1},
+          {"a": 90, "b": 91, "order": 2},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 405, "b": 427, "order": 2},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 1},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 2},
+          {"a": 552, "b": 1944, "order": 1},
+          {"a": 1944, "b": 2126, "order": 1},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 1},
+          {"a": 2126, "b": 2203, "order": 2},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1465457258",
+      "formula": "N2",
+      "atom_counts": {"N": 2},
+      "stats": {
+        "total_connections": 50,
+        "precursors": 29,
+        "derivatives": 21
+      },
+      "example": {
+        "atoms": [
+          {"id": 187, "element": "N"},
+          {"id": 294, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 187, "b": 294, "order": 4}
+        ]
+      }
+    },
+    {
+      "id": "1467532520",
+      "formula": "HN6O7",
+      "atom_counts": {"H": 1, "N": 6, "O": 7},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 55, "element": "O"},
+          {"id": 56, "element": "O"},
+          {"id": 57, "element": "N"},
+          {"id": 75, "element": "N"},
+          {"id": 77, "element": "O"},
+          {"id": 78, "element": "N"},
+          {"id": 172, "element": "O"},
+          {"id": 174, "element": "O"},
+          {"id": 198, "element": "N"},
+          {"id": 201, "element": "O"},
+          {"id": 203, "element": "N"},
+          {"id": 204, "element": "O"},
+          {"id": 205, "element": "N"},
+          {"id": 309, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 55, "b": 75, "order": 1},
+          {"a": 56, "b": 78, "order": 1},
+          {"a": 56, "b": 203, "order": 1},
+          {"a": 57, "b": 75, "order": 2},
+          {"a": 57, "b": 78, "order": 2},
+          {"a": 75, "b": 77, "order": 1},
+          {"a": 172, "b": 205, "order": 2},
+          {"a": 174, "b": 198, "order": 1},
+          {"a": 174, "b": 309, "order": 1},
+          {"a": 198, "b": 201, "order": 2},
+          {"a": 198, "b": 203, "order": 1},
+          {"a": 203, "b": 205, "order": 1},
+          {"a": 204, "b": 205, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1481319989",
+      "formula": "N5O3",
+      "atom_counts": {"N": 5, "O": 3},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 2,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 398, "element": "N"},
+          {"id": 399, "element": "N"},
+          {"id": 2007, "element": "O"},
+          {"id": 2008, "element": "N"},
+          {"id": 2011, "element": "O"},
+          {"id": 2032, "element": "N"},
+          {"id": 2040, "element": "O"},
+          {"id": 2041, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 398, "b": 399, "order": 3},
+          {"a": 399, "b": 2007, "order": 1},
+          {"a": 2007, "b": 2032, "order": 1},
+          {"a": 2008, "b": 2032, "order": 3},
+          {"a": 2008, "b": 2041, "order": 1},
+          {"a": 2011, "b": 2041, "order": 2},
+          {"a": 2040, "b": 2041, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1482086808",
+      "formula": "N3O3",
+      "atom_counts": {"N": 3, "O": 3},
+      "stats": {
+        "total_connections": 41,
+        "precursors": 16,
+        "derivatives": 25
+      },
+      "example": {
+        "atoms": [
+          {"id": 55, "element": "O"},
+          {"id": 56, "element": "O"},
+          {"id": 57, "element": "N"},
+          {"id": 75, "element": "N"},
+          {"id": 77, "element": "O"},
+          {"id": 78, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 55, "b": 75, "order": 1},
+          {"a": 56, "b": 78, "order": 2},
+          {"a": 57, "b": 75, "order": 2},
+          {"a": 57, "b": 78, "order": 2},
+          {"a": 75, "b": 77, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1514961602",
+      "formula": "H3N13O15",
+      "atom_counts": {"H": 3, "N": 13, "O": 15},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 3,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 69, "element": "O"},
+          {"id": 70, "element": "N"},
+          {"id": 73, "element": "O"},
+          {"id": 90, "element": "N"},
+          {"id": 91, "element": "O"},
+          {"id": 96, "element": "O"},
+          {"id": 97, "element": "N"},
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 849, "element": "N"},
+          {"id": 861, "element": "H"},
+          {"id": 863, "element": "H"},
+          {"id": 895, "element": "H"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 69, "b": 90, "order": 1},
+          {"a": 70, "b": 90, "order": 2},
+          {"a": 70, "b": 97, "order": 1},
+          {"a": 70, "b": 433, "order": 1},
+          {"a": 73, "b": 97, "order": 2},
+          {"a": 90, "b": 91, "order": 1},
+          {"a": 96, "b": 97, "order": 1},
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 2},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 1},
+          {"a": 180, "b": 849, "order": 1},
+          {"a": 405, "b": 427, "order": 1},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 2},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 2},
+          {"a": 849, "b": 861, "order": 1},
+          {"a": 849, "b": 863, "order": 1},
+          {"a": 849, "b": 895, "order": 1},
+          {"a": 1944, "b": 2126, "order": 1},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 2},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2237, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1532655608",
+      "formula": "HNO2",
+      "atom_counts": {"H": 1, "N": 1, "O": 2},
+      "stats": {
+        "total_connections": 66,
+        "precursors": 36,
+        "derivatives": 30
+      },
+      "example": {
+        "atoms": [
+          {"id": 47, "element": "O"},
+          {"id": 93, "element": "N"},
+          {"id": 184, "element": "O"},
+          {"id": 261, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 47, "b": 93, "order": 2},
+          {"a": 93, "b": 184, "order": 1},
+          {"a": 184, "b": 261, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1537811975",
+      "formula": "H4NO2",
+      "atom_counts": {"H": 4, "N": 1, "O": 2},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 972, "element": "H"},
+          {"id": 994, "element": "H"},
+          {"id": 996, "element": "O"},
+          {"id": 1041, "element": "H"},
+          {"id": 1061, "element": "O"},
+          {"id": 1122, "element": "H"},
+          {"id": 1232, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 972, "b": 1232, "order": 1},
+          {"a": 994, "b": 996, "order": 1},
+          {"a": 996, "b": 1232, "order": 1},
+          {"a": 1041, "b": 1061, "order": 1},
+          {"a": 1061, "b": 1232, "order": 1},
+          {"a": 1122, "b": 1232, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1544856053",
+      "formula": "N8O8",
+      "atom_counts": {"N": 8, "O": 8},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 3,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1961, "element": "N"},
+          {"id": 1998, "element": "N"},
+          {"id": 2264, "element": "O"},
+          {"id": 2265, "element": "O"},
+          {"id": 2266, "element": "N"},
+          {"id": 2269, "element": "N"},
+          {"id": 2270, "element": "N"},
+          {"id": 2416, "element": "O"},
+          {"id": 2440, "element": "O"},
+          {"id": 2443, "element": "O"},
+          {"id": 2454, "element": "N"},
+          {"id": 2470, "element": "O"},
+          {"id": 2491, "element": "O"},
+          {"id": 2495, "element": "O"},
+          {"id": 2527, "element": "N"},
+          {"id": 2548, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1961, "b": 1998, "order": 2},
+          {"a": 1961, "b": 2454, "order": 2},
+          {"a": 1998, "b": 2265, "order": 1},
+          {"a": 2264, "b": 2266, "order": 2},
+          {"a": 2265, "b": 2266, "order": 1},
+          {"a": 2266, "b": 2269, "order": 1},
+          {"a": 2269, "b": 2548, "order": 1},
+          {"a": 2270, "b": 2416, "order": 1},
+          {"a": 2270, "b": 2443, "order": 2},
+          {"a": 2270, "b": 2454, "order": 1},
+          {"a": 2440, "b": 2527, "order": 1},
+          {"a": 2454, "b": 2527, "order": 1},
+          {"a": 2470, "b": 2548, "order": 2},
+          {"a": 2491, "b": 2527, "order": 2},
+          {"a": 2495, "b": 2548, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1547553508",
+      "formula": "H4NO",
+      "atom_counts": {"H": 4, "N": 1, "O": 1},
+      "stats": {
+        "total_connections": 58,
+        "precursors": 32,
+        "derivatives": 26
+      },
+      "example": {
+        "atoms": [
+          {"id": 325, "element": "H"},
+          {"id": 337, "element": "H"},
+          {"id": 339, "element": "H"},
+          {"id": 343, "element": "N"},
+          {"id": 531, "element": "O"},
+          {"id": 603, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 325, "b": 343, "order": 1},
+          {"a": 337, "b": 531, "order": 1},
+          {"a": 339, "b": 343, "order": 1},
+          {"a": 343, "b": 531, "order": 1},
+          {"a": 343, "b": 603, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1563492703",
+      "formula": "H2N2O",
+      "atom_counts": {"H": 2, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 5,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 595, "element": "O"},
+          {"id": 1627, "element": "N"},
+          {"id": 1628, "element": "H"},
+          {"id": 1688, "element": "N"},
+          {"id": 1875, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 595, "b": 1688, "order": 2},
+          {"a": 1627, "b": 1628, "order": 1},
+          {"a": 1627, "b": 1688, "order": 2},
+          {"a": 1627, "b": 1875, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1580736809",
+      "formula": "H2N4O2",
+      "atom_counts": {"H": 2, "N": 4, "O": 2},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 3,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 2059, "element": "N"},
+          {"id": 2060, "element": "H"},
+          {"id": 2062, "element": "H"},
+          {"id": 2091, "element": "N"},
+          {"id": 2092, "element": "O"},
+          {"id": 2094, "element": "N"},
+          {"id": 2095, "element": "N"},
+          {"id": 2134, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2059, "b": 2060, "order": 1},
+          {"a": 2059, "b": 2062, "order": 1},
+          {"a": 2059, "b": 2092, "order": 1},
+          {"a": 2091, "b": 2094, "order": 2},
+          {"a": 2091, "b": 2095, "order": 2},
+          {"a": 2092, "b": 2094, "order": 1},
+          {"a": 2095, "b": 2134, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1615476185",
+      "formula": "H2N8O11",
+      "atom_counts": {"H": 2, "N": 8, "O": 11},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 5,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 72, "element": "O"},
+          {"id": 92, "element": "N"},
+          {"id": 342, "element": "N"},
+          {"id": 563, "element": "O"},
+          {"id": 709, "element": "N"},
+          {"id": 713, "element": "O"},
+          {"id": 738, "element": "O"},
+          {"id": 739, "element": "N"},
+          {"id": 833, "element": "O"},
+          {"id": 986, "element": "O"},
+          {"id": 1043, "element": "O"},
+          {"id": 1068, "element": "O"},
+          {"id": 1069, "element": "N"},
+          {"id": 1070, "element": "N"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1081, "element": "H"},
+          {"id": 1092, "element": "O"},
+          {"id": 1114, "element": "O"},
+          {"id": 1115, "element": "O"},
+          {"id": 1278, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 72, "b": 92, "order": 1},
+          {"a": 92, "b": 709, "order": 1},
+          {"a": 92, "b": 833, "order": 2},
+          {"a": 342, "b": 563, "order": 1},
+          {"a": 342, "b": 713, "order": 1},
+          {"a": 342, "b": 1115, "order": 2},
+          {"a": 563, "b": 1069, "order": 1},
+          {"a": 709, "b": 739, "order": 1},
+          {"a": 709, "b": 986, "order": 1},
+          {"a": 713, "b": 739, "order": 1},
+          {"a": 738, "b": 739, "order": 2},
+          {"a": 986, "b": 1078, "order": 1},
+          {"a": 1043, "b": 1070, "order": 2},
+          {"a": 1068, "b": 1070, "order": 1},
+          {"a": 1069, "b": 1070, "order": 1},
+          {"a": 1069, "b": 1278, "order": 2},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1078, "b": 1081, "order": 1},
+          {"a": 1092, "b": 1278, "order": 1},
+          {"a": 1114, "b": 1278, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1618406962",
+      "formula": "H4N4O3",
+      "atom_counts": {"H": 4, "N": 4, "O": 3},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 6,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 46, "element": "N"},
+          {"id": 183, "element": "O"},
+          {"id": 185, "element": "N"},
+          {"id": 188, "element": "H"},
+          {"id": 189, "element": "O"},
+          {"id": 190, "element": "O"},
+          {"id": 207, "element": "H"},
+          {"id": 208, "element": "N"},
+          {"id": 212, "element": "H"},
+          {"id": 735, "element": "N"},
+          {"id": 895, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 46, "b": 189, "order": 1},
+          {"a": 46, "b": 190, "order": 2},
+          {"a": 46, "b": 735, "order": 1},
+          {"a": 183, "b": 185, "order": 1},
+          {"a": 183, "b": 208, "order": 1},
+          {"a": 185, "b": 188, "order": 1},
+          {"a": 185, "b": 207, "order": 1},
+          {"a": 185, "b": 212, "order": 1},
+          {"a": 189, "b": 895, "order": 1},
+          {"a": 208, "b": 735, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "1629964450",
+      "formula": "H3N4O5",
+      "atom_counts": {"H": 3, "N": 4, "O": 5},
+      "stats": {
+        "total_connections": 10,
+        "precursors": 5,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 744, "element": "O"},
+          {"id": 1014, "element": "H"},
+          {"id": 1020, "element": "H"},
+          {"id": 1044, "element": "N"},
+          {"id": 1045, "element": "H"},
+          {"id": 1075, "element": "O"},
+          {"id": 1104, "element": "O"},
+          {"id": 1145, "element": "N"},
+          {"id": 1201, "element": "O"},
+          {"id": 1212, "element": "N"},
+          {"id": 1224, "element": "N"},
+          {"id": 1293, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 744, "b": 1044, "order": 1},
+          {"a": 744, "b": 1224, "order": 1},
+          {"a": 1014, "b": 1044, "order": 1},
+          {"a": 1020, "b": 1044, "order": 1},
+          {"a": 1044, "b": 1045, "order": 1},
+          {"a": 1075, "b": 1145, "order": 1},
+          {"a": 1104, "b": 1212, "order": 2},
+          {"a": 1145, "b": 1201, "order": 1},
+          {"a": 1145, "b": 1224, "order": 2},
+          {"a": 1212, "b": 1224, "order": 1},
+          {"a": 1212, "b": 1293, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1639136083",
+      "formula": "HN3O6",
+      "atom_counts": {"H": 1, "N": 3, "O": 6},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 2010, "element": "O"},
+          {"id": 2119, "element": "O"},
+          {"id": 2123, "element": "N"},
+          {"id": 2124, "element": "O"},
+          {"id": 2149, "element": "O"},
+          {"id": 2161, "element": "O"},
+          {"id": 2162, "element": "N"},
+          {"id": 2163, "element": "N"},
+          {"id": 2193, "element": "O"},
+          {"id": 2201, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 2010, "b": 2193, "order": 1},
+          {"a": 2010, "b": 2201, "order": 1},
+          {"a": 2119, "b": 2123, "order": 2},
+          {"a": 2123, "b": 2124, "order": 1},
+          {"a": 2123, "b": 2163, "order": 1},
+          {"a": 2149, "b": 2162, "order": 1},
+          {"a": 2161, "b": 2162, "order": 2},
+          {"a": 2162, "b": 2163, "order": 1},
+          {"a": 2163, "b": 2193, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1640412859",
+      "formula": "N3O",
+      "atom_counts": {"N": 3, "O": 1},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 2565, "element": "N"},
+          {"id": 2566, "element": "N"},
+          {"id": 2567, "element": "O"},
+          {"id": 2569, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 2565, "b": 2566, "order": 2},
+          {"a": 2565, "b": 2569, "order": 2},
+          {"a": 2566, "b": 2567, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1728756500",
+      "formula": "H2O2",
+      "atom_counts": {"H": 2, "O": 2},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 2,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 1288, "element": "H"},
+          {"id": 1574, "element": "O"},
+          {"id": 1693, "element": "O"},
+          {"id": 1728, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1288, "b": 1693, "order": 1},
+          {"a": 1574, "b": 1693, "order": 1},
+          {"a": 1574, "b": 1728, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1931263022",
+      "formula": "HN4O2",
+      "atom_counts": {"H": 1, "N": 4, "O": 2},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 2059, "element": "N"},
+          {"id": 2062, "element": "H"},
+          {"id": 2091, "element": "N"},
+          {"id": 2092, "element": "O"},
+          {"id": 2094, "element": "N"},
+          {"id": 2095, "element": "N"},
+          {"id": 2134, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2059, "b": 2062, "order": 1},
+          {"a": 2059, "b": 2092, "order": 1},
+          {"a": 2091, "b": 2094, "order": 2},
+          {"a": 2091, "b": 2095, "order": 2},
+          {"a": 2092, "b": 2094, "order": 1},
+          {"a": 2095, "b": 2134, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "1951580499",
+      "formula": "H6N2O",
+      "atom_counts": {"H": 6, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 18,
+        "precursors": 9,
+        "derivatives": 9
+      },
+      "example": {
+        "atoms": [
+          {"id": 401, "element": "H"},
+          {"id": 422, "element": "N"},
+          {"id": 423, "element": "H"},
+          {"id": 424, "element": "H"},
+          {"id": 438, "element": "H"},
+          {"id": 439, "element": "N"},
+          {"id": 441, "element": "H"},
+          {"id": 443, "element": "O"},
+          {"id": 547, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 401, "b": 422, "order": 1},
+          {"a": 422, "b": 423, "order": 1},
+          {"a": 422, "b": 424, "order": 1},
+          {"a": 422, "b": 443, "order": 1},
+          {"a": 438, "b": 439, "order": 1},
+          {"a": 439, "b": 441, "order": 1},
+          {"a": 439, "b": 443, "order": 1},
+          {"a": 439, "b": 547, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1974929842",
+      "formula": "H3N3O2",
+      "atom_counts": {"H": 3, "N": 3, "O": 2},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1625, "element": "O"},
+          {"id": 1649, "element": "H"},
+          {"id": 1774, "element": "N"},
+          {"id": 1777, "element": "H"},
+          {"id": 1842, "element": "N"},
+          {"id": 1916, "element": "O"},
+          {"id": 1917, "element": "N"},
+          {"id": 1928, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1625, "b": 1774, "order": 1},
+          {"a": 1625, "b": 1928, "order": 1},
+          {"a": 1649, "b": 1774, "order": 1},
+          {"a": 1774, "b": 1777, "order": 1},
+          {"a": 1774, "b": 1916, "order": 1},
+          {"a": 1842, "b": 1917, "order": 3},
+          {"a": 1916, "b": 1917, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "1999073196",
+      "formula": "HN4O5",
+      "atom_counts": {"H": 1, "N": 4, "O": 5},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 2,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 643, "element": "O"},
+          {"id": 644, "element": "O"},
+          {"id": 645, "element": "N"},
+          {"id": 646, "element": "N"},
+          {"id": 648, "element": "O"},
+          {"id": 830, "element": "N"},
+          {"id": 834, "element": "O"},
+          {"id": 839, "element": "O"},
+          {"id": 883, "element": "N"},
+          {"id": 947, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 643, "b": 646, "order": 1},
+          {"a": 644, "b": 646, "order": 2},
+          {"a": 645, "b": 646, "order": 1},
+          {"a": 645, "b": 883, "order": 3},
+          {"a": 648, "b": 830, "order": 2},
+          {"a": 830, "b": 834, "order": 1},
+          {"a": 830, "b": 839, "order": 1},
+          {"a": 834, "b": 947, "order": 1},
+          {"a": 839, "b": 883, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2009016174",
+      "formula": "N3O6",
+      "atom_counts": {"N": 3, "O": 6},
+      "stats": {
+        "total_connections": 2,
+        "precursors": 1,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 2010, "element": "O"},
+          {"id": 2119, "element": "O"},
+          {"id": 2123, "element": "N"},
+          {"id": 2124, "element": "O"},
+          {"id": 2149, "element": "O"},
+          {"id": 2161, "element": "O"},
+          {"id": 2162, "element": "N"},
+          {"id": 2163, "element": "N"},
+          {"id": 2193, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2010, "b": 2193, "order": 1},
+          {"a": 2119, "b": 2123, "order": 2},
+          {"a": 2123, "b": 2124, "order": 1},
+          {"a": 2123, "b": 2163, "order": 1},
+          {"a": 2149, "b": 2162, "order": 2},
+          {"a": 2161, "b": 2162, "order": 1},
+          {"a": 2162, "b": 2163, "order": 1},
+          {"a": 2163, "b": 2193, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2023269227",
+      "formula": "HN3O3",
+      "atom_counts": {"H": 1, "N": 3, "O": 3},
+      "stats": {
+        "total_connections": 48,
+        "precursors": 21,
+        "derivatives": 27
+      },
+      "example": {
+        "atoms": [
+          {"id": 12, "element": "O"},
+          {"id": 47, "element": "O"},
+          {"id": 93, "element": "N"},
+          {"id": 184, "element": "O"},
+          {"id": 187, "element": "N"},
+          {"id": 261, "element": "H"},
+          {"id": 294, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 12, "b": 294, "order": 2},
+          {"a": 47, "b": 93, "order": 1},
+          {"a": 93, "b": 184, "order": 1},
+          {"a": 93, "b": 187, "order": 2},
+          {"a": 184, "b": 261, "order": 1},
+          {"a": 187, "b": 294, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "2199878052",
+      "formula": "HN2O4",
+      "atom_counts": {"H": 1, "N": 2, "O": 4},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 7,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1351, "element": "O"},
+          {"id": 1371, "element": "N"},
+          {"id": 1373, "element": "O"},
+          {"id": 1396, "element": "H"},
+          {"id": 1657, "element": "O"},
+          {"id": 1663, "element": "O"},
+          {"id": 1665, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1351, "b": 1371, "order": 1},
+          {"a": 1351, "b": 1665, "order": 1},
+          {"a": 1371, "b": 1373, "order": 1},
+          {"a": 1373, "b": 1396, "order": 1},
+          {"a": 1657, "b": 1665, "order": 2},
+          {"a": 1663, "b": 1665, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2271498262",
+      "formula": "H2N6O8",
+      "atom_counts": {"H": 2, "N": 6, "O": 8},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 3,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 313, "element": "H"},
+          {"id": 2254, "element": "N"},
+          {"id": 2386, "element": "O"},
+          {"id": 2420, "element": "O"},
+          {"id": 2427, "element": "N"},
+          {"id": 2436, "element": "H"},
+          {"id": 2452, "element": "O"},
+          {"id": 2480, "element": "O"},
+          {"id": 2485, "element": "O"},
+          {"id": 2486, "element": "N"},
+          {"id": 2489, "element": "O"},
+          {"id": 2493, "element": "O"},
+          {"id": 2496, "element": "N"},
+          {"id": 2499, "element": "N"},
+          {"id": 2522, "element": "N"},
+          {"id": 2586, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 313, "b": 2489, "order": 1},
+          {"a": 2254, "b": 2420, "order": 1},
+          {"a": 2254, "b": 2486, "order": 1},
+          {"a": 2254, "b": 2522, "order": 2},
+          {"a": 2386, "b": 2436, "order": 1},
+          {"a": 2386, "b": 2496, "order": 1},
+          {"a": 2420, "b": 2499, "order": 1},
+          {"a": 2427, "b": 2496, "order": 2},
+          {"a": 2427, "b": 2499, "order": 1},
+          {"a": 2452, "b": 2486, "order": 2},
+          {"a": 2480, "b": 2499, "order": 2},
+          {"a": 2485, "b": 2486, "order": 1},
+          {"a": 2489, "b": 2496, "order": 1},
+          {"a": 2493, "b": 2522, "order": 1},
+          {"a": 2522, "b": 2586, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2275207282",
+      "formula": "H3N3",
+      "atom_counts": {"H": 3, "N": 3},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 2,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 1623, "element": "H"},
+          {"id": 1727, "element": "H"},
+          {"id": 1876, "element": "N"},
+          {"id": 1904, "element": "H"},
+          {"id": 2294, "element": "N"},
+          {"id": 2327, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1623, "b": 1876, "order": 1},
+          {"a": 1727, "b": 1876, "order": 1},
+          {"a": 1876, "b": 1904, "order": 1},
+          {"a": 1876, "b": 2327, "order": 1},
+          {"a": 2294, "b": 2327, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "2306377213",
+      "formula": "HNO4",
+      "atom_counts": {"H": 1, "N": 1, "O": 4},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 905, "element": "H"},
+          {"id": 1433, "element": "O"},
+          {"id": 1435, "element": "N"},
+          {"id": 1922, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 905, "order": 1},
+          {"a": 897, "b": 1435, "order": 1},
+          {"a": 1433, "b": 1435, "order": 2},
+          {"a": 1435, "b": 1922, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2363352848",
+      "formula": "H3N",
+      "atom_counts": {"H": 3, "N": 1},
+      "stats": {
+        "total_connections": 113,
+        "precursors": 53,
+        "derivatives": 60
+      },
+      "example": {
+        "atoms": [
+          {"id": 1, "element": "N"},
+          {"id": 2, "element": "H"},
+          {"id": 285, "element": "H"},
+          {"id": 286, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1, "b": 2, "order": 1},
+          {"a": 1, "b": 285, "order": 1},
+          {"a": 1, "b": 286, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2401854690",
+      "formula": "H3N3O",
+      "atom_counts": {"H": 3, "N": 3, "O": 1},
+      "stats": {
+        "total_connections": 23,
+        "precursors": 11,
+        "derivatives": 12
+      },
+      "example": {
+        "atoms": [
+          {"id": 1621, "element": "H"},
+          {"id": 1635, "element": "H"},
+          {"id": 1639, "element": "N"},
+          {"id": 1895, "element": "N"},
+          {"id": 1896, "element": "N"},
+          {"id": 1897, "element": "O"},
+          {"id": 1899, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1621, "b": 1639, "order": 1},
+          {"a": 1635, "b": 1639, "order": 1},
+          {"a": 1639, "b": 1897, "order": 1},
+          {"a": 1639, "b": 1899, "order": 1},
+          {"a": 1895, "b": 1896, "order": 3},
+          {"a": 1896, "b": 1897, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2439066350",
+      "formula": "H2NO",
+      "atom_counts": {"H": 2, "N": 1, "O": 1},
+      "stats": {
+        "total_connections": 24,
+        "precursors": 11,
+        "derivatives": 13
+      },
+      "example": {
+        "atoms": [
+          {"id": 986, "element": "O"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1081, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 986, "b": 1078, "order": 2},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1078, "b": 1081, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2457961672",
+      "formula": "N",
+      "atom_counts": {"N": 1},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 1,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 187, "element": "N"}
+        ],
+        "bonds": [
+        ]
+      }
+    },
+    {
+      "id": "2467488158",
+      "formula": "H2N3O5",
+      "atom_counts": {"H": 2, "N": 3, "O": 5},
+      "stats": {
+        "total_connections": 25,
+        "precursors": 15,
+        "derivatives": 10
+      },
+      "example": {
+        "atoms": [
+          {"id": 406, "element": "O"},
+          {"id": 408, "element": "H"},
+          {"id": 453, "element": "N"},
+          {"id": 480, "element": "N"},
+          {"id": 501, "element": "O"},
+          {"id": 510, "element": "O"},
+          {"id": 524, "element": "O"},
+          {"id": 979, "element": "N"},
+          {"id": 1076, "element": "O"},
+          {"id": 1081, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 406, "b": 408, "order": 1},
+          {"a": 406, "b": 979, "order": 1},
+          {"a": 453, "b": 524, "order": 1},
+          {"a": 453, "b": 979, "order": 2},
+          {"a": 453, "b": 1076, "order": 1},
+          {"a": 480, "b": 501, "order": 2},
+          {"a": 480, "b": 510, "order": 1},
+          {"a": 480, "b": 979, "order": 1},
+          {"a": 510, "b": 1081, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2468419122",
+      "formula": "H4N2O",
+      "atom_counts": {"H": 4, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 67, "element": "O"},
+          {"id": 130, "element": "H"},
+          {"id": 131, "element": "N"},
+          {"id": 132, "element": "H"},
+          {"id": 220, "element": "H"},
+          {"id": 230, "element": "N"},
+          {"id": 231, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 67, "b": 131, "order": 1},
+          {"a": 67, "b": 230, "order": 1},
+          {"a": 130, "b": 131, "order": 1},
+          {"a": 131, "b": 132, "order": 1},
+          {"a": 220, "b": 230, "order": 1},
+          {"a": 230, "b": 231, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2477436747",
+      "formula": "NO",
+      "atom_counts": {"N": 1, "O": 1},
+      "stats": {
+        "total_connections": 27,
+        "precursors": 14,
+        "derivatives": 13
+      },
+      "example": {
+        "atoms": [
+          {"id": 2307, "element": "N"},
+          {"id": 2457, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 2307, "b": 2457, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "2616732487",
+      "formula": "HN8O11",
+      "atom_counts": {"H": 1, "N": 8, "O": 11},
+      "stats": {
+        "total_connections": 2,
+        "precursors": 1,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 72, "element": "O"},
+          {"id": 92, "element": "N"},
+          {"id": 342, "element": "N"},
+          {"id": 563, "element": "O"},
+          {"id": 709, "element": "N"},
+          {"id": 713, "element": "O"},
+          {"id": 738, "element": "O"},
+          {"id": 739, "element": "N"},
+          {"id": 833, "element": "O"},
+          {"id": 986, "element": "O"},
+          {"id": 1043, "element": "O"},
+          {"id": 1068, "element": "O"},
+          {"id": 1069, "element": "N"},
+          {"id": 1070, "element": "N"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1092, "element": "O"},
+          {"id": 1114, "element": "O"},
+          {"id": 1115, "element": "O"},
+          {"id": 1278, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 72, "b": 92, "order": 1},
+          {"a": 92, "b": 709, "order": 1},
+          {"a": 92, "b": 833, "order": 2},
+          {"a": 342, "b": 563, "order": 1},
+          {"a": 342, "b": 713, "order": 1},
+          {"a": 342, "b": 1115, "order": 2},
+          {"a": 563, "b": 1069, "order": 1},
+          {"a": 709, "b": 739, "order": 2},
+          {"a": 709, "b": 986, "order": 1},
+          {"a": 713, "b": 739, "order": 1},
+          {"a": 738, "b": 739, "order": 1},
+          {"a": 986, "b": 1078, "order": 1},
+          {"a": 1043, "b": 1070, "order": 1},
+          {"a": 1068, "b": 1070, "order": 2},
+          {"a": 1069, "b": 1070, "order": 1},
+          {"a": 1069, "b": 1278, "order": 1},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1092, "b": 1278, "order": 2},
+          {"a": 1114, "b": 1278, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2618704720",
+      "formula": "HN2O",
+      "atom_counts": {"H": 1, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 42,
+        "precursors": 22,
+        "derivatives": 20
+      },
+      "example": {
+        "atoms": [
+          {"id": 19, "element": "O"},
+          {"id": 209, "element": "N"},
+          {"id": 2247, "element": "N"},
+          {"id": 2475, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 19, "b": 2247, "order": 1},
+          {"a": 19, "b": 2475, "order": 1},
+          {"a": 209, "b": 2247, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "2635558627",
+      "formula": "N6O7",
+      "atom_counts": {"N": 6, "O": 7},
+      "stats": {
+        "total_connections": 16,
+        "precursors": 7,
+        "derivatives": 9
+      },
+      "example": {
+        "atoms": [
+          {"id": 1638, "element": "N"},
+          {"id": 1702, "element": "O"},
+          {"id": 1724, "element": "O"},
+          {"id": 1726, "element": "N"},
+          {"id": 1859, "element": "O"},
+          {"id": 1925, "element": "N"},
+          {"id": 2277, "element": "O"},
+          {"id": 2389, "element": "N"},
+          {"id": 2393, "element": "N"},
+          {"id": 2411, "element": "O"},
+          {"id": 2414, "element": "O"},
+          {"id": 2535, "element": "N"},
+          {"id": 2575, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1638, "b": 1859, "order": 1},
+          {"a": 1638, "b": 1925, "order": 1},
+          {"a": 1638, "b": 2411, "order": 2},
+          {"a": 1702, "b": 1726, "order": 2},
+          {"a": 1724, "b": 1726, "order": 1},
+          {"a": 1726, "b": 1925, "order": 1},
+          {"a": 1925, "b": 2414, "order": 1},
+          {"a": 2277, "b": 2389, "order": 1},
+          {"a": 2389, "b": 2535, "order": 1},
+          {"a": 2389, "b": 2575, "order": 2},
+          {"a": 2393, "b": 2414, "order": 1},
+          {"a": 2393, "b": 2535, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "2649584523",
+      "formula": "N2O",
+      "atom_counts": {"N": 2, "O": 1},
+      "stats": {
+        "total_connections": 35,
+        "precursors": 18,
+        "derivatives": 17
+      },
+      "example": {
+        "atoms": [
+          {"id": 340, "element": "N"},
+          {"id": 565, "element": "N"},
+          {"id": 610, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 340, "b": 565, "order": 2},
+          {"a": 565, "b": 610, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "2657940704",
+      "formula": "H5N2O",
+      "atom_counts": {"H": 5, "N": 2, "O": 1},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 5,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1938, "element": "H"},
+          {"id": 1950, "element": "H"},
+          {"id": 1951, "element": "N"},
+          {"id": 1952, "element": "H"},
+          {"id": 1959, "element": "H"},
+          {"id": 1964, "element": "H"},
+          {"id": 1965, "element": "N"},
+          {"id": 1994, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1938, "b": 1965, "order": 1},
+          {"a": 1950, "b": 1951, "order": 1},
+          {"a": 1951, "b": 1952, "order": 1},
+          {"a": 1951, "b": 1959, "order": 1},
+          {"a": 1951, "b": 1994, "order": 1},
+          {"a": 1964, "b": 1965, "order": 1},
+          {"a": 1965, "b": 1994, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2694028532",
+      "formula": "HN5O5",
+      "atom_counts": {"H": 1, "N": 5, "O": 5},
+      "stats": {
+        "total_connections": 16,
+        "precursors": 8,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 56, "element": "O"},
+          {"id": 57, "element": "N"},
+          {"id": 78, "element": "N"},
+          {"id": 172, "element": "O"},
+          {"id": 174, "element": "O"},
+          {"id": 198, "element": "N"},
+          {"id": 201, "element": "O"},
+          {"id": 203, "element": "N"},
+          {"id": 204, "element": "O"},
+          {"id": 205, "element": "N"},
+          {"id": 309, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 56, "b": 78, "order": 1},
+          {"a": 56, "b": 203, "order": 1},
+          {"a": 57, "b": 78, "order": 3},
+          {"a": 172, "b": 205, "order": 2},
+          {"a": 174, "b": 198, "order": 1},
+          {"a": 174, "b": 309, "order": 1},
+          {"a": 198, "b": 201, "order": 2},
+          {"a": 198, "b": 203, "order": 1},
+          {"a": 203, "b": 205, "order": 1},
+          {"a": 204, "b": 205, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2755846643",
+      "formula": "H2O",
+      "atom_counts": {"H": 2, "O": 1},
+      "stats": {
+        "total_connections": 72,
+        "precursors": 39,
+        "derivatives": 33
+      },
+      "example": {
+        "atoms": [
+          {"id": 24, "element": "H"},
+          {"id": 76, "element": "O"},
+          {"id": 112, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 24, "b": 76, "order": 1},
+          {"a": 76, "b": 112, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2764941947",
+      "formula": "HN6O8",
+      "atom_counts": {"H": 1, "N": 6, "O": 8},
+      "stats": {
+        "total_connections": 16,
+        "precursors": 8,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 1990, "element": "O"},
+          {"id": 1991, "element": "O"},
+          {"id": 1992, "element": "N"},
+          {"id": 2016, "element": "N"},
+          {"id": 2017, "element": "O"},
+          {"id": 2018, "element": "O"},
+          {"id": 2019, "element": "N"},
+          {"id": 2045, "element": "H"},
+          {"id": 2304, "element": "O"},
+          {"id": 2305, "element": "N"},
+          {"id": 2334, "element": "O"},
+          {"id": 2335, "element": "N"},
+          {"id": 2336, "element": "N"},
+          {"id": 2555, "element": "O"},
+          {"id": 2591, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1990, "b": 2016, "order": 1},
+          {"a": 1990, "b": 2335, "order": 1},
+          {"a": 1991, "b": 2019, "order": 2},
+          {"a": 1992, "b": 2016, "order": 2},
+          {"a": 1992, "b": 2019, "order": 1},
+          {"a": 1992, "b": 2555, "order": 1},
+          {"a": 2016, "b": 2018, "order": 1},
+          {"a": 2017, "b": 2019, "order": 1},
+          {"a": 2018, "b": 2045, "order": 1},
+          {"a": 2304, "b": 2336, "order": 1},
+          {"a": 2305, "b": 2335, "order": 1},
+          {"a": 2305, "b": 2555, "order": 1},
+          {"a": 2305, "b": 2591, "order": 2},
+          {"a": 2334, "b": 2336, "order": 1},
+          {"a": 2335, "b": 2336, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "2792070735",
+      "formula": "HO",
+      "atom_counts": {"H": 1, "O": 1},
+      "stats": {
+        "total_connections": 25,
+        "precursors": 17,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 284, "element": "H"},
+          {"id": 874, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 284, "b": 874, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2824959429",
+      "formula": "H2N4O3",
+      "atom_counts": {"H": 2, "N": 4, "O": 3},
+      "stats": {
+        "total_connections": 37,
+        "precursors": 16,
+        "derivatives": 21
+      },
+      "example": {
+        "atoms": [
+          {"id": 725, "element": "O"},
+          {"id": 726, "element": "N"},
+          {"id": 727, "element": "O"},
+          {"id": 752, "element": "N"},
+          {"id": 753, "element": "N"},
+          {"id": 755, "element": "O"},
+          {"id": 783, "element": "N"},
+          {"id": 784, "element": "H"},
+          {"id": 786, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 725, "b": 726, "order": 1},
+          {"a": 725, "b": 783, "order": 1},
+          {"a": 726, "b": 752, "order": 3},
+          {"a": 727, "b": 753, "order": 2},
+          {"a": 752, "b": 753, "order": 1},
+          {"a": 753, "b": 755, "order": 1},
+          {"a": 783, "b": 784, "order": 1},
+          {"a": 783, "b": 786, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "2854189885",
+      "formula": "H4N4O7",
+      "atom_counts": {"H": 4, "N": 4, "O": 7},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 4,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 643, "element": "O"},
+          {"id": 644, "element": "O"},
+          {"id": 646, "element": "N"},
+          {"id": 1297, "element": "N"},
+          {"id": 1298, "element": "H"},
+          {"id": 1514, "element": "O"},
+          {"id": 1580, "element": "H"},
+          {"id": 1581, "element": "H"},
+          {"id": 1752, "element": "H"},
+          {"id": 1863, "element": "O"},
+          {"id": 1979, "element": "N"},
+          {"id": 2170, "element": "O"},
+          {"id": 2236, "element": "O"},
+          {"id": 2307, "element": "N"},
+          {"id": 2457, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 643, "b": 646, "order": 1},
+          {"a": 643, "b": 1979, "order": 1},
+          {"a": 644, "b": 646, "order": 2},
+          {"a": 646, "b": 1863, "order": 1},
+          {"a": 1297, "b": 1514, "order": 1},
+          {"a": 1297, "b": 1580, "order": 1},
+          {"a": 1297, "b": 1581, "order": 1},
+          {"a": 1297, "b": 2170, "order": 1},
+          {"a": 1298, "b": 2170, "order": 1},
+          {"a": 1514, "b": 1979, "order": 1},
+          {"a": 1752, "b": 1863, "order": 1},
+          {"a": 1979, "b": 2236, "order": 1},
+          {"a": 2236, "b": 2307, "order": 1},
+          {"a": 2307, "b": 2457, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "2977436058",
+      "formula": "H3NO",
+      "atom_counts": {"H": 3, "N": 1, "O": 1},
+      "stats": {
+        "total_connections": 56,
+        "precursors": 28,
+        "derivatives": 28
+      },
+      "example": {
+        "atoms": [
+          {"id": 53, "element": "H"},
+          {"id": 270, "element": "N"},
+          {"id": 273, "element": "H"},
+          {"id": 274, "element": "H"},
+          {"id": 293, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 53, "b": 293, "order": 1},
+          {"a": 270, "b": 273, "order": 1},
+          {"a": 270, "b": 274, "order": 1},
+          {"a": 270, "b": 293, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3007715675",
+      "formula": "H4N2O4",
+      "atom_counts": {"H": 4, "N": 2, "O": 4},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 1433, "element": "O"},
+          {"id": 1435, "element": "N"},
+          {"id": 1594, "element": "H"},
+          {"id": 1922, "element": "O"},
+          {"id": 2392, "element": "H"},
+          {"id": 2425, "element": "H"},
+          {"id": 2433, "element": "H"},
+          {"id": 2498, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 2498, "order": 1},
+          {"a": 897, "b": 1435, "order": 1},
+          {"a": 1433, "b": 1435, "order": 1},
+          {"a": 1433, "b": 1594, "order": 1},
+          {"a": 1435, "b": 1922, "order": 2},
+          {"a": 2392, "b": 2498, "order": 1},
+          {"a": 2425, "b": 2498, "order": 1},
+          {"a": 2433, "b": 2498, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3021413527",
+      "formula": "HN4O4",
+      "atom_counts": {"H": 1, "N": 4, "O": 4},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 3,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1689, "element": "O"},
+          {"id": 1710, "element": "N"},
+          {"id": 2321, "element": "O"},
+          {"id": 2322, "element": "N"},
+          {"id": 2346, "element": "O"},
+          {"id": 2348, "element": "N"},
+          {"id": 2413, "element": "H"},
+          {"id": 2421, "element": "N"},
+          {"id": 2458, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1689, "b": 1710, "order": 1},
+          {"a": 1710, "b": 2322, "order": 1},
+          {"a": 1710, "b": 2458, "order": 2},
+          {"a": 2321, "b": 2348, "order": 2},
+          {"a": 2322, "b": 2348, "order": 1},
+          {"a": 2322, "b": 2421, "order": 2},
+          {"a": 2346, "b": 2348, "order": 1},
+          {"a": 2413, "b": 2421, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3041819201",
+      "formula": "N3O2",
+      "atom_counts": {"N": 3, "O": 2},
+      "stats": {
+        "total_connections": 28,
+        "precursors": 15,
+        "derivatives": 13
+      },
+      "example": {
+        "atoms": [
+          {"id": 320, "element": "N"},
+          {"id": 338, "element": "O"},
+          {"id": 545, "element": "O"},
+          {"id": 546, "element": "N"},
+          {"id": 621, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 320, "b": 338, "order": 1},
+          {"a": 320, "b": 545, "order": 2},
+          {"a": 320, "b": 546, "order": 1},
+          {"a": 546, "b": 621, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "3060190049",
+      "formula": "N8O9",
+      "atom_counts": {"N": 8, "O": 9},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 2,
+        "derivatives": 9
+      },
+      "example": {
+        "atoms": [
+          {"id": 1010, "element": "O"},
+          {"id": 1095, "element": "O"},
+          {"id": 1134, "element": "O"},
+          {"id": 1135, "element": "N"},
+          {"id": 1136, "element": "O"},
+          {"id": 1175, "element": "O"},
+          {"id": 1176, "element": "N"},
+          {"id": 1177, "element": "O"},
+          {"id": 1178, "element": "N"},
+          {"id": 1208, "element": "N"},
+          {"id": 1210, "element": "N"},
+          {"id": 1213, "element": "N"},
+          {"id": 1761, "element": "O"},
+          {"id": 1787, "element": "O"},
+          {"id": 1788, "element": "O"},
+          {"id": 1789, "element": "N"},
+          {"id": 1825, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1010, "b": 1213, "order": 1},
+          {"a": 1095, "b": 1210, "order": 1},
+          {"a": 1095, "b": 1825, "order": 1},
+          {"a": 1134, "b": 1135, "order": 1},
+          {"a": 1135, "b": 1136, "order": 2},
+          {"a": 1135, "b": 1178, "order": 1},
+          {"a": 1175, "b": 1176, "order": 1},
+          {"a": 1176, "b": 1177, "order": 2},
+          {"a": 1176, "b": 1178, "order": 1},
+          {"a": 1178, "b": 1788, "order": 1},
+          {"a": 1208, "b": 1210, "order": 3},
+          {"a": 1213, "b": 1761, "order": 2},
+          {"a": 1213, "b": 1825, "order": 1},
+          {"a": 1787, "b": 1789, "order": 1},
+          {"a": 1788, "b": 1789, "order": 1},
+          {"a": 1789, "b": 1825, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3098784568",
+      "formula": "N6O2",
+      "atom_counts": {"N": 6, "O": 2},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 3,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 340, "element": "N"},
+          {"id": 565, "element": "N"},
+          {"id": 610, "element": "O"},
+          {"id": 1095, "element": "O"},
+          {"id": 1109, "element": "N"},
+          {"id": 1112, "element": "N"},
+          {"id": 1208, "element": "N"},
+          {"id": 1210, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 340, "b": 565, "order": 3},
+          {"a": 565, "b": 610, "order": 1},
+          {"a": 610, "b": 1109, "order": 1},
+          {"a": 1095, "b": 1112, "order": 1},
+          {"a": 1095, "b": 1210, "order": 1},
+          {"a": 1109, "b": 1112, "order": 3},
+          {"a": 1208, "b": 1210, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "3117119100",
+      "formula": "N4O",
+      "atom_counts": {"N": 4, "O": 1},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 340, "element": "N"},
+          {"id": 565, "element": "N"},
+          {"id": 610, "element": "O"},
+          {"id": 1109, "element": "N"},
+          {"id": 1112, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 340, "b": 565, "order": 3},
+          {"a": 565, "b": 610, "order": 1},
+          {"a": 610, "b": 1109, "order": 1},
+          {"a": 1109, "b": 1112, "order": 3}
+        ]
+      }
+    },
+    {
+      "id": "3147693358",
+      "formula": "H4N3O2",
+      "atom_counts": {"H": 4, "N": 3, "O": 2},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 3,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 337, "element": "H"},
+          {"id": 494, "element": "N"},
+          {"id": 518, "element": "H"},
+          {"id": 527, "element": "N"},
+          {"id": 528, "element": "H"},
+          {"id": 530, "element": "O"},
+          {"id": 531, "element": "O"},
+          {"id": 532, "element": "N"},
+          {"id": 575, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 337, "b": 531, "order": 1},
+          {"a": 494, "b": 530, "order": 1},
+          {"a": 494, "b": 532, "order": 3},
+          {"a": 518, "b": 527, "order": 1},
+          {"a": 527, "b": 528, "order": 1},
+          {"a": 527, "b": 530, "order": 1},
+          {"a": 527, "b": 575, "order": 1},
+          {"a": 531, "b": 532, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3165366674",
+      "formula": "HN5O3",
+      "atom_counts": {"H": 1, "N": 5, "O": 3},
+      "stats": {
+        "total_connections": 17,
+        "precursors": 8,
+        "derivatives": 9
+      },
+      "example": {
+        "atoms": [
+          {"id": 1354, "element": "O"},
+          {"id": 1375, "element": "N"},
+          {"id": 1562, "element": "N"},
+          {"id": 1670, "element": "H"},
+          {"id": 1988, "element": "O"},
+          {"id": 1989, "element": "N"},
+          {"id": 2015, "element": "N"},
+          {"id": 2039, "element": "O"},
+          {"id": 2152, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1354, "b": 1375, "order": 1},
+          {"a": 1354, "b": 1670, "order": 1},
+          {"a": 1375, "b": 1989, "order": 2},
+          {"a": 1375, "b": 2039, "order": 1},
+          {"a": 1562, "b": 2152, "order": 3},
+          {"a": 1988, "b": 2015, "order": 1},
+          {"a": 1988, "b": 2152, "order": 1},
+          {"a": 1989, "b": 2015, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3227781649",
+      "formula": "N9O11",
+      "atom_counts": {"N": 9, "O": 11},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 1},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 2},
+          {"a": 405, "b": 427, "order": 2},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 1},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 2},
+          {"a": 429, "b": 562, "order": 1},
+          {"a": 1944, "b": 2126, "order": 1},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 2},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 2},
+          {"a": 2167, "b": 2237, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3249406980",
+      "formula": "HN4O3",
+      "atom_counts": {"H": 1, "N": 4, "O": 3},
+      "stats": {
+        "total_connections": 2,
+        "precursors": 1,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 66, "element": "N"},
+          {"id": 67, "element": "O"},
+          {"id": 131, "element": "N"},
+          {"id": 132, "element": "H"},
+          {"id": 222, "element": "N"},
+          {"id": 315, "element": "O"},
+          {"id": 676, "element": "O"},
+          {"id": 716, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 66, "b": 67, "order": 1},
+          {"a": 66, "b": 222, "order": 3},
+          {"a": 67, "b": 131, "order": 1},
+          {"a": 131, "b": 132, "order": 1},
+          {"a": 222, "b": 716, "order": 1},
+          {"a": 315, "b": 716, "order": 1},
+          {"a": 676, "b": 716, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3259501226",
+      "formula": "N5O8",
+      "atom_counts": {"N": 5, "O": 8},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 2,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 1027, "element": "O"},
+          {"id": 1053, "element": "N"},
+          {"id": 1055, "element": "O"},
+          {"id": 1060, "element": "O"},
+          {"id": 1083, "element": "O"},
+          {"id": 1085, "element": "N"},
+          {"id": 1086, "element": "O"},
+          {"id": 1087, "element": "N"},
+          {"id": 1088, "element": "N"},
+          {"id": 1089, "element": "O"},
+          {"id": 1108, "element": "O"},
+          {"id": 1121, "element": "O"},
+          {"id": 1123, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1027, "b": 1053, "order": 1},
+          {"a": 1027, "b": 1085, "order": 1},
+          {"a": 1053, "b": 1055, "order": 2},
+          {"a": 1060, "b": 1085, "order": 2},
+          {"a": 1083, "b": 1085, "order": 1},
+          {"a": 1083, "b": 1087, "order": 1},
+          {"a": 1086, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1123, "order": 1},
+          {"a": 1088, "b": 1089, "order": 2},
+          {"a": 1108, "b": 1123, "order": 2},
+          {"a": 1121, "b": 1123, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3353844120",
+      "formula": "HNO3",
+      "atom_counts": {"H": 1, "N": 1, "O": 3},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 6,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 920, "element": "H"},
+          {"id": 1051, "element": "N"},
+          {"id": 1091, "element": "O"},
+          {"id": 1099, "element": "O"},
+          {"id": 1198, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 920, "b": 1091, "order": 1},
+          {"a": 1051, "b": 1099, "order": 1},
+          {"a": 1051, "b": 1198, "order": 2},
+          {"a": 1091, "b": 1099, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3394708237",
+      "formula": "HN4O7",
+      "atom_counts": {"H": 1, "N": 4, "O": 7},
+      "stats": {
+        "total_connections": 2,
+        "precursors": 2,
+        "derivatives": 0
+      },
+      "example": {
+        "atoms": [
+          {"id": 682, "element": "O"},
+          {"id": 1205, "element": "N"},
+          {"id": 1206, "element": "O"},
+          {"id": 1240, "element": "O"},
+          {"id": 1241, "element": "N"},
+          {"id": 1242, "element": "O"},
+          {"id": 1244, "element": "O"},
+          {"id": 1245, "element": "N"},
+          {"id": 1246, "element": "N"},
+          {"id": 1247, "element": "O"},
+          {"id": 1271, "element": "O"},
+          {"id": 1870, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 682, "b": 1205, "order": 1},
+          {"a": 1205, "b": 1206, "order": 2},
+          {"a": 1205, "b": 1247, "order": 1},
+          {"a": 1240, "b": 1241, "order": 1},
+          {"a": 1241, "b": 1242, "order": 2},
+          {"a": 1241, "b": 1245, "order": 1},
+          {"a": 1244, "b": 1246, "order": 2},
+          {"a": 1245, "b": 1246, "order": 1},
+          {"a": 1245, "b": 1271, "order": 1},
+          {"a": 1246, "b": 1247, "order": 1},
+          {"a": 1271, "b": 1870, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3414719570",
+      "formula": "N2O3",
+      "atom_counts": {"N": 2, "O": 3},
+      "stats": {
+        "total_connections": 13,
+        "precursors": 8,
+        "derivatives": 5
+      },
+      "example": {
+        "atoms": [
+          {"id": 1352, "element": "O"},
+          {"id": 1407, "element": "O"},
+          {"id": 1431, "element": "N"},
+          {"id": 1432, "element": "O"},
+          {"id": 1434, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1352, "b": 1431, "order": 2},
+          {"a": 1407, "b": 1434, "order": 2},
+          {"a": 1431, "b": 1434, "order": 1},
+          {"a": 1432, "b": 1434, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3421381254",
+      "formula": "H2N4O7",
+      "atom_counts": {"H": 2, "N": 4, "O": 7},
+      "stats": {
+        "total_connections": 6,
+        "precursors": 3,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1033, "element": "O"},
+          {"id": 1034, "element": "O"},
+          {"id": 1035, "element": "N"},
+          {"id": 1240, "element": "O"},
+          {"id": 1241, "element": "N"},
+          {"id": 1242, "element": "O"},
+          {"id": 1244, "element": "O"},
+          {"id": 1245, "element": "N"},
+          {"id": 1246, "element": "N"},
+          {"id": 1247, "element": "O"},
+          {"id": 1271, "element": "O"},
+          {"id": 1802, "element": "H"},
+          {"id": 1839, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 1033, "b": 1035, "order": 2},
+          {"a": 1034, "b": 1035, "order": 1},
+          {"a": 1034, "b": 1839, "order": 1},
+          {"a": 1035, "b": 1271, "order": 1},
+          {"a": 1240, "b": 1241, "order": 1},
+          {"a": 1240, "b": 1802, "order": 1},
+          {"a": 1241, "b": 1242, "order": 1},
+          {"a": 1241, "b": 1245, "order": 2},
+          {"a": 1244, "b": 1246, "order": 1},
+          {"a": 1245, "b": 1246, "order": 1},
+          {"a": 1245, "b": 1271, "order": 1},
+          {"a": 1246, "b": 1247, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3492047250",
+      "formula": "H2N5O4",
+      "atom_counts": {"H": 2, "N": 5, "O": 4},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 754, "element": "O"},
+          {"id": 772, "element": "N"},
+          {"id": 774, "element": "O"},
+          {"id": 775, "element": "N"},
+          {"id": 776, "element": "N"},
+          {"id": 885, "element": "O"},
+          {"id": 1353, "element": "N"},
+          {"id": 1374, "element": "N"},
+          {"id": 1378, "element": "O"},
+          {"id": 1404, "element": "H"},
+          {"id": 1613, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 754, "b": 775, "order": 1},
+          {"a": 754, "b": 1374, "order": 1},
+          {"a": 772, "b": 775, "order": 3},
+          {"a": 772, "b": 776, "order": 1},
+          {"a": 774, "b": 776, "order": 2},
+          {"a": 776, "b": 885, "order": 1},
+          {"a": 885, "b": 1613, "order": 1},
+          {"a": 1353, "b": 1374, "order": 3},
+          {"a": 1353, "b": 1378, "order": 1},
+          {"a": 1378, "b": 1404, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3492784012",
+      "formula": "H2N3O3",
+      "atom_counts": {"H": 2, "N": 3, "O": 3},
+      "stats": {
+        "total_connections": 11,
+        "precursors": 5,
+        "derivatives": 6
+      },
+      "example": {
+        "atoms": [
+          {"id": 754, "element": "O"},
+          {"id": 772, "element": "N"},
+          {"id": 773, "element": "O"},
+          {"id": 774, "element": "O"},
+          {"id": 775, "element": "N"},
+          {"id": 776, "element": "N"},
+          {"id": 801, "element": "H"},
+          {"id": 860, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 754, "b": 775, "order": 1},
+          {"a": 754, "b": 860, "order": 1},
+          {"a": 772, "b": 775, "order": 2},
+          {"a": 772, "b": 776, "order": 2},
+          {"a": 773, "b": 775, "order": 1},
+          {"a": 773, "b": 801, "order": 1},
+          {"a": 774, "b": 776, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3507321855",
+      "formula": "H2N3O",
+      "atom_counts": {"H": 2, "N": 3, "O": 1},
+      "stats": {
+        "total_connections": 26,
+        "precursors": 13,
+        "derivatives": 13
+      },
+      "example": {
+        "atoms": [
+          {"id": 973, "element": "N"},
+          {"id": 1106, "element": "H"},
+          {"id": 1174, "element": "O"},
+          {"id": 1252, "element": "N"},
+          {"id": 1855, "element": "N"},
+          {"id": 1884, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 973, "b": 1252, "order": 3},
+          {"a": 1106, "b": 1855, "order": 1},
+          {"a": 1174, "b": 1252, "order": 1},
+          {"a": 1174, "b": 1855, "order": 1},
+          {"a": 1855, "b": 1884, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3596364739",
+      "formula": "H3N8O11",
+      "atom_counts": {"H": 3, "N": 8, "O": 11},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 72, "element": "O"},
+          {"id": 92, "element": "N"},
+          {"id": 342, "element": "N"},
+          {"id": 563, "element": "O"},
+          {"id": 709, "element": "N"},
+          {"id": 713, "element": "O"},
+          {"id": 738, "element": "O"},
+          {"id": 739, "element": "N"},
+          {"id": 833, "element": "O"},
+          {"id": 986, "element": "O"},
+          {"id": 1043, "element": "O"},
+          {"id": 1068, "element": "O"},
+          {"id": 1069, "element": "N"},
+          {"id": 1070, "element": "N"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1081, "element": "H"},
+          {"id": 1092, "element": "O"},
+          {"id": 1114, "element": "O"},
+          {"id": 1115, "element": "O"},
+          {"id": 1278, "element": "N"},
+          {"id": 1632, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 72, "b": 92, "order": 1},
+          {"a": 92, "b": 709, "order": 2},
+          {"a": 92, "b": 833, "order": 1},
+          {"a": 342, "b": 563, "order": 1},
+          {"a": 342, "b": 713, "order": 1},
+          {"a": 342, "b": 1115, "order": 2},
+          {"a": 563, "b": 1069, "order": 1},
+          {"a": 709, "b": 739, "order": 1},
+          {"a": 709, "b": 986, "order": 1},
+          {"a": 713, "b": 739, "order": 1},
+          {"a": 738, "b": 739, "order": 2},
+          {"a": 986, "b": 1078, "order": 1},
+          {"a": 1043, "b": 1070, "order": 1},
+          {"a": 1043, "b": 1632, "order": 1},
+          {"a": 1068, "b": 1070, "order": 2},
+          {"a": 1069, "b": 1070, "order": 1},
+          {"a": 1069, "b": 1278, "order": 1},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1078, "b": 1081, "order": 1},
+          {"a": 1092, "b": 1278, "order": 1},
+          {"a": 1114, "b": 1278, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3717775554",
+      "formula": "H2N5O7",
+      "atom_counts": {"H": 2, "N": 5, "O": 7},
+      "stats": {
+        "total_connections": 3,
+        "precursors": 2,
+        "derivatives": 1
+      },
+      "example": {
+        "atoms": [
+          {"id": 72, "element": "O"},
+          {"id": 92, "element": "N"},
+          {"id": 342, "element": "N"},
+          {"id": 563, "element": "O"},
+          {"id": 709, "element": "N"},
+          {"id": 713, "element": "O"},
+          {"id": 738, "element": "O"},
+          {"id": 739, "element": "N"},
+          {"id": 833, "element": "O"},
+          {"id": 986, "element": "O"},
+          {"id": 1078, "element": "N"},
+          {"id": 1079, "element": "H"},
+          {"id": 1081, "element": "H"},
+          {"id": 1115, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 72, "b": 92, "order": 1},
+          {"a": 92, "b": 709, "order": 1},
+          {"a": 92, "b": 833, "order": 2},
+          {"a": 342, "b": 563, "order": 2},
+          {"a": 342, "b": 713, "order": 1},
+          {"a": 342, "b": 1115, "order": 1},
+          {"a": 709, "b": 739, "order": 1},
+          {"a": 709, "b": 986, "order": 1},
+          {"a": 713, "b": 739, "order": 1},
+          {"a": 738, "b": 739, "order": 2},
+          {"a": 986, "b": 1078, "order": 1},
+          {"a": 1078, "b": 1079, "order": 1},
+          {"a": 1078, "b": 1081, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3748605527",
+      "formula": "H2N2O2",
+      "atom_counts": {"H": 2, "N": 2, "O": 2},
+      "stats": {
+        "total_connections": 18,
+        "precursors": 10,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 354, "element": "O"},
+          {"id": 389, "element": "N"},
+          {"id": 636, "element": "N"},
+          {"id": 977, "element": "H"},
+          {"id": 1021, "element": "O"},
+          {"id": 1046, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 354, "b": 389, "order": 1},
+          {"a": 354, "b": 1046, "order": 1},
+          {"a": 389, "b": 636, "order": 3},
+          {"a": 636, "b": 1021, "order": 1},
+          {"a": 977, "b": 1021, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3755195254",
+      "formula": "N3O5",
+      "atom_counts": {"N": 3, "O": 5},
+      "stats": {
+        "total_connections": 25,
+        "precursors": 14,
+        "derivatives": 11
+      },
+      "example": {
+        "atoms": [
+          {"id": 19, "element": "O"},
+          {"id": 173, "element": "O"},
+          {"id": 175, "element": "O"},
+          {"id": 176, "element": "N"},
+          {"id": 209, "element": "N"},
+          {"id": 2010, "element": "O"},
+          {"id": 2193, "element": "O"},
+          {"id": 2247, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 19, "b": 2247, "order": 1},
+          {"a": 173, "b": 176, "order": 2},
+          {"a": 175, "b": 176, "order": 1},
+          {"a": 176, "b": 209, "order": 1},
+          {"a": 209, "b": 2247, "order": 2},
+          {"a": 2010, "b": 2193, "order": 1},
+          {"a": 2010, "b": 2247, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3764204667",
+      "formula": "H",
+      "atom_counts": {"H": 1},
+      "stats": {
+        "total_connections": 18,
+        "precursors": 9,
+        "derivatives": 9
+      },
+      "example": {
+        "atoms": [
+          {"id": 576, "element": "H"}
+        ],
+        "bonds": [
+        ]
+      }
+    },
+    {
+      "id": "3786389028",
+      "formula": "N3O4",
+      "atom_counts": {"N": 3, "O": 4},
+      "stats": {
+        "total_connections": 60,
+        "precursors": 14,
+        "derivatives": 46
+      },
+      "example": {
+        "atoms": [
+          {"id": 9, "element": "O"},
+          {"id": 489, "element": "O"},
+          {"id": 516, "element": "O"},
+          {"id": 517, "element": "N"},
+          {"id": 519, "element": "O"},
+          {"id": 520, "element": "N"},
+          {"id": 522, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 9, "b": 520, "order": 1},
+          {"a": 489, "b": 517, "order": 2},
+          {"a": 516, "b": 517, "order": 1},
+          {"a": 517, "b": 522, "order": 1},
+          {"a": 519, "b": 520, "order": 2},
+          {"a": 520, "b": 522, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3808222090",
+      "formula": "N4O6",
+      "atom_counts": {"N": 4, "O": 6},
+      "stats": {
+        "total_connections": 8,
+        "precursors": 4,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1060, "element": "O"},
+          {"id": 1083, "element": "O"},
+          {"id": 1085, "element": "N"},
+          {"id": 1086, "element": "O"},
+          {"id": 1087, "element": "N"},
+          {"id": 1088, "element": "N"},
+          {"id": 1089, "element": "O"},
+          {"id": 1108, "element": "O"},
+          {"id": 1121, "element": "O"},
+          {"id": 1123, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1060, "b": 1085, "order": 2},
+          {"a": 1083, "b": 1085, "order": 1},
+          {"a": 1083, "b": 1087, "order": 1},
+          {"a": 1086, "b": 1088, "order": 2},
+          {"a": 1087, "b": 1088, "order": 1},
+          {"a": 1087, "b": 1123, "order": 2},
+          {"a": 1088, "b": 1089, "order": 1},
+          {"a": 1108, "b": 1123, "order": 1},
+          {"a": 1121, "b": 1123, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3836941837",
+      "formula": "H3N3O4",
+      "atom_counts": {"H": 3, "N": 3, "O": 4},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 2,
+        "derivatives": 7
+      },
+      "example": {
+        "atoms": [
+          {"id": 1898, "element": "H"},
+          {"id": 2288, "element": "H"},
+          {"id": 2307, "element": "N"},
+          {"id": 2308, "element": "O"},
+          {"id": 2394, "element": "O"},
+          {"id": 2456, "element": "N"},
+          {"id": 2457, "element": "O"},
+          {"id": 2477, "element": "O"},
+          {"id": 2513, "element": "H"},
+          {"id": 2521, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1898, "b": 2477, "order": 1},
+          {"a": 2288, "b": 2394, "order": 1},
+          {"a": 2307, "b": 2308, "order": 1},
+          {"a": 2307, "b": 2456, "order": 1},
+          {"a": 2307, "b": 2457, "order": 2},
+          {"a": 2308, "b": 2513, "order": 1},
+          {"a": 2394, "b": 2521, "order": 1},
+          {"a": 2456, "b": 2521, "order": 2},
+          {"a": 2477, "b": 2521, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "3878366280",
+      "formula": "N7O5",
+      "atom_counts": {"N": 7, "O": 5},
+      "stats": {
+        "total_connections": 9,
+        "precursors": 5,
+        "derivatives": 4
+      },
+      "example": {
+        "atoms": [
+          {"id": 1214, "element": "N"},
+          {"id": 1287, "element": "N"},
+          {"id": 1807, "element": "O"},
+          {"id": 2264, "element": "O"},
+          {"id": 2265, "element": "O"},
+          {"id": 2266, "element": "N"},
+          {"id": 2269, "element": "N"},
+          {"id": 2470, "element": "O"},
+          {"id": 2495, "element": "O"},
+          {"id": 2548, "element": "N"},
+          {"id": 2565, "element": "N"},
+          {"id": 2569, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1214, "b": 1287, "order": 3},
+          {"a": 1214, "b": 1807, "order": 1},
+          {"a": 1807, "b": 2569, "order": 1},
+          {"a": 2264, "b": 2266, "order": 2},
+          {"a": 2265, "b": 2266, "order": 1},
+          {"a": 2266, "b": 2269, "order": 1},
+          {"a": 2269, "b": 2548, "order": 1},
+          {"a": 2269, "b": 2565, "order": 2},
+          {"a": 2470, "b": 2548, "order": 2},
+          {"a": 2495, "b": 2548, "order": 1},
+          {"a": 2565, "b": 2569, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "3960828232",
+      "formula": "N5O4",
+      "atom_counts": {"N": 5, "O": 4},
+      "stats": {
+        "total_connections": 15,
+        "precursors": 8,
+        "derivatives": 7
+      },
+      "example": {
+        "atoms": [
+          {"id": 1010, "element": "O"},
+          {"id": 1095, "element": "O"},
+          {"id": 1208, "element": "N"},
+          {"id": 1210, "element": "N"},
+          {"id": 1213, "element": "N"},
+          {"id": 1761, "element": "O"},
+          {"id": 1787, "element": "O"},
+          {"id": 1789, "element": "N"},
+          {"id": 1825, "element": "N"}
+        ],
+        "bonds": [
+          {"a": 1010, "b": 1213, "order": 1},
+          {"a": 1095, "b": 1210, "order": 1},
+          {"a": 1095, "b": 1825, "order": 1},
+          {"a": 1208, "b": 1210, "order": 3},
+          {"a": 1213, "b": 1761, "order": 2},
+          {"a": 1213, "b": 1825, "order": 1},
+          {"a": 1787, "b": 1789, "order": 2},
+          {"a": 1789, "b": 1825, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "4069923543",
+      "formula": "H3NO2",
+      "atom_counts": {"H": 3, "N": 1, "O": 2},
+      "stats": {
+        "total_connections": 7,
+        "precursors": 4,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 714, "element": "O"},
+          {"id": 897, "element": "O"},
+          {"id": 905, "element": "H"},
+          {"id": 1495, "element": "H"},
+          {"id": 1496, "element": "N"},
+          {"id": 1543, "element": "H"}
+        ],
+        "bonds": [
+          {"a": 714, "b": 897, "order": 1},
+          {"a": 714, "b": 905, "order": 1},
+          {"a": 897, "b": 1496, "order": 1},
+          {"a": 1495, "b": 1496, "order": 1},
+          {"a": 1496, "b": 1543, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "4084348107",
+      "formula": "HN9O11",
+      "atom_counts": {"H": 1, "N": 9, "O": 11},
+      "stats": {
+        "total_connections": 4,
+        "precursors": 2,
+        "derivatives": 2
+      },
+      "example": {
+        "atoms": [
+          {"id": 151, "element": "N"},
+          {"id": 152, "element": "O"},
+          {"id": 153, "element": "O"},
+          {"id": 154, "element": "N"},
+          {"id": 155, "element": "N"},
+          {"id": 180, "element": "O"},
+          {"id": 405, "element": "O"},
+          {"id": 425, "element": "O"},
+          {"id": 426, "element": "N"},
+          {"id": 427, "element": "N"},
+          {"id": 429, "element": "N"},
+          {"id": 433, "element": "O"},
+          {"id": 562, "element": "O"},
+          {"id": 1944, "element": "O"},
+          {"id": 2106, "element": "O"},
+          {"id": 2126, "element": "N"},
+          {"id": 2130, "element": "O"},
+          {"id": 2139, "element": "H"},
+          {"id": 2167, "element": "N"},
+          {"id": 2203, "element": "N"},
+          {"id": 2237, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 151, "b": 154, "order": 2},
+          {"a": 151, "b": 155, "order": 1},
+          {"a": 152, "b": 154, "order": 2},
+          {"a": 153, "b": 155, "order": 1},
+          {"a": 153, "b": 426, "order": 1},
+          {"a": 155, "b": 180, "order": 2},
+          {"a": 405, "b": 427, "order": 1},
+          {"a": 405, "b": 2139, "order": 1},
+          {"a": 425, "b": 427, "order": 1},
+          {"a": 425, "b": 2203, "order": 1},
+          {"a": 426, "b": 427, "order": 2},
+          {"a": 426, "b": 429, "order": 1},
+          {"a": 429, "b": 433, "order": 1},
+          {"a": 429, "b": 562, "order": 2},
+          {"a": 1944, "b": 2126, "order": 2},
+          {"a": 2106, "b": 2167, "order": 1},
+          {"a": 2126, "b": 2130, "order": 1},
+          {"a": 2126, "b": 2203, "order": 1},
+          {"a": 2167, "b": 2203, "order": 2},
+          {"a": 2167, "b": 2237, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "4101811006",
+      "formula": "H3N7O7",
+      "atom_counts": {"H": 3, "N": 7, "O": 7},
+      "stats": {
+        "total_connections": 5,
+        "precursors": 2,
+        "derivatives": 3
+      },
+      "example": {
+        "atoms": [
+          {"id": 1638, "element": "N"},
+          {"id": 1702, "element": "O"},
+          {"id": 1724, "element": "O"},
+          {"id": 1726, "element": "N"},
+          {"id": 1859, "element": "O"},
+          {"id": 1925, "element": "N"},
+          {"id": 2277, "element": "O"},
+          {"id": 2310, "element": "H"},
+          {"id": 2340, "element": "N"},
+          {"id": 2341, "element": "H"},
+          {"id": 2342, "element": "H"},
+          {"id": 2389, "element": "N"},
+          {"id": 2393, "element": "N"},
+          {"id": 2411, "element": "O"},
+          {"id": 2414, "element": "O"},
+          {"id": 2535, "element": "N"},
+          {"id": 2575, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1638, "b": 1859, "order": 1},
+          {"a": 1638, "b": 1925, "order": 1},
+          {"a": 1638, "b": 2411, "order": 2},
+          {"a": 1702, "b": 1726, "order": 1},
+          {"a": 1724, "b": 1726, "order": 1},
+          {"a": 1726, "b": 1925, "order": 2},
+          {"a": 1859, "b": 2340, "order": 1},
+          {"a": 1925, "b": 2414, "order": 1},
+          {"a": 2277, "b": 2389, "order": 1},
+          {"a": 2310, "b": 2340, "order": 1},
+          {"a": 2340, "b": 2341, "order": 1},
+          {"a": 2340, "b": 2342, "order": 1},
+          {"a": 2389, "b": 2535, "order": 2},
+          {"a": 2389, "b": 2575, "order": 1},
+          {"a": 2393, "b": 2414, "order": 1},
+          {"a": 2393, "b": 2535, "order": 2}
+        ]
+      }
+    },
+    {
+      "id": "4122143436",
+      "formula": "HN3O5",
+      "atom_counts": {"H": 1, "N": 3, "O": 5},
+      "stats": {
+        "total_connections": 43,
+        "precursors": 27,
+        "derivatives": 16
+      },
+      "example": {
+        "atoms": [
+          {"id": 42, "element": "O"},
+          {"id": 245, "element": "O"},
+          {"id": 255, "element": "H"},
+          {"id": 2076, "element": "N"},
+          {"id": 2108, "element": "O"},
+          {"id": 2120, "element": "N"},
+          {"id": 2188, "element": "N"},
+          {"id": 2189, "element": "O"},
+          {"id": 2199, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 42, "b": 2188, "order": 1},
+          {"a": 245, "b": 255, "order": 1},
+          {"a": 245, "b": 2120, "order": 1},
+          {"a": 2076, "b": 2108, "order": 2},
+          {"a": 2076, "b": 2120, "order": 1},
+          {"a": 2076, "b": 2189, "order": 1},
+          {"a": 2120, "b": 2188, "order": 2},
+          {"a": 2188, "b": 2199, "order": 1}
+        ]
+      }
+    },
+    {
+      "id": "4289530154",
+      "formula": "H2N4O4",
+      "atom_counts": {"H": 2, "N": 4, "O": 4},
+      "stats": {
+        "total_connections": 17,
+        "precursors": 9,
+        "derivatives": 8
+      },
+      "example": {
+        "atoms": [
+          {"id": 1689, "element": "O"},
+          {"id": 1710, "element": "N"},
+          {"id": 2321, "element": "O"},
+          {"id": 2322, "element": "N"},
+          {"id": 2346, "element": "O"},
+          {"id": 2348, "element": "N"},
+          {"id": 2412, "element": "H"},
+          {"id": 2413, "element": "H"},
+          {"id": 2421, "element": "N"},
+          {"id": 2458, "element": "O"}
+        ],
+        "bonds": [
+          {"a": 1689, "b": 1710, "order": 1},
+          {"a": 1710, "b": 2322, "order": 1},
+          {"a": 1710, "b": 2458, "order": 2},
+          {"a": 2321, "b": 2348, "order": 2},
+          {"a": 2322, "b": 2348, "order": 1},
+          {"a": 2322, "b": 2421, "order": 2},
+          {"a": 2346, "b": 2348, "order": 1},
+          {"a": 2412, "b": 2421, "order": 1},
+          {"a": 2413, "b": 2421, "order": 1}
+        ]
+      }
+    }
+  ]
+}

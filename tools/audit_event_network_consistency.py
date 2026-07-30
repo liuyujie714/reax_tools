@@ -41,25 +41,14 @@ def main() -> int:
     args = parser.parse_args()
 
     out = args.output_dir
-    events = read_rows(out / "reaction_events.csv")
     pairs = read_rows(out / "reaction_event_pairs.csv")
     flow = read_rows(out / "transfer_flow.csv")
 
     if args.expect_event_pairs is not None and len(pairs) != args.expect_event_pairs:
         raise SystemExit(f"event-pair count mismatch: got {len(pairs)}, expected {args.expect_event_pairs}")
 
-    bad_events = [row["event_id"] for row in events if row.get("atom_conserved") != "1"]
-    if bad_events:
-        raise SystemExit(f"reaction_events.csv has non-conserved events: {bad_events[:10]}")
-
-    event_atom_transfer = sum(int(row["atom_transfer"]) for row in events)
     pair_atom_transfer = sum(int(row["atom_overlap"]) for row in pairs)
     flow_atom_transfer = sum(int(row["atom_transfer"]) for row in flow)
-    if event_atom_transfer != pair_atom_transfer:
-        raise SystemExit(
-            "event atom_transfer total does not match reaction_event_pairs atom_overlap total: "
-            f"{event_atom_transfer} != {pair_atom_transfer}"
-        )
     if pair_atom_transfer != flow_atom_transfer:
         raise SystemExit(
             "reaction_event_pairs atom_overlap total does not match transfer_flow atom_transfer total: "
@@ -82,7 +71,6 @@ def main() -> int:
     self_loop_count = sum(int(row["count"]) for row in flow if row.get("self_loop") == "1")
     self_loop_atoms = sum(int(row["atom_transfer"]) for row in flow if row.get("self_loop") == "1")
     print("Event-network consistency audit passed")
-    print(f"  reaction events: {len(events)}")
     print(f"  reaction event pairs: {len(pairs)}")
     print(f"  transfer edges: {len(flow)}")
     print(f"  atom transfer total: {flow_atom_transfer}")

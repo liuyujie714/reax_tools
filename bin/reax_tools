@@ -69,6 +69,7 @@ def print_help() -> None:
         "  reax_tools focus -f <flow.csv|output_dir>       centered Sankey views\n"
         "  reax_tools events -f <events.csv|output_dir>    reaction-event plot\n"
         "  reax_tools molecules -f <json|output_dir>       molecule drawings\n"
+        "  reax_tools snapshots -f <output_dir>            reaction snapshot montages\n"
         "  reax_tools summary -f <output_dir>              output validation summary\n"
         "\n"
         "Use `reax_tools analyze --help` for the full C++ option table.\n"
@@ -87,7 +88,7 @@ def main() -> int:
     if command == "analyze":
         return run_core(args[1:])
 
-    if command in {"plot", "network", "flow", "focus", "events", "counts", "summary", "molecules"}:
+    if command in {"plot", "network", "flow", "focus", "events", "counts", "summary", "molecules", "snapshots"}:
         return run_python(args)
 
     if command in {"-h", "--help", "help"}:

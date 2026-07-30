@@ -1,0 +1,65 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 840,
+  "frame_id": 23,
+  "reactant_frame": 22,
+  "product_frame": 23,
+  "time_fs": 57.500000,
+  "reaction_signature": "1465457258+2363352848->2275207282",
+  "reaction_arity": "2->1",
+  "reactant_formulas": "H3N+N2",
+  "product_formulas": "H3N3",
+  "reactants": [
+    {"tracked_molecule_id":464,"molecule_hash":"2363352848","formula":"H3N","atom_ids":[1623,1727,1876,1904]},
+    {"tracked_molecule_id":2225,"molecule_hash":"1465457258","formula":"N2","atom_ids":[2294,2327]}
+  ],
+  "products": [
+    {"tracked_molecule_id":2350,"molecule_hash":"2275207282","formula":"H3N3","atom_ids":[1623,1727,1876,1904,2294,2327]}
+  ],
+  "reactant_coords": [
+    {"id":1623,"element":"H","x":29.326700,"y":32.179199,"z":3.582060},
+    {"id":1727,"element":"H","x":30.356800,"y":33.124599,"z":4.700910},
+    {"id":1876,"element":"N","x":29.800100,"y":33.065899,"z":3.824650},
+    {"id":1904,"element":"H","x":29.717800,"y":33.794899,"z":3.111400},
+    {"id":2294,"element":"N","x":29.089701,"y":29.735399,"z":10.496600},
+    {"id":2327,"element":"N","x":29.682199,"y":29.398500,"z":11.432000}
+  ],
+  "product_coords": [
+    {"id":1623,"element":"H","x":27.851700,"y":32.957401,"z":11.765700},
+    {"id":1727,"element":"H","x":26.332500,"y":33.187099,"z":10.498000},
+    {"id":1876,"element":"N","x":27.631300,"y":32.963799,"z":10.572200},
+    {"id":1904,"element":"H","x":28.176001,"y":33.550201,"z":9.868350},
+    {"id":2294,"element":"N","x":27.945999,"y":30.319700,"z":10.604100},
+    {"id":2327,"element":"N","x":27.934500,"y":31.346901,"z":9.930110}
+  ],
+  "reactant_bonds": [
+    {"a":1623,"b":1876,"order":1,"length":1.034018},
+    {"a":1727,"b":1876,"order":1,"length":1.039804},
+    {"a":1876,"b":1904,"order":1,"length":1.023201},
+    {"a":2294,"b":2327,"order":4,"length":1.157380}
+  ],
+  "product_bonds": [
+    {"a":1623,"b":1876,"order":1,"length":1.213697},
+    {"a":1727,"b":1876,"order":1,"length":1.319943},
+    {"a":1876,"b":1904,"order":1,"length":1.065820},
+    {"a":1876,"b":2327,"order":1,"length":1.765947},
+    {"a":2294,"b":2327,"order":3,"length":1.228632}
+  ],
+  "broken_bond_ids": [
+
+  ],
+  "created_bond_ids": [
+    "1876-2327"
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 6,
+    "product_atom_count": 6,
+    "reactant_bond_count": 4,
+    "product_bond_count": 5,
+    "broken_bond_count": 0,
+    "created_bond_count": 1,
+    "allowed_arity": true,
+    "signature_instance_index": 1
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 1345,
+  "frame_id": 38,
+  "reactant_frame": 37,
+  "product_frame": 38,
+  "time_fs": 95.000000,
+  "reaction_signature": "2468419122+3041819201->1169087527+2824959429",
+  "reaction_arity": "2->2",
+  "reactant_formulas": "H4N2O+N3O2",
+  "product_formulas": "H2N+H2N4O3",
+  "reactants": [
+    {"tracked_molecule_id":3309,"molecule_hash":"2468419122","formula":"H4N2O","atom_ids":[67,130,131,132,220,230,231]},
+    {"tracked_molecule_id":3310,"molecule_hash":"3041819201","formula":"N3O2","atom_ids":[66,222,315,676,716]}
+  ],
+  "products": [
+    {"tracked_molecule_id":3393,"molecule_hash":"1169087527","formula":"H2N","atom_ids":[220,230,231]},
+    {"tracked_molecule_id":3394,"molecule_hash":"2824959429","formula":"H2N4O3","atom_ids":[66,67,130,131,132,222,315,676,716]}
+  ],
+  "reactant_coords": [
+    {"id":67,"element":"O","x":8.047410,"y":12.373100,"z":12.362400},
+    {"id":130,"element":"H","x":7.122550,"y":13.082200,"z":14.031000},
+    {"id":131,"element":"N","x":7.308470,"y":12.119300,"z":13.663700},
+    {"id":132,"element":"H","x":8.042030,"y":11.436400,"z":14.054900},
+    {"id":220,"element":"H","x":9.545150,"y":13.514700,"z":11.608600},
+    {"id":230,"element":"N","x":9.561470,"y":13.224400,"z":12.577500},
+    {"id":231,"element":"H","x":10.045100,"y":12.280400,"z":13.063100},
+    {"id":66,"element":"N","x":8.480640,"y":10.573300,"z":11.649800},
+    {"id":222,"element":"N","x":8.337300,"y":10.582100,"z":10.460700},
+    {"id":315,"element":"O","x":6.789780,"y":12.190500,"z":9.093310},
+    {"id":676,"element":"O","x":8.752330,"y":12.990100,"z":9.620420},
+    {"id":716,"element":"N","x":7.887380,"y":12.088500,"z":9.671300}
+  ],
+  "product_coords": [
+    {"id":220,"element":"H","x":10.053800,"y":13.001800,"z":11.205900},
+    {"id":230,"element":"N","x":9.399880,"y":13.130300,"z":12.023900},
+    {"id":231,"element":"H","x":9.407550,"y":12.307400,"z":12.982300},
+    {"id":66,"element":"N","x":8.388130,"y":10.697800,"z":10.922300},
+    {"id":67,"element":"O","x":8.014960,"y":12.426300,"z":11.292500},
+    {"id":130,"element":"H","x":6.068790,"y":13.007500,"z":11.719900},
+    {"id":131,"element":"N","x":6.694540,"y":12.431100,"z":12.295700},
+    {"id":132,"element":"H","x":7.113720,"y":12.484700,"z":13.210700},
+    {"id":222,"element":"N","x":8.840400,"y":10.574800,"z":9.798190},
+    {"id":315,"element":"O","x":8.253900,"y":12.086700,"z":7.832120},
+    {"id":676,"element":"O","x":9.904320,"y":12.795200,"z":9.083440},
+    {"id":716,"element":"N","x":9.018210,"y":11.954300,"z":8.819900}
+  ],
+  "reactant_bonds": [
+    {"a":67,"b":131,"order":1,"length":1.517837},
+    {"a":67,"b":230,"order":1,"length":1.750245},
+    {"a":130,"b":131,"order":1,"length":1.047212},
+    {"a":131,"b":132,"order":1,"length":1.075872},
+    {"a":220,"b":230,"order":1,"length":1.011587},
+    {"a":230,"b":231,"order":1,"length":1.166550},
+    {"a":66,"b":222,"order":2,"length":1.197741},
+    {"a":222,"b":716,"order":2,"length":1.759211},
+    {"a":315,"b":716,"order":1,"length":1.244669},
+    {"a":676,"b":716,"order":1,"length":1.250444}
+  ],
+  "product_bonds": [
+    {"a":220,"b":230,"order":1,"length":1.055105},
+    {"a":230,"b":231,"order":1,"length":1.263231},
+    {"a":66,"b":67,"order":1,"length":1.806659},
+    {"a":66,"b":222,"order":3,"length":1.217908},
+    {"a":67,"b":131,"order":1,"length":1.658296},
+    {"a":130,"b":131,"order":1,"length":1.027300},
+    {"a":131,"b":132,"order":1,"length":1.007874},
+    {"a":222,"b":716,"order":1,"length":1.700497},
+    {"a":315,"b":716,"order":2,"length":1.255950},
+    {"a":676,"b":716,"order":1,"length":1.249703}
+  ],
+  "broken_bond_ids": [
+    "67-230"
+  ],
+  "created_bond_ids": [
+    "66-67"
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 12,
+    "product_atom_count": 12,
+    "reactant_bond_count": 10,
+    "product_bond_count": 10,
+    "broken_bond_count": 1,
+    "created_bond_count": 1,
+    "allowed_arity": true,
+    "signature_instance_index": 1
+  }
+}

@@ -19,6 +19,7 @@ from .molecule_draw import draw_selected_molecules
 from .network import build_transfer_graph, draw_transfer_graph
 from .plots import plot_count_pages, plot_reaction_events
 from .sankey import draw_focus_sankey_set, draw_role_flow
+from .snapshots import render_snapshot_directory
 from .templates import load_plot_template
 
 
@@ -94,12 +95,15 @@ def plot_count_file(path: Path, output_dir: Path, config: dict, targets=None, to
 
 def _network_config(config: dict, args) -> dict:
     section = dict(config.get("transfer_flow", {}))
-    return _with_cli_override(
+    result = _with_cli_override(
         section,
         layout=args.layout,
         filter_max_molecules=args.max_molecules,
         filter_max_subgraphs=args.max_subgraphs,
     )
+    if str(result.get("layout", "dot")).lower() not in {"dot", "fdp", "sfdp", "neato"}:
+        result["layout"] = "dot"
+    return result
 
 
 def _max_reactions(config: dict, args) -> int | None:
@@ -111,6 +115,104 @@ def _max_reactions(config: dict, args) -> int | None:
     return int(value) if value else None
 
 
+def _flow_sort_by(network_config: dict) -> str:
+    value = str(network_config.get("weight", network_config.get("sort_by", "atom_transfer")))
+    return value if value in {"count", "atom_transfer"} else "atom_transfer"
+
+
+def _filtered_transfer_view(
+    raw_flow: pd.DataFrame,
+    network_config: dict,
+    *,
+    include_self_loops: bool,
+    max_reactions: int | None = None,
+    max_molecules: int | None = None,
+    max_subgraphs: int | None = None,
+    min_count: int | None = None,
+    min_atom_transfer: int | None = None,
+) -> pd.DataFrame:
+    return filter_transfer_flow(
+        raw_flow,
+        include_self_loops=include_self_loops,
+        top_n=max_reactions,
+        max_molecules=max_molecules,
+        max_subgraphs=max_subgraphs,
+        min_count=min_count,
+        min_atom_transfer=min_atom_transfer,
+        sort_by=_flow_sort_by(network_config),
+    )
+
+
+def _draw_transfer_view(
+    raw_flow: pd.DataFrame,
+    output_dir: Path,
+    network_config: dict,
+    *,
+    stem: str,
+    title: str,
+    include_self_loops: bool = False,
+    max_reactions: int | None = None,
+    max_molecules: int | None = None,
+    max_subgraphs: int | None = None,
+    min_count: int | None = None,
+    min_atom_transfer: int | None = None,
+    use_colors: bool = True,
+) -> list[Path]:
+    filtered = _filtered_transfer_view(
+        raw_flow,
+        network_config,
+        include_self_loops=include_self_loops,
+        max_reactions=max_reactions,
+        max_molecules=max_molecules,
+        max_subgraphs=max_subgraphs,
+        min_count=min_count,
+        min_atom_transfer=min_atom_transfer,
+    )
+    csv_path = output_dir / f"{stem}_filtered.csv"
+    png_path = output_dir / f"{stem}.png"
+    filtered.to_csv(csv_path, index=False)
+    draw_transfer_graph(
+        build_transfer_graph(filtered),
+        png_path,
+        layout=str(network_config.get("layout", "dot")),
+        config=network_config,
+        use_colors=use_colors,
+        title=title,
+    )
+    return [csv_path, png_path]
+
+
+def _draw_default_transfer_views(raw_flow: pd.DataFrame, output_dir: Path, network_config: dict, *, use_colors: bool = True) -> list[Path]:
+    max_molecules = int(network_config.get("default_max_molecules", 24))
+    max_reactions = int(network_config.get("default_max_reactions", 48))
+    written: list[Path] = []
+    written.extend(
+        _draw_transfer_view(
+            raw_flow,
+            output_dir,
+            network_config,
+            stem=f"molecule_transfer_top{max_molecules}",
+            title=f"Top {max_molecules} molecules by atom transfer",
+            max_molecules=max_molecules,
+            max_subgraphs=int(network_config.get("filter_max_subgraphs")) if network_config.get("filter_max_subgraphs") else None,
+            use_colors=use_colors,
+        )
+    )
+    written.extend(
+        _draw_transfer_view(
+            raw_flow,
+            output_dir,
+            network_config,
+            stem=f"reaction_transfer_top{max_reactions}",
+            title=f"Top {max_reactions} reactions by atom transfer",
+            max_reactions=max_reactions,
+            max_subgraphs=int(network_config.get("filter_max_subgraphs")) if network_config.get("filter_max_subgraphs") else None,
+            use_colors=use_colors,
+        )
+    )
+    return written
+
+
 def _draw_network_command(args, *, legacy_flow: bool = False) -> int:
     path = _input_path(args.file)
     bundle = _load_bundle_or_none(path)
@@ -118,38 +220,56 @@ def _draw_network_command(args, *, legacy_flow: bool = False) -> int:
     network_config = _network_config(config, args)
     raw_flow = read_transfer_flow(bundle) if bundle else pd.read_csv(path, dtype={"source_id": str, "target_id": str})
     output_dir = bundle.root if bundle else path.parent
-    filtered = filter_transfer_flow(
+    cli_filtered = any(
+        value is not None
+        for value in [args.max_reactions, args.max_molecules, args.max_subgraphs, args.top, args.min_count, args.min_atom_transfer]
+    ) or args.include_self_loops
+    if not cli_filtered and not legacy_flow:
+        for output in _draw_default_transfer_views(raw_flow, output_dir, network_config, use_colors=not args.no_colors):
+            print(f"Wrote {output}")
+        return 0
+
+    max_reactions = _max_reactions(config, args)
+    max_molecules = int(network_config.get("filter_max_molecules")) if network_config.get("filter_max_molecules") else None
+    stem = f"reaction_transfer_top{max_reactions}" if max_reactions else f"molecule_transfer_top{max_molecules}" if max_molecules else "molecule_transfer"
+    title = (
+        f"Top {max_reactions} reactions by atom transfer"
+        if max_reactions
+        else f"Top {max_molecules} molecules by atom transfer"
+        if max_molecules
+        else "Molecule transfer"
+    )
+    written = _draw_transfer_view(
         raw_flow,
+        output_dir,
+        network_config,
+        stem=stem,
+        title=title,
         include_self_loops=args.include_self_loops,
-        top_n=_max_reactions(config, args),
-        max_molecules=int(network_config.get("filter_max_molecules")) if network_config.get("filter_max_molecules") else None,
+        max_reactions=max_reactions,
+        max_molecules=max_molecules,
         max_subgraphs=int(network_config.get("filter_max_subgraphs")) if network_config.get("filter_max_subgraphs") else None,
         min_count=args.min_count,
         min_atom_transfer=args.min_atom_transfer,
-    )
-    stem = "transfer_network"
-    filtered.to_csv(output_dir / f"{stem}_filtered.csv", index=False)
-    draw_transfer_graph(
-        build_transfer_graph(filtered),
-        output_dir / f"{stem}.png",
-        layout=str(network_config.get("layout", "kamada")),
-        config=network_config,
         use_colors=not args.no_colors,
     )
-    print(f"Wrote {output_dir / f'{stem}_filtered.csv'}")
-    print(f"Wrote {output_dir / f'{stem}.png'}")
+    for output in written:
+        print(f"Wrote {output}")
     if legacy_flow:
+        filtered = pd.read_csv(written[0])
         filtered.to_csv(output_dir / "transfer_flow_filtered.csv", index=False)
         draw_transfer_graph(
             build_transfer_graph(filtered),
             output_dir / "transfer_flow.png",
-            layout=str(network_config.get("layout", "kamada")),
+            layout=str(network_config.get("layout", "dot")),
             config=network_config,
             use_colors=not args.no_colors,
+            title=title,
         )
         print(f"Wrote {output_dir / 'transfer_flow_filtered.csv'}")
         print(f"Wrote {output_dir / 'transfer_flow.png'}")
     if args.dot:
+        filtered = pd.read_csv(written[0])
         export_transfer_flow_dot(filtered, output_dir / f"{stem}_filtered.dot")
         print(f"Wrote {output_dir / f'{stem}_filtered.dot'}")
     return 0
@@ -173,19 +293,19 @@ def main() -> int:
     counts.add_argument("--template", help="YAML plot template")
     counts.add_argument("--top", type=int, help="Compatibility alias for count max objects per page")
 
-    network = sub.add_parser("network", help="Filter and draw transfer network graph")
+    network = sub.add_parser("network", help="Draw molecule/reaction transfer diagrams")
     network.add_argument("-f", "--file", required=True, help="transfer_flow.csv or ReaxTools output directory")
     network.add_argument("--template", help="YAML plot template")
     network.add_argument("--top", type=int, help="Compatibility alias for --max-reactions")
-    network.add_argument("--max-reactions", type=int, help="Keep the strongest N net transfer edges")
-    network.add_argument("--max-molecules", type=int, help="Keep the induced subgraph of the strongest N molecules")
-    network.add_argument("--max-subgraphs", type=int, help="Keep the largest N weakly connected components")
-    network.add_argument("--layout", choices=["kamada", "spring", "fdp", "layered", "dot", "circular", "shell", "spectral"])
+    network.add_argument("--max-reactions", type=int, help="Keep the strongest N reactions")
+    network.add_argument("--max-molecules", type=int, help="Keep the strongest N molecules and their direct transfers")
+    network.add_argument("--max-subgraphs", type=int, help="Keep the largest N connected molecule groups")
+    network.add_argument("--layout", choices=["dot", "fdp", "sfdp", "neato"])
     network.add_argument("--no-colors", action="store_true")
     network.add_argument("--min-count", type=int)
     network.add_argument("--min-atom-transfer", type=int)
     network.add_argument("--include-self-loops", action="store_true")
-    network.add_argument("--dot", action="store_true", help="Also export the filtered network as Graphviz DOT")
+    network.add_argument("--dot", action="store_true", help="Also export the filtered transfer diagram as DOT source")
 
     flow = sub.add_parser("flow", help="Draw role-layer atom-transfer flow diagram")
     flow.add_argument("-f", "--file", required=True, help="transfer_flow.csv or ReaxTools output directory")
@@ -220,6 +340,12 @@ def main() -> int:
     molecules = sub.add_parser("molecules", help="Draw selected molecule graph examples")
     molecules.add_argument("-f", "--file", required=True, help="molecules.json or ReaxTools output directory")
     molecules.add_argument("--species", nargs="*", help="Formula or molecule id to draw")
+
+    snapshots = sub.add_parser("snapshots", help="Render reaction snapshot montage figures")
+    snapshots.add_argument("-f", "--file", required=True, help="ReaxTools output directory with reaction_snapshots/")
+    snapshots.add_argument("--limit", type=int, default=30, help="Maximum snapshot packages to render; default: 30")
+    snapshots.add_argument("--all", action="store_true", help="Render every snapshot package")
+    snapshots.add_argument("--force", action="store_true", help="Overwrite existing montage PNG files")
 
     args = parser.parse_args()
 
@@ -257,37 +383,22 @@ def main() -> int:
             )
             network_config = _network_config(config, flow_args)
             raw_flow = read_transfer_flow(bundle)
-            filtered = filter_transfer_flow(
-                raw_flow,
-                include_self_loops=False,
-                top_n=_max_reactions(config, flow_args),
-                max_molecules=int(network_config.get("filter_max_molecules")) if network_config.get("filter_max_molecules") else None,
-                max_subgraphs=int(network_config.get("filter_max_subgraphs")) if network_config.get("filter_max_subgraphs") else None,
-            )
-            filtered.to_csv(bundle.root / "transfer_network_filtered.csv", index=False)
-            draw_transfer_graph(
-                build_transfer_graph(filtered),
-                bundle.root / "transfer_network.png",
-                layout=str(network_config.get("layout", "kamada")),
-                config=network_config,
-            )
-            flow_config = dict(config.get("flow", {}))
-            draw_role_flow(raw_flow, bundle.root / "transfer_flow.png", config=flow_config)
+            transfer_outputs = _draw_default_transfer_views(raw_flow, bundle.root, network_config)
             raw_events = read_reaction_events(bundle)
             cleaned = aggregate_reaction_events(raw_events, bundle.molecules, cancel_common=True)
             cleaned.to_csv(bundle.root / "reaction_events_cleaned.csv", index=False)
             event_config = config.get("reaction_events", {})
-            plot_reaction_events(
+            event_outputs = plot_reaction_events(
                 cleaned,
                 bundle.root / "reaction_events.png",
                 top_n=int(event_config.get("max_reactions", 15)),
                 config=event_config,
             )
-            print(f"Wrote {bundle.root / 'transfer_network_filtered.csv'}")
-            print(f"Wrote {bundle.root / 'transfer_network.png'}")
-            print(f"Wrote {bundle.root / 'transfer_flow.png'}")
+            for output in transfer_outputs:
+                print(f"Wrote {output}")
             print(f"Wrote {bundle.root / 'reaction_events_cleaned.csv'}")
-            print(f"Wrote {bundle.root / 'reaction_events.png'}")
+            for output in event_outputs:
+                print(f"Wrote {output}")
         return 0
 
     if args.command == "flow":
@@ -355,9 +466,10 @@ def main() -> int:
             )
         cleaned.to_csv(output_dir / "reaction_events_cleaned.csv", index=False)
         top_n = args.max_events or args.top or int(event_config.get("max_reactions", 15))
-        plot_reaction_events(cleaned, output_dir / "reaction_events.png", top_n=top_n, config=event_config)
+        event_outputs = plot_reaction_events(cleaned, output_dir / "reaction_events.png", top_n=top_n, config=event_config)
         print(f"Wrote {output_dir / 'reaction_events_cleaned.csv'}")
-        print(f"Wrote {output_dir / 'reaction_events.png'}")
+        for output in event_outputs:
+            print(f"Wrote {output}")
         return 0
 
     if args.command == "molecules":
@@ -370,6 +482,13 @@ def main() -> int:
             output_dir = path.parent / "molecule_pictures"
         records = json.loads(molecule_path.read_text()).get("molecules", [])
         written = draw_selected_molecules(records, output_dir, args.species)
+        for item in written:
+            print(f"Wrote {item}")
+        return 0
+
+    if args.command == "snapshots":
+        output_dir = _input_path(args.file)
+        written = render_snapshot_directory(output_dir, limit=None if args.all else args.limit, force=args.force)
         for item in written:
             print(f"Wrote {item}")
         return 0

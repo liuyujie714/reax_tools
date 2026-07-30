@@ -1,0 +1,77 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 712,
+  "frame_id": 19,
+  "reactant_frame": 18,
+  "product_frame": 19,
+  "time_fs": 47.500000,
+  "reaction_signature": "2657940704+3764204667->2363352848+2977436058",
+  "reaction_arity": "2->2",
+  "reactant_formulas": "H5N2O+H",
+  "product_formulas": "H3N+H3NO",
+  "reactants": [
+    {"tracked_molecule_id":1989,"molecule_hash":"2657940704","formula":"H5N2O","atom_ids":[50,51,52,54,178,229,291,428]},
+    {"tracked_molecule_id":1990,"molecule_hash":"3764204667","formula":"H","atom_ids":[904]}
+  ],
+  "products": [
+    {"tracked_molecule_id":2092,"molecule_hash":"2363352848","formula":"H3N","atom_ids":[50,51,52,54]},
+    {"tracked_molecule_id":2093,"molecule_hash":"2977436058","formula":"H3NO","atom_ids":[178,229,291,428,904]}
+  ],
+  "reactant_coords": [
+    {"id":50,"element":"H","x":6.167470,"y":18.675400,"z":13.323000},
+    {"id":51,"element":"N","x":5.278350,"y":18.447001,"z":12.802000},
+    {"id":52,"element":"H","x":5.193940,"y":17.598801,"z":12.247300},
+    {"id":54,"element":"H","x":4.550520,"y":19.183800,"z":12.639900},
+    {"id":178,"element":"H","x":4.258660,"y":19.340401,"z":15.322300},
+    {"id":229,"element":"H","x":3.558260,"y":17.890600,"z":16.176399},
+    {"id":291,"element":"N","x":4.350250,"y":18.386900,"z":15.719100},
+    {"id":428,"element":"O","x":4.395940,"y":17.459900,"z":14.196100},
+    {"id":904,"element":"H","x":3.463290,"y":17.402201,"z":13.906300}
+  ],
+  "product_coords": [
+    {"id":50,"element":"H","x":6.823860,"y":19.732000,"z":13.106000},
+    {"id":51,"element":"N","x":6.318050,"y":19.043400,"z":12.588800},
+    {"id":52,"element":"H","x":5.876720,"y":18.162901,"z":13.097200},
+    {"id":54,"element":"H","x":6.029030,"y":19.302401,"z":11.610500},
+    {"id":178,"element":"H","x":3.908900,"y":18.281601,"z":14.078900},
+    {"id":229,"element":"H","x":3.500960,"y":16.694901,"z":14.852800},
+    {"id":291,"element":"N","x":4.173940,"y":17.500799,"z":14.703000},
+    {"id":428,"element":"O","x":5.250980,"y":16.677900,"z":13.486500},
+    {"id":904,"element":"H","x":4.674050,"y":16.508499,"z":12.715800}
+  ],
+  "reactant_bonds": [
+    {"a":50,"b":51,"order":1,"length":1.055529},
+    {"a":51,"b":52,"order":1,"length":1.016986},
+    {"a":51,"b":54,"order":1,"length":1.048278},
+    {"a":51,"b":428,"order":1,"length":1.922636},
+    {"a":178,"b":291,"order":1,"length":1.036823},
+    {"a":229,"b":291,"order":1,"length":1.040521},
+    {"a":291,"b":428,"order":1,"length":1.783520}
+  ],
+  "product_bonds": [
+    {"a":50,"b":51,"order":1,"length":0.998754},
+    {"a":51,"b":52,"order":1,"length":1.108387},
+    {"a":51,"b":54,"order":1,"length":1.052466},
+    {"a":178,"b":291,"order":1,"length":1.034117},
+    {"a":229,"b":291,"order":1,"length":1.060573},
+    {"a":291,"b":428,"order":1,"length":1.821277},
+    {"a":428,"b":904,"order":1,"length":0.977508}
+  ],
+  "broken_bond_ids": [
+    "51-428"
+  ],
+  "created_bond_ids": [
+    "428-904"
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 9,
+    "product_atom_count": 9,
+    "reactant_bond_count": 7,
+    "product_bond_count": 7,
+    "broken_bond_count": 1,
+    "created_bond_count": 1,
+    "allowed_arity": true,
+    "signature_instance_index": 1
+  }
+}

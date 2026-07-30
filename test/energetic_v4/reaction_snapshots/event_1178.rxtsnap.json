@@ -1,0 +1,69 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 1178,
+  "frame_id": 33,
+  "reactant_frame": 32,
+  "product_frame": 33,
+  "time_fs": 82.500000,
+  "reaction_signature": "744595106->1169087527+1532655608",
+  "reaction_arity": "1->2",
+  "reactant_formulas": "H3N2O2",
+  "product_formulas": "HNO2+H2N",
+  "reactants": [
+    {"tracked_molecule_id":2999,"molecule_hash":"744595106","formula":"H3N2O2","atom_ids":[2169,2211,2418,2444,2526,2528,2549]}
+  ],
+  "products": [
+    {"tracked_molecule_id":3071,"molecule_hash":"1532655608","formula":"HNO2","atom_ids":[2169,2211,2444,2549]},
+    {"tracked_molecule_id":3072,"molecule_hash":"1169087527","formula":"H2N","atom_ids":[2418,2526,2528]}
+  ],
+  "reactant_coords": [
+    {"id":2169,"element":"O","x":30.101400,"y":25.330000,"z":9.131050},
+    {"id":2211,"element":"H","x":29.421600,"y":24.596600,"z":9.039300},
+    {"id":2418,"element":"H","x":32.825100,"y":27.509899,"z":10.003300},
+    {"id":2444,"element":"O","x":31.082600,"y":26.279699,"z":10.860100},
+    {"id":2526,"element":"H","x":31.778500,"y":26.600700,"z":8.649040},
+    {"id":2528,"element":"N","x":32.330601,"y":26.729500,"z":9.493760},
+    {"id":2549,"element":"N","x":30.077700,"y":25.708300,"z":10.503300}
+  ],
+  "product_coords": [
+    {"id":2169,"element":"O","x":29.883301,"y":25.057301,"z":8.424320},
+    {"id":2211,"element":"H","x":29.080299,"y":24.717100,"z":7.891940},
+    {"id":2444,"element":"O","x":30.478001,"y":25.427900,"z":10.562800},
+    {"id":2549,"element":"N","x":29.581900,"y":25.081800,"z":9.857270},
+    {"id":2418,"element":"H","x":32.570301,"y":26.986099,"z":10.247000},
+    {"id":2526,"element":"H","x":31.881201,"y":26.217699,"z":8.716130},
+    {"id":2528,"element":"N","x":32.096600,"y":26.232901,"z":9.720140}
+  ],
+  "reactant_bonds": [
+    {"a":2169,"b":2211,"order":1,"length":1.004202},
+    {"a":2169,"b":2549,"order":1,"length":1.423637},
+    {"a":2418,"b":2528,"order":1,"length":1.055075},
+    {"a":2444,"b":2528,"order":1,"length":1.904393},
+    {"a":2444,"b":2549,"order":1,"length":1.209805},
+    {"a":2526,"b":2528,"order":1,"length":1.017328}
+  ],
+  "product_bonds": [
+    {"a":2169,"b":2211,"order":1,"length":1.021752},
+    {"a":2169,"b":2549,"order":1,"length":1.464510},
+    {"a":2444,"b":2549,"order":2,"length":1.191870},
+    {"a":2418,"b":2528,"order":1,"length":1.034061},
+    {"a":2526,"b":2528,"order":1,"length":1.026968}
+  ],
+  "broken_bond_ids": [
+    "2444-2528"
+  ],
+  "created_bond_ids": [
+
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 7,
+    "product_atom_count": 7,
+    "reactant_bond_count": 6,
+    "product_bond_count": 5,
+    "broken_bond_count": 1,
+    "created_bond_count": 0,
+    "allowed_arity": true,
+    "signature_instance_index": 1
+  }
+}

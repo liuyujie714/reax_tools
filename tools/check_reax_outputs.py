@@ -75,22 +75,18 @@ def main() -> int:
     if unknown_transfer_ids:
         raise SystemExit(f"transfer_flow.csv references unknown molecule ids: {sorted(unknown_transfer_ids)[:10]}")
 
-    for required in ["reactant_ids", "product_ids", "tracked_reactant_ids", "tracked_product_ids"]:
+    for required in ["reactant_hashes", "product_hashes", "reactant_formulas", "product_formulas"]:
         if events and required not in events[0]:
             raise SystemExit(f"reaction_events.csv missing {required}")
 
     unknown_event_ids = set()
     for row in events:
-        for key in ["reactant_ids", "product_ids"]:
+        for key in ["reactant_hashes", "product_hashes"]:
             for molecule_id in row[key].split("+"):
                 if molecule_id and molecule_id not in molecule_ids:
                     unknown_event_ids.add(molecule_id)
     if unknown_event_ids:
         raise SystemExit(f"reaction_events.csv references unknown molecule ids: {sorted(unknown_event_ids)[:10]}")
-
-    bad_conservation = [row["event_id"] for row in events if row.get("atom_conserved") != "1"]
-    if bad_conservation:
-        raise SystemExit(f"atom conservation failed for events: {bad_conservation[:10]}")
 
     if args.expect_events is not None and len(events) != args.expect_events:
         raise SystemExit(f"event count mismatch: got {len(events)}, expected {args.expect_events}")

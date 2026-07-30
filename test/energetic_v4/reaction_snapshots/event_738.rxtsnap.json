@@ -1,0 +1,61 @@
+{
+  "schema": "reax_tools.reaction_snapshot.v1",
+  "event_id": 738,
+  "frame_id": 20,
+  "reactant_frame": 19,
+  "product_frame": 20,
+  "time_fs": 50.000000,
+  "reaction_signature": "3041819201->2477436747+2649584523",
+  "reaction_arity": "1->2",
+  "reactant_formulas": "N3O2",
+  "product_formulas": "N2O+NO",
+  "reactants": [
+    {"tracked_molecule_id":2072,"molecule_hash":"3041819201","formula":"N3O2","atom_ids":[333,335,1144,1158,1231]}
+  ],
+  "products": [
+    {"tracked_molecule_id":2146,"molecule_hash":"2649584523","formula":"N2O","atom_ids":[1144,1158,1231]},
+    {"tracked_molecule_id":2147,"molecule_hash":"2477436747","formula":"NO","atom_ids":[333,335]}
+  ],
+  "reactant_coords": [
+    {"id":333,"element":"O","x":6.959890,"y":30.593300,"z":6.019810},
+    {"id":335,"element":"N","x":7.691830,"y":30.174801,"z":6.849070},
+    {"id":1144,"element":"O","x":9.347830,"y":29.565901,"z":6.191760},
+    {"id":1158,"element":"N","x":9.425500,"y":27.484900,"z":4.826480},
+    {"id":1231,"element":"N","x":9.168050,"y":28.367500,"z":5.554200}
+  ],
+  "product_coords": [
+    {"id":1144,"element":"O","x":9.097330,"y":30.399500,"z":5.235810},
+    {"id":1158,"element":"N","x":8.475500,"y":29.104099,"z":3.217910},
+    {"id":1231,"element":"N","x":8.501170,"y":29.799601,"z":4.146860},
+    {"id":333,"element":"O","x":7.086560,"y":32.035801,"z":5.415490},
+    {"id":335,"element":"N","x":7.754470,"y":31.444201,"z":6.237570}
+  ],
+  "reactant_bonds": [
+    {"a":333,"b":335,"order":2,"length":1.182603},
+    {"a":335,"b":1144,"order":1,"length":1.882857},
+    {"a":1144,"b":1231,"order":1,"length":1.369294},
+    {"a":1158,"b":1231,"order":3,"length":1.172536}
+  ],
+  "product_bonds": [
+    {"a":1144,"b":1231,"order":2,"length":1.378803},
+    {"a":1158,"b":1231,"order":2,"length":1.160745},
+    {"a":333,"b":335,"order":2,"length":1.213223}
+  ],
+  "broken_bond_ids": [
+    "335-1144"
+  ],
+  "created_bond_ids": [
+
+  ],
+  "audit": {
+    "atom_ids_conserved": true,
+    "reactant_atom_count": 5,
+    "product_atom_count": 5,
+    "reactant_bond_count": 4,
+    "product_bond_count": 3,
+    "broken_bond_count": 1,
+    "created_bond_count": 0,
+    "allowed_arity": true,
+    "signature_instance_index": 3
+  }
+}
