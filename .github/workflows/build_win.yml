@@ -1,4 +1,4 @@
-name: Build Windows GROMACS with CUDA 12.X
+name: Build latest reax_tools windows version
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           arch: amd64
           toolset: 14.29
 
-      - name: Staitc Compile Windows reax_tools 
+      - name: Static compile windows reax_tools 
         run: |
           md build && cd build
           cmake .. -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
