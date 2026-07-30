@@ -88,17 +88,17 @@ jobs:
           This is an automated build of the latest source. It may be unstable or even crash, corrupt your save or eat your kitten. Use with caution!
           https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           github-release ${{env.RELEASE_COMMAND}} --tag ${{ env.RELEASE_TAG }} --name "Bleed Release" --description "$DESCRIPTION" --pre-release
-      
 
       - name: Download Windows artifact
         uses: actions/download-artifact@v4
         with:
           name: reax_tools_bins
+          path: reax_tools_bins
 
       - name: Package Windows artifact to release
         env:
           OUTPUT_TAR: reax_tools_windows_latest.tar.gz
         run: |
           ls -alt
-          tar -czvf ${{env.OUTPUT_TAR}} .
+          tar -czvf ${{env.OUTPUT_TAR}} -C reax_tools_bins .
           github-release upload --tag ${{ env.RELEASE_TAG }} --replace --name ${{env.OUTPUT_TAR}} --file ${{env.OUTPUT_TAR}}
