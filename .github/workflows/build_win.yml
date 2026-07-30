@@ -3,7 +3,7 @@ name: Build Windows GROMACS with CUDA 12.X
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   Windows:
