@@ -17,7 +17,7 @@ os.environ.setdefault("MPLCONFIGDIR", "/tmp/reax_tools_matplotlib")
 # If someone runs reax_tools.py directly with a newer system Python and the
 # installer created a project-local venv, switch to the venv automatically.
 VENV_PYTHON = ROOT / "venv" / "bin" / "python"
-if VENV_PYTHON.exists() and sys.executable != str(VENV_PYTHON.resolve()):
+if VENV_PYTHON.exists() and Path(sys.executable).resolve() != VENV_PYTHON.resolve():
     os.execv(str(VENV_PYTHON), [str(VENV_PYTHON), str(Path(__file__).resolve()), *sys.argv[1:]])
 
 if str(PYTHON_DIR) not in sys.path:
