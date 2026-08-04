@@ -90,7 +90,7 @@ mv "$temp_file" "$shell_rc"
     echo "$export_path_line"
 } >> "$shell_rc"
 
-chmod +x "$BIN_DIR/reax_tools" "$BIN_DIR/reax_tools_core" 2>/dev/null || true
+chmod +x "$BIN_DIR/reax_tools" "$BIN_DIR/reax_tools.py" "$BIN_DIR/reax_tools_core" 2>/dev/null || true
 
 echo ""
 echo "ReaxTools installation completed."
