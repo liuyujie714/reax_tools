@@ -9,7 +9,7 @@ echo "Installing ReaxTools 2.1"
 echo "Project directory: $PROJECT_DIR"
 
 echo ""
-echo "[1/3] Checking build tools"
+echo "[1/4] Checking build tools"
 for tool in cmake g++ gcc; do
     if ! command -v "$tool" >/dev/null 2>&1; then
         echo "Error: $tool not found. Please install cmake and a C++17 compiler first." >&2
@@ -20,12 +20,12 @@ for tool in cmake g++ gcc; do
 done
 
 echo ""
-echo "[2/3] Building C++ analysis core"
+echo "[2/4] Building C++ analysis core"
 cmake -S "$PROJECT_DIR" -B "$PROJECT_DIR/build" -DCMAKE_BUILD_TYPE=Release
 cmake --build "$PROJECT_DIR/build" -j"$(nproc 2>/dev/null || echo 4)"
 
 echo ""
-echo "[3/3] Configuring Python environment"
+echo "[3/4] Configuring Python environment"
 find_python() {
     local candidate
     for candidate in python3.13 python3.12 python3.11 python3.10 python3.9 python3.8 python3; do
