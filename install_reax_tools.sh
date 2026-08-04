@@ -66,6 +66,12 @@ else
     echo "Python dependencies installed with --user"
 fi
 
+if ! command -v dot >/dev/null 2>&1; then
+    echo "Warning: graphviz (dot) was not found. Transfer-network diagrams need it." >&2
+    echo "  Debian/Ubuntu: sudo apt install graphviz" >&2
+    echo "  RHEL/Alibaba:  sudo dnf install graphviz" >&2
+fi
+
 echo ""
 echo "[4/4] Registering command path"
 current_shell="$(basename "${SHELL:-bash}")"
