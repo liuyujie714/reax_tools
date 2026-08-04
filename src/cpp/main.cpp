@@ -18,7 +18,7 @@ static void write_run_log(double elapsed_sec) {
     fmt::print(fp, "[run]\n");
     fmt::print(fp, "program = ReaxTools\n");
     fmt::print(fp, "version = {}\n", "2.1");
-    fmt::print(fp, "identity_model = formula-hash-v1\n");
+    fmt::print(fp, "identity_model = formula-hash-v2\n");
     fmt::print(fp, "input = {}\n", INPUT_FILE);
     fmt::print(fp, "output_dir = {}\n", OUTPUT_DIR);
     fmt::print(fp, "elapsed_s = {:.6f}\n\n", elapsed_sec);
@@ -58,7 +58,7 @@ static void write_manifest(double elapsed_sec) {
     fmt::print(fp, "  \"schema_version\": \"1.0\",\n");
     fmt::print(fp, "  \"program\": \"ReaxTools\",\n");
     fmt::print(fp, "  \"version\": \"2.1\",\n");
-    fmt::print(fp, "  \"identity_model\": \"formula-hash-v1\",\n");
+    fmt::print(fp, "  \"identity_model\": \"formula-hash-v2\",\n");
     fmt::print(fp, "  \"input\": {{\"trajectory\": \"{}\"}},\n", INPUT_FILE);
     fmt::print(fp, "  \"output_directory\": \"{}\",\n", OUTPUT_DIR);
     fmt::print(fp, "  \"elapsed_s\": {:.6f},\n", elapsed_sec);
@@ -86,12 +86,7 @@ static void write_manifest(double elapsed_sec) {
     fclose(fp);
 }
 
-#ifndef WASM_MODE
-int main(int argc, char** argv)
-#else
-extern "C" int cpp_main(int argc, const char** argv)
-#endif
-{
+int run_analysis(int argc, const char* const* argv) {
     auto start_time = std::chrono::high_resolution_clock::now();
     fmt::print("ReaxTools 2.1\n");
     fmt::print("High-performance reactive MD post-processing\n\n");
@@ -149,4 +144,8 @@ extern "C" int cpp_main(int argc, const char** argv)
     fmt::print("  manifest         reax_tools_manifest.json\n");
 
     return 0;
+}
+
+int main(int argc, char** argv) {
+    return run_analysis(argc, argv);
 }

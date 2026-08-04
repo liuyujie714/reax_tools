@@ -18,7 +18,7 @@ extern float TIMESTEP_FS;
 extern int SAMPLING_FREQ;
 
 static unsigned int molecule_identity_id(const std::string& formula) {
-    return std::hash<std::string>()(formula);
+    return reax_string_hash(formula);
 }
 
 static std::string json_escape(const std::string& value) {

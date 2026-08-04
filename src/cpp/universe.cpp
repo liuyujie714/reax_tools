@@ -1,12 +1,14 @@
-#ifndef WASM_MODE
-#include <pthread.h>
-#endif
-
+#include <algorithm>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
+
+#ifdef REAX_ENABLE_THREADS
+#include <thread>
+#endif
 
 #include "argparser.h"
 #include "fmt/core.h"
@@ -19,7 +21,6 @@ Universe::Universe() {
     reaction_tracker = new ReactionTracker(STABLE_TIME_FRAMES, TIMESTEP_FS, SAMPLING_FREQ);
 }
 
-#ifndef WASM_MODE
 Universe::~Universe() {
     if (species_counter != nullptr) {
         delete species_counter;
@@ -58,97 +59,28 @@ Universe::~Universe() {
 }
 
 void Universe::flush() {}
-#else
-Universe::~Universe() {
-    if (system != nullptr) {
-        delete system;
-        system = nullptr;
-    }
 
-    if (last_system != nullptr) {
-        delete last_system;
-        last_system = nullptr;
-    }
-
-    if (species_counter != nullptr) {
-        delete species_counter;
-        species_counter = nullptr;
-    }
-
-    if (reax_flow != nullptr) {
-        delete reax_flow;
-        reax_flow = nullptr;
-    }
-
-    if (bond_counter != nullptr) {
-        delete bond_counter;
-        bond_counter = nullptr;
-    }
-
-    if (ring_counter != nullptr) {
-        delete ring_counter;
-        ring_counter = nullptr;
-    }
-
-    if (atom_bonded_num_counter != nullptr) {
-        delete atom_bonded_num_counter;
-        atom_bonded_num_counter = nullptr;
-    }
-
-    if (hash_counter != nullptr) {
-        delete hash_counter;
-        hash_counter = nullptr;
-    }
-
-    if (reaction_tracker != nullptr) {
-        delete reaction_tracker;
-        reaction_tracker = nullptr;
-    }
-}
-
-void Universe::flush() {
-    // only for fallbacked serial.
-    if (last_system != nullptr) {
-        delete last_system;
-        last_system = nullptr;
-    }
-    last_system = std::move(system);
-    system = nullptr;
-}
-#endif
-
-#ifndef WASM_MODE
+#ifdef REAX_ENABLE_THREADS
 template <typename T, typename Func>
 void parallel_for_each(std::vector<T*>& objects, Func func) {
-    size_t n = objects.size();
-    std::vector<pthread_t> threads(n);
-
-    struct ThreadCallArg {
-        T* obj;
-        Func func;
-    };
-
-    std::vector<ThreadCallArg> args(n);
-
-    auto thread_func = [](void* arg) -> void* {
-        ThreadCallArg* a = static_cast<ThreadCallArg*>(arg);
-        if (a->obj) {
-            (a->obj->*(a->func))();
-        }
-        return nullptr;
-        };
-
-    for (size_t i = 0; i < n; ++i) {
-        args[i] = { objects[i], func };
-        if (objects[i]) pthread_create(&threads[i], nullptr, thread_func, &args[i]);
+    std::vector<std::thread> threads;
+    threads.reserve(objects.size());
+    for (T* obj : objects) {
+        if (obj) threads.emplace_back([obj, func]() { (obj->*func)(); });
     }
-    for (size_t i = 0; i < n; ++i) {
-        if (objects[i]) pthread_join(threads[i], nullptr);
+    for (auto& thread : threads) {
+        if (thread.joinable()) thread.join();
+    }
+}
+#else
+template <typename T, typename Func>
+void parallel_for_each(std::vector<T*>& objects, Func func) {
+    for (T* obj : objects) {
+        if (obj) (obj->*func)();
     }
 }
 #endif
 
-#ifndef WASM_MODE
 void Universe::process_traj() {
     int max_neigh = 10;
     int curr_frame_id = 1;
@@ -281,67 +213,3 @@ void Universe::process_traj() {
         reaction_tracker->save_reaction_snapshots("reaction_snapshots");
     }
 }
-#else
-void Universe::process_traj() {
-    int curr_frame_id = 1;
-    int max_neigh = 10;
-
-    std::ifstream file(INPUT_FILE);
-
-    // The highest calling stack, only do this once.
-    while (file.is_open() && !file.eof()) {
-        if (curr_frame_id > 1) {
-            flush();
-        }
-
-        system = new System();
-        system->frame_id = curr_frame_id;
-        system->reax_flow = reax_flow;
-        system->set_counters(this->species_counter, this->bond_counter, this->ring_counter,
-            this->atom_bonded_num_counter, this->hash_counter);
-
-        if (curr_frame_id == 1) {
-            system->is_first_frame = true;
-        }
-        if (file.eof()) {
-            system->is_last_frame = true;
-        }
-
-        if (ends_with(INPUT_FILE, ".lammpstrj"))
-            system->load_lammpstrj(file);
-        else if (ends_with(INPUT_FILE, ".xyz"))
-            system->load_xyz(file);
-        else {
-            std::cerr << "Using unsupported format, check your file and suffix!";
-            exit(1);
-        }
-
-        if (system->atoms.size() == 0) {
-            continue;
-        };
-        curr_frame_id++;
-
-        system->prev_sys = last_system;
-        system->process_this();
-        system->process_counters();
-        system->process_reax_flow();
-
-        if (FLAG_DUMP_STRUCTURE) {
-            system->dump_lammps_data();
-        }
-
-        if (system->frame_id == 1) {
-            fmt::print("Atom Types: ");
-            for (auto& pair : system->type_itos) {
-                fmt::print("{}: {}, ", pair.first, pair.second);
-            }
-            fmt::print("\n");
-            fmt::print("\n");
-        }
-
-        system->finish();
-    }
-    fmt::print("\n\n");
-    species_counter->analyze_frame_formulas();
-}
-#endif

@@ -16,6 +16,18 @@ bool ends_with(const std::string& str, const std::string& suffix);
 
 FILE* create_file(std::string basename);
 
+// Deterministic 32-bit string hash (FNV-1a).
+// Replaces std::hash<std::string>, whose output differs between libstdc++
+// (native) and libc++ (Emscripten), breaking WASM/native output parity.
+inline unsigned int reax_string_hash(const std::string& text) {
+    unsigned int hash = 2166136261u;
+    for (unsigned char ch : text) {
+        hash ^= ch;
+        hash *= 16777619u;
+    }
+    return hash;
+}
+
 template <typename T> void print_info(const T& container, const size_t& num, const bool& two_way = true) {
     size_t size = container.size();
 

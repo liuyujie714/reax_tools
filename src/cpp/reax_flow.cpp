@@ -554,7 +554,7 @@ void ReaxFlow::merge_formulas(const std::unordered_set<std::string>& formulas_se
     // Create a new merged node
     Node* merged_node = new Node(nodes_to_merge[0]->molecule);
     merged_node->molecule->formula = new_formula;
-    merged_node->hash = std::hash<std::string>()(new_formula);
+    merged_node->hash = reax_string_hash(new_formula);
 
     // Add the merged node
     nodes.insert(merged_node);

@@ -161,8 +161,7 @@ struct Molecule {
         }
         formula = rename_formula(mol_formula, ELEMENT_DISPLAY_ORDER);
 
-        std::hash<std::string> str_hash;
-        hash = str_hash(formula);
+        hash = reax_string_hash(formula);
 
         for (auto& atom : mol_atoms) {
             atom->belong_molecule = this;

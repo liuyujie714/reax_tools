@@ -309,7 +309,7 @@ void SpeciesCounter::save_file() {
 
     std::vector<std::pair<unsigned int, std::string>> sorted_formulas;
     for (const auto& pair : formulas_nums) {
-        sorted_formulas.emplace_back(std::hash<std::string>()(pair.first), pair.first);
+        sorted_formulas.emplace_back(reax_string_hash(pair.first), pair.first);
     }
     std::sort(sorted_formulas.begin(), sorted_formulas.end(),
         [](const auto& a, const auto& b) {

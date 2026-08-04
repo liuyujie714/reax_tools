@@ -12,9 +12,22 @@ cd reax_tools
 bash install_reax_tools.sh
 ```
 
-The installer builds `bin/reax_tools_core`, installs lightweight Python plotting dependencies from `bin/requirements.txt`, and adds `bin/` to `PATH`.
+The installer builds `bin/reax_tools_core`, creates a project-local Python virtual environment (`venv/`) with Python 3.8+, installs lightweight plotting dependencies from `bin/requirements.txt`, and adds `bin/` to `PATH`. The `reax_tools` command automatically runs inside the venv when it exists.
+
+Requirements:
+
+- CMake 3.14+ and a C++17 compiler (GCC 9+ recommended; GCC 8.x is also supported and links `libstdc++fs` automatically).
+- Python 3.8+ (the installer searches for `python3.8` … `python3.13`; a conda environment also works).
 
 The default local build does not require RDKit, Boost, Graphviz, or bundled shared libraries.
+
+You can also build the C++ core directly without the Python layer:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
+./bin/reax_tools_core -f test/energetic.xyz -o reax_tools_output
+```
 
 ## Quick Start
 
@@ -85,7 +98,7 @@ The C++ core writes raw, audit-oriented files:
 | `reax_tools.log` | Run metadata and audit notes |
 | `reax_tools_manifest.json` | Structured file manifest for Python and web clients |
 
-`molecules.json` is the identity anchor. Current ids use `formula-hash-v1`; future structural hashes can replace this without changing the audit model.
+`molecules.json` is the identity anchor. Current ids use the deterministic `formula-hash-v2` (FNV-1a); future structural hashes can replace this without changing the audit model.
 
 ## Audited Transfer
 

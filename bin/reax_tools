@@ -14,6 +14,11 @@ PYTHON_DIR = ROOT / "src" / "python"
 CORE = ROOT / "bin" / "reax_tools_core"
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/reax_tools_matplotlib")
 
+# If the installer created a project-local venv, run inside it automatically.
+VENV_PYTHON = ROOT / "venv" / "bin" / "python"
+if VENV_PYTHON.exists() and sys.executable != str(VENV_PYTHON.resolve()):
+    os.execv(str(VENV_PYTHON), [str(VENV_PYTHON), str(Path(__file__).resolve()), *sys.argv[1:]])
+
 if str(PYTHON_DIR) not in sys.path:
     sys.path.insert(0, str(PYTHON_DIR))
 

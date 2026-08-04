@@ -238,11 +238,7 @@ class ArgParser {
  * @return true if parsing succeeded, false otherwise
  * @throws ArgParserException on any parsing error
  */
-#ifndef WASM_MODE
-    bool parse_args(int argc, char* argv[])
-#else
-    bool parse_args(int argc, const char* argv[])
-#endif
+    bool parse_args(int argc, const char* const* argv)
     {
         if (argc <= 1) {
             print_help();
