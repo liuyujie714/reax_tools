@@ -32,4 +32,4 @@ jobs:
         with:
           folder: .
           target-folder: .
-          clean: false
+          clean: true
