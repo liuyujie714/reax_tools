@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - deploy-pages-v1.98
+      - web-2.2-preview
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy from deploy-pages-v1.98 
+        if: github.ref == 'refs/heads/deploy-pages-v1.98'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./web         
+          target-folder: web     
+          clean: false
+
+      - name: Deploy from web-2.2-preview
+        if: github.ref == 'refs/heads/web-2.2-preview'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          target-folder: web-2.2-preview
+          clean: false
