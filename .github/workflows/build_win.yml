@@ -1,0 +1,105 @@
+name: Build latest reax_tools windows version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Windows:
+    runs-on: windows-2022
+
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+
+      - name: Configure build for amd64
+        uses: ilammy/msvc-dev-cmd@v1.13.0
+        with:
+          arch: amd64
+          toolset: 14.29
+
+      - name: Static compile windows reax_tools 
+        run: |
+          md build && cd build
+          cmake .. -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
+          cmake --build . --config Release
+      
+      - name: Check reax_tools_core.exe
+        run: |
+          Move-Item -Path ".\bin\Release\reax_tools_core.exe" -Destination ".\bin\" -Force
+          Remove-Item -Path ".\bin\Release\" -Recurse -Force
+          dumpbin /dependents .\bin\reax_tools_core.exe
+
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ success() }}
+        with:
+          name: reax_tools_bins
+          path: |
+            ./bin
+            ./tools 
+            ./src
+            ./README.md
+
+
+  # refer to https://github.com/endless-sky/endless-sky/blob/master/.github/workflows/cd.yaml
+  Release:
+    needs: [Windows]
+    runs-on: ubuntu-latest
+
+    env:
+        RELEASE_COMMAND: release
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        RELEASE_TAG: bleed
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install github-release
+        run: |
+          go install github.com/github-release/github-release@latest
+          echo "GOPATH=$(go env GOPATH)" >> $GITHUB_ENV
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+      
+      - name: Set environment variables
+        run: |
+          echo "RELEASE_TAG=bleed" >> $GITHUB_ENV
+          echo "TIME=$(date -u '+%Y.%m.%d')" >> $GITHUB_ENV
+          echo "GITHUB_USER=$( echo ${{ github.repository }} | cut -d/ -f1 )" >> $GITHUB_ENV
+          echo "GITHUB_REPO=$( echo ${{ github.repository }} | cut -d/ -f2 )" >> $GITHUB_ENV
+
+      - name: Move/Create continuous tag
+        run: |
+          git tag --force ${{ env.RELEASE_TAG }} ${{ github.sha }}
+          git push --tags --force
+      
+      - name: Check continuous release status
+        run: |
+          if ! github-release info -t ${{ env.RELEASE_TAG }} > /dev/null 2>&1; then
+            echo "RELEASE_COMMAND=release" >> $GITHUB_ENV
+          else
+            echo "RELEASE_COMMAND=edit" >> $GITHUB_ENV
+          fi
+      
+      - name: Setup continuous release
+        run: |
+          DESCRIPTION="Triggered on $(date -u '+%Y/%m/%d, %H:%M') UTC by commit ${{ github.sha }} (@${{ github.actor }})
+          This is an automated build of the latest source. It may be unstable or even crash, corrupt your save or eat your kitten. Use with caution!
+          https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          github-release ${{env.RELEASE_COMMAND}} --tag ${{ env.RELEASE_TAG }} --name "Bleed Release" --description "$DESCRIPTION" --pre-release
+
+      - name: Download Windows artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: reax_tools_bins
+          path: reax_tools_bins
+
+      - name: Package Windows artifact to release
+        env:
+          OUTPUT_TAR: reax_tools_windows_latest.tar.gz
+        run: |
+          ls -alt
+          tar -czvf ${{env.OUTPUT_TAR}} -C reax_tools_bins .
+          github-release upload --tag ${{ env.RELEASE_TAG }} --replace --name ${{env.OUTPUT_TAR}} --file ${{env.OUTPUT_TAR}}

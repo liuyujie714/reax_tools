@@ -15,3 +15,4 @@ __pycache__/
 *.egg-info/
 *.xyz
 test/gpumd_v3/molecules.json
+mytest/
