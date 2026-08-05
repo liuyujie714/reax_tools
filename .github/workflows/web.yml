@@ -31,5 +31,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .
-          target-folder: web-2.2-preview
+          target-folder: .
           clean: false
