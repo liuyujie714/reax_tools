@@ -1,8 +1,0 @@
-*.html linguist-detectable=false
-*.js linguist-detectable=false
-*.css linguist-detectable=false
-
-web/** linguist-documentation
-doc/** linguist-documentation
-bin/** linguist-generated
-node_modules/** linguist-vendored
