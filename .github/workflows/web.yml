@@ -26,7 +26,7 @@ jobs:
           target-folder: web     
           clean: false
 
-      - name: Deploy from web-2.2-preview → /web-2.2-preview
+      - name: Deploy from web-2.2-preview
         if: github.ref == 'refs/heads/web-2.2-preview'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
