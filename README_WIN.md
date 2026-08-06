@@ -12,7 +12,7 @@
 
 ## 使用
 
-下载预编译版本[https://github.com/liuyujie714/reax_tools/releases/tag/bleed](https://github.com/liuyujie714/reax_tools/releases/tag/bleed)`reax_tools_windows_latest.tar.gz`压缩包，解压，比如我这里放在`D`盘。因为Windows系统字体原因，后期python得到的某些图可能无法正确显示分子式中的下标，所以修改`D:\reax_tools_windows_latest\src\python\reax_tools_viz\default_plot_template.yaml`的字体名称：
+下载预编译版本[reax_tools_windows_latest.tar.gz](https://github.com/liuyujie714/reax_tools/releases/tag/bleed)压缩包，解压，比如我这里放在`D`盘。因为Windows系统字体原因，后期python得到的某些图可能无法正确显示分子式中的下标，所以修改`D:\reax_tools_windows_latest\src\python\reax_tools_viz\default_plot_template.yaml`的字体名称：
 
 修改前：
 
