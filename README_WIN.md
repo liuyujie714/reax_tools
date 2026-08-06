@@ -2,7 +2,7 @@
 
 ## 系统环境
 
-* Python版本要求和依赖包和原文档一致
+* Python版本要求，依赖包和原文档一致
 
 * 需要有一个shell环境，这里推荐使用[cmder](https://cmder.app/)中的shell环境，因为目前最新的这个reax_tools调用有部分依赖bash环境（🤦之前是不需要的）
 
