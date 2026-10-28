@@ -48,7 +48,7 @@ def run_python(args: list[str]) -> int:
 def print_help() -> None:
     print(
         "ReaxTools\n\n"
-        "Version: 2.1\n\n"
+        "Version: 2.3\n\n"
         "Analyze mode (C++ core):\n"
         "  reax_tools analyze -f <trajectory> [analysis options]\n"
         "  reax_tools -f <trajectory> [analysis options]\n"
@@ -68,14 +68,13 @@ def print_help() -> None:
         "  --stable-time <frames>     molecule stability threshold\n"
         "\n"
         "Python post-processing commands:\n"
-        "  reax_tools plot -f <output_dir>                 default plots\n"
+        "  reax_tools plot -f <output_dir>                 default plots + key molecules\n"
         "  reax_tools counts -f <count.csv|output_dir>     count line plots\n"
         "  reax_tools network -f <flow.csv|output_dir>     transfer network graph\n"
         "  reax_tools flow -f <flow.csv|output_dir>        experimental Sankey flow\n"
         "  reax_tools focus -f <flow.csv|output_dir>       centered Sankey views\n"
         "  reax_tools events -f <events.csv|output_dir>    reaction-event plot\n"
-        "  reax_tools molecules -f <json|output_dir>       molecule drawings\n"
-        "  reax_tools snapshots -f <output_dir>            reaction snapshot montages\n"
+        "  reax_tools molecules -f <csv|output_dir>        SMILES molecule drawings\n"
         "  reax_tools summary -f <output_dir>              output validation summary\n"
         "\n"
         "Use `reax_tools analyze --help` for the full C++ option table.\n"
@@ -94,7 +93,7 @@ def main() -> int:
     if command == "analyze":
         return run_core(args[1:])
 
-    if command in {"plot", "network", "flow", "focus", "events", "counts", "summary", "molecules", "snapshots"}:
+    if command in {"plot", "network", "flow", "focus", "events", "counts", "summary", "molecules"}:
         return run_python(args)
 
     if command in {"-h", "--help", "help"}:
